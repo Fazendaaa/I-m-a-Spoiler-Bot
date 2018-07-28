@@ -33,7 +33,7 @@ By default all the commands are in English, but you can see if the same command 
 First of all, talk to [@ispoilerbot](http://t.me/ispoilerbot).
 
 ## Sending Spoilers
-Basically there are two kinds of spoiler, those of _low_ priority, that won't ask the user to confirm to see it, and those of **high** priority, that will will ask permission to be displayed.
+Basically there are two kinds of spoiler, those of _light_ weight, that won't ask the user to confirm to see it, and those of **heavy** weight, that will will ask permission to be displayed.
 
 The inline mode works in any chat conversation:
 
@@ -119,8 +119,8 @@ I've made all the artwork for it, [Boku No Hero](http://bokunoheroacademia.wikia
     <img src="./others/img/spoiler/spoiler.png" width=100/>
     <img src="./others/img/assistant/assistant.png" width=100/>
     <img src="./others/img/name/name.png" width=100/>
-    <img src="./others/img/low/low.png" width=100/>
-    <img src="./others/img/high/high.png" width=100/>
+    <img src="./others/img/light/light.png" width=100/>
+    <img src="./others/img/heavy/heavy.png" width=100/>
     <img src="./others/img/warning/warning.png" width=100/>
     <img src="./others/img/error/error.png" width=100/>
     <img src="./others/img/offline/offline.png" width=100/>

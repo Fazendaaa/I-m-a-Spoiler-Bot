@@ -27,31 +27,34 @@ spoilerButton:
   "Spoiler aqui!"
 
 spoilerName:
-  " sobre: **${name}**"
+  " sobre: _${name}_"
 
 counterSpoilerTitle:
   "Characteres: ${length}/${limit}"
 
+counterDescription:
+  "Apenas contando os caracteres."
+
 counterSpoilerMessageText:
   "Não encoste em mim, Senpai. Eu estou aqui apenas para te ajudar a contar caracteres."
 
-lowSpoilerTitle:
-  "Spoiler baixo"
+lightSpoilerTitle:
+  "Spoiler leve"
 
-lowSpoilerDescription:
-  "Envie como um spoiler baixo. O usuário não será perguntado se gostaria de ver o spoiler."
+lightSpoilerDescription:
+  "Clique-me para enviar como um spoiler leve. O usuário não será perguntado se gostaria de ver o spoiler."
 
-lowSpoilerMessageText:
+lightSpoilerMessageText:
   "Clique em mim para ver o spoiler${spoiler_name}."
 
-highSpoilerTitle:
-  "Spoiler alto"
+heavySpoilerTitle:
+  "Spoiler pesado"
 
-highSpoilerDescription:
-  "Envie como um spoiler alto. O usuário será perguntado se gostaria de ver o spoiler."
+heavySpoilerDescription:
+  "Clique-me para enviar como um spoiler pesado. O usuário será perguntado se gostaria de ver o spoiler."
 
-highSpoilerMessageText:
-  "[Spoiler Alto] Clique em mim para ver o spoiler${spoiler_name}."
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Spoiler Pesado* ⚠️ 🚨 -- Clique em mim para ver o spoiler${spoiler_name}."
 
 tagSpoilerTitle:
   "Quer nomear este spoiler? (opcional)"

@@ -14,28 +14,28 @@ const parse_1 = require("../utils/parse");
 const charactersLimit = 200;
 const counterSpoiler = ({ description, translate }) => {
     return {
-        description,
         thumb_url: 'https://i.imgur.com/54qirkY.png',
+        description: translate.t('counterDescription'),
         message_text: translate.t('counterSpoilerMessageText'),
         title: translate.t('counterSpoilerTitle', { length: description.length, limit: charactersLimit })
     };
 };
-const lowSpoiler = ({ translate, id, spoiler_name }) => {
+const lightSpoiler = ({ translate, id, spoiler_name }) => {
     return {
-        title: translate.t('lowSpoilerTitle'),
+        title: translate.t('lightSpoilerTitle'),
         thumb_url: 'https://i.imgur.com/XOzZR7c.png',
         reply_markup: keyboard_1.spoilerKeyboard({ id, translate }),
-        description: translate.t('lowSpoilerDescription'),
-        message_text: translate.t('lowSpoilerMessageText', { spoiler_name })
+        description: translate.t('lightSpoilerDescription'),
+        message_text: translate.t('lightSpoilerMessageText', { spoiler_name })
     };
 };
-const highSpoiler = ({ translate, id, spoiler_name }) => {
+const heavySpoiler = ({ translate, id, spoiler_name }) => {
     return {
-        title: translate.t('highSpoilerTitle'),
+        title: translate.t('heavySpoilerTitle'),
         thumb_url: 'https://i.imgur.com/TpAVSKT.png',
-        description: translate.t('highSpoilerDescription'),
-        reply_markup: keyboard_1.spoilerKeyboard({ id, translate, isHigh: true }),
-        message_text: translate.t('highSpoilerMessageText', { spoiler_name })
+        description: translate.t('heavySpoilerDescription'),
+        reply_markup: keyboard_1.spoilerKeyboard({ id, translate, isHeavy: true }),
+        message_text: translate.t('heavySpoilerMessageText', { spoiler_name })
     };
 };
 const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
@@ -44,8 +44,8 @@ const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 
         const spoilerId = yield data_1.addNews({ message: description, id });
         return [
             counterSpoiler({ description, translate }),
-            lowSpoiler({ description, spoiler_name, translate, id: spoilerId }),
-            highSpoiler({ description, spoiler_name, translate, id: spoilerId })
+            lightSpoiler({ description, spoiler_name, translate, id: spoilerId }),
+            heavySpoiler({ description, spoiler_name, translate, id: spoilerId })
         ];
     }
     catch (e) {

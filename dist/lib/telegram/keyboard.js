@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const markup = require('telegraf').Markup;
-exports.spoilerKeyboard = ({ id, translate, isHigh = false }) => {
+exports.spoilerKeyboard = ({ id, translate, isHeavy = false }) => {
     return markup.inlineKeyboard([
-        markup.callbackButton(translate.t('spoilerButton'), `${id.toString()}/${isHigh}`)
+        markup.callbackButton(translate.t('spoilerButton'), `${id.toString()}/${isHeavy}`)
     ]);
 };

@@ -8,30 +8,30 @@ const charactersLimit = 200;
 
 const counterSpoiler = ({ description, translate }: SpoilerContext): Spoiler => {
     return {
-        description,
         thumb_url: 'https://i.imgur.com/54qirkY.png',
+        description: translate.t('counterDescription'),
         message_text: translate.t('counterSpoilerMessageText'),
         title: translate.t('counterSpoilerTitle', { length: description.length, limit: charactersLimit })
     };
 };
 
-const lowSpoiler = ({ translate, id, spoiler_name }: SpoilerContext): Spoiler  => {
+const lightSpoiler = ({ translate, id, spoiler_name }: SpoilerContext): Spoiler  => {
     return {
-        title: translate.t('lowSpoilerTitle'),
+        title: translate.t('lightSpoilerTitle'),
         thumb_url: 'https://i.imgur.com/XOzZR7c.png',
         reply_markup: spoilerKeyboard({ id, translate }),
-        description: translate.t('lowSpoilerDescription'),
-        message_text: translate.t('lowSpoilerMessageText', { spoiler_name })
+        description: translate.t('lightSpoilerDescription'),
+        message_text: translate.t('lightSpoilerMessageText', { spoiler_name })
     };
 };
 
-const highSpoiler = ({ translate, id, spoiler_name }: SpoilerContext): Spoiler => {
+const heavySpoiler = ({ translate, id, spoiler_name }: SpoilerContext): Spoiler => {
     return {
-        title: translate.t('highSpoilerTitle'),
+        title: translate.t('heavySpoilerTitle'),
         thumb_url: 'https://i.imgur.com/TpAVSKT.png',
-        description: translate.t('highSpoilerDescription'),
-        reply_markup: spoilerKeyboard({ id, translate, isHigh: true }),
-        message_text: translate.t('highSpoilerMessageText', { spoiler_name })
+        description: translate.t('heavySpoilerDescription'),
+        reply_markup: spoilerKeyboard({ id, translate, isHeavy: true }),
+        message_text: translate.t('heavySpoilerMessageText', { spoiler_name })
     };
 };
 
@@ -42,8 +42,8 @@ const newSpoiler = async ({ message, translate, id }: Context): Promise<Array<Sp
 
         return [
             counterSpoiler({ description, translate }),
-            lowSpoiler({ description, spoiler_name, translate, id: spoilerId }),
-            highSpoiler({ description, spoiler_name, translate, id: spoilerId })
+            lightSpoiler({ description, spoiler_name, translate, id: spoilerId }),
+            heavySpoiler({ description, spoiler_name, translate, id: spoilerId })
         ];
     } catch (e) {
         console.error(e);

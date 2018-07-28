@@ -33,7 +33,7 @@ Por padrão os comandos se encontram por em Inglês mas possuem seu equivalente 
 Primeiro de tudo, abra uma conversa com o [@ispoilerbot](http://t.me/ispoilerbot).
 
 ## Sending Spoilers
-Basicamente há dois tipos de spoilers, os de _baixa_ prioridade, que não pedirão ao usuário permissão para serem mostrados, e os de **alta** prioridade, que pedirão tais permissões.
+Basicamente há dois tipos de spoilers, os de _leve_ peso, que não pedirão ao usuário permissão para serem mostrados, e os de **pesado** peso, que pedirão tais permissões.
 
 O modo inline funciona em qualquer conversa:
 
@@ -117,8 +117,8 @@ Eu fiz todos os desenhos do bot, [Boku No Hero](http://bokunoheroacademia.wikia.
     <img src="../../others/img/spoiler/spoiler.png" width=100/>
     <img src="../../others/img/assistant/assistant.png" width=100/>
     <img src="../../others/img/name/name.png" width=100/>
-    <img src="../../others/img/low/low.png" width=100/>
-    <img src="../../others/img/high/high.png" width=100/>
+    <img src="../../others/img/light/light.png" width=100/>
+    <img src="../../others/img/heavy/heavy.png" width=100/>
     <img src="../../others/img/warning/warning.png" width=100/>
     <img src="../../others/img/error/error.png" width=100/>
     <img src="../../others/img/offline/offline.png" width=100/>
