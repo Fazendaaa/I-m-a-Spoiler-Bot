@@ -48,7 +48,7 @@ Example:
 ```
 
 <div align="center">
-    <img src="./others/gif/help.1.gif" width="420" height="500" />
+    <img src="./others/gif/help.1.gif"/>
 </div>
 
 And you can also send a spoiler name it about what it is:
@@ -64,13 +64,13 @@ Example:
 ```
 
 <div align="center">
-    <img src="./others/gif/help.2.gif" width="420" height="500" />
+    <img src="./others/gif/help.2.gif"/>
 </div>
 
 And those heavy spoilers with:
 
 <div align="center">
-    <img src="./others/gif/help.3.gif" width="420" height="500" />
+    <img src="./others/gif/help.3.gif"/>
 </div>
 
 ## Help

@@ -48,7 +48,7 @@ Exemplo:
 ```
 
 <div align="center">
-    <img src="../../others/gif/help.1.gif" width="420" height="500" />
+    <img src="../../others/gif/help.1.gif"/>
 </div>
 
 E você pode também enviar o spoiler nomeando ele:
@@ -64,13 +64,13 @@ Example:
 ```
 
 <div align="center">
-    <img src="../../others/gif/help.2.gif" width="420" height="500" />
+    <img src="../../others/gif/help.2.gif"/>
 </div>
 
 E aqueles spoilers pesados com:
 
 <div align="center">
-    <img src="../../others/gif/help.3.gif" width="420" height="500" />
+    <img src="../../others/gif/help.3.gif"/>
 </div>
 
 ## Ajuda
