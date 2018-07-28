@@ -1,13 +1,14 @@
+const emojiRegex = require('emoji-regex');
 import { Context } from '../../index';
+
+const createRegExp = emojiRegex();
 
 interface SpoilerInfo {
     description: string;
     spoiler_name: string;
 }
 
-export const messageToString = ({ message }: { message: string }): string => {
-    return Buffer.from(message, 'ascii').toString('ascii').replace(/(?:=\(|:0|:o|: o|: 0)/, ': o');
-};
+export const messageToString = ({ message }: { message: string }): string => message.replace(createRegExp, '');
 
 export const parseSpoilerText = ({ message, translate }: Context): SpoilerInfo => {
     const name = message.match(/"((?:\\.|[^"\\])*)"/);

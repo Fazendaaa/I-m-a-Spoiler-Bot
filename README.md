@@ -101,6 +101,7 @@ When Snyk report some errors or bugs that can be fixed, just follow the CLI comm
 
 # Build with
 * [dotenv](https://github.com/motdotla/dotenv)
+* [emoji-regex](https://github.com/mathiasbynens/emoji-regex)
 * [mongoose](http://mongoosejs.com/)
 * [node schedule](https://github.com/node-schedule/node-schedule)
 * [telegraf](http://telegraf.js.org/#/)

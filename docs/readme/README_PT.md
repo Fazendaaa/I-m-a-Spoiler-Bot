@@ -99,6 +99,7 @@ Se o Snyk reportar algum error ou bugs que podem ser corrigidos, apenas siga os 
 
 # Construído com
 * [dotenv](https://github.com/motdotla/dotenv)
+* [emoji-regex](https://github.com/mathiasbynens/emoji-regex)
 * [mongoose](http://mongoosejs.com/)
 * [node schedule](https://github.com/node-schedule/node-schedule)
 * [telegraf](http://telegraf.js.org/#/)

@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.messageToString = ({ message }) => {
-    return Buffer.from(message, 'ascii').toString('ascii').replace(/(?:=\(|:0|:o|: o|: 0)/, ': o');
-};
+const emojiRegex = require('emoji-regex');
+const createRegExp = emojiRegex();
+exports.messageToString = ({ message }) => message.replace(createRegExp, '');
 exports.parseSpoilerText = ({ message, translate }) => {
     const name = message.match(/"((?:\\.|[^"\\])*)"/);
     const description = message.replace(/"((?:\\.|[^"\\])*)"/, '');
