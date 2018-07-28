@@ -88,7 +88,7 @@ bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }) => {
     } if (true === show && false === session.user) {
         session.user = true;
 
-        return await answerCbQuery(i18n.t('priority'));
+        return await answerCbQuery(i18n.t('priority'), true);
     }
 
     session.user = false;

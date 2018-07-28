@@ -75,7 +75,7 @@ bot.on('callback_query', ({ i18n, update, answerCbQuery, session }) => __awaiter
     }
     if (true === show && false === session.user) {
         session.user = true;
-        return yield answerCbQuery(i18n.t('priority'));
+        return yield answerCbQuery(i18n.t('priority'), true);
     }
     session.user = false;
     return yield answerCbQuery(spoiler, true);
