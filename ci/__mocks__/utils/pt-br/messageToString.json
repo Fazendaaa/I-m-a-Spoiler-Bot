@@ -4,13 +4,13 @@
         "input": {
             "message": "Ç"
         },
-        "output": "C"
+        "output": "Ç"
     },
     {
         "label": "Ímã",
         "input": {
             "message": "Ímã"
         },
-        "output": "Ima"
+        "output": "Ímã"
     }
 ]

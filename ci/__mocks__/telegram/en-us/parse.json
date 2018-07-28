@@ -1,13 +1,15 @@
 [
     {
         "label": "lorem ipsum",
-        "input": {
-            "title": "lorem ipsum",
-            "description": "lorem ipsum",
-            "reply_markup": {},
-            "thumb_url": "lorem ipsum",
-            "message_text": "lorem ipsum"
-        },
+        "input": [
+            {
+                "title": "lorem ipsum",
+                "description": "lorem ipsum",
+                "reply_markup": {},
+                "thumb_url": "lorem ipsum",
+                "message_text": "lorem ipsum"
+            }
+        ],
         "output": [
             {
                 "title": "lorem ipsum",
