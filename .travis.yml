@@ -7,6 +7,5 @@ cache:
 scripts:
   - npm install codecov -g
   - npm install -g snyk
-  - snyk auth
 after_success:
   - codecov
