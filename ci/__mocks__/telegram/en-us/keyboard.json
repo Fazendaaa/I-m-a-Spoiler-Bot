@@ -1,0 +1,34 @@
+[
+    {
+        "label": "ID 0",
+        "input": {
+            "id": 0
+        },
+        "output": {
+            "inline_keyboard": [
+                [
+                    {
+                        "callback_data": "0",
+                        "hide": false
+                    }
+                ]
+            ]
+        }
+    },
+    {
+        "label": "ID 123456",
+        "input": {
+            "id": 123456
+        },
+        "output": {
+            "inline_keyboard": [
+                [
+                    {
+                        "callback_data": "123456",
+                        "hide": false
+                    }
+                ]
+            ]
+        }
+    }
+]

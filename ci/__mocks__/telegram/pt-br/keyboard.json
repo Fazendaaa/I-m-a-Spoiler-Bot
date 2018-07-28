@@ -1,0 +1,18 @@
+[
+    {
+        "label": "ID 0",
+        "input": {
+            "id": 0
+        },
+        "output": {
+            "inline_keyboard": [
+                [
+                    {
+                        "callback_data": "0",
+                        "hide": false
+                    }
+                ]
+            ]
+        }
+    }
+]

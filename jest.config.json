@@ -1,0 +1,37 @@
+{
+    "name": "i-am-a-spoiler-bot",
+    "globals": {
+        "ts-jest": {
+            "enableTsDiagnostics": true
+        }
+    },
+    "verbose": true,
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    },
+    "coveragePathIgnorePatterns": [
+        "./node_modules/",
+        "./dist/"
+    ],
+    "testRegex": "(./ci/__tests__/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+        "ts",
+        "tsx",
+        "js",
+        "jsx",
+        "json",
+        "node"
+    ],
+    "collectCoverage": true,
+    "useStderr": true,
+    "forceExit": true,
+    "coverageReporters": [
+        "json",
+        "lcov",
+        "text"
+    ],
+    "expand": true,
+    "logHeapUsage": true,
+    "bail": true,
+    "coverageDirectory": "./coverage"
+}

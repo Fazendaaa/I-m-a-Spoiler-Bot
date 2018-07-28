@@ -1,0 +1,16 @@
+[
+    {
+        "label": "Ç",
+        "input": {
+            "message": "Ç"
+        },
+        "output": "C"
+    },
+    {
+        "label": "Ímã",
+        "input": {
+            "message": "Ímã"
+        },
+        "output": "Ima"
+    }
+]

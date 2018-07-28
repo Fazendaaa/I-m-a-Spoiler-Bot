@@ -1,0 +1,105 @@
+start:
+  "Please, use me as a inline tool to send spoiler (@ispoilerbot)."
+
+help1:
+  "I'm just a wrapper for you to sent spoilers in groups to only some to see it. Let me show it to you:"
+
+help2:
+  "One friendly remminder, all of the spoilers are available only for one week after sent them."
+
+help3:
+  "To know more, just /about"
+
+about:
+  "See the code behind me at:\n\
+  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- See how I work.\n\
+  😀 [Creator's website](http://fazendaaa.me) — Check it out some other bots.\n\n\
+  Or even consider it supporting my creator:\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — One time only.\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Subscription.\n\n\
+  Has any suggestions, errors to report it or even request a translation?\n\
+  Fell free to tell at: @farmy."
+
+priority:
+  "Leave all hope ye who enter here... To see it, just click me again."
+
+spoilerButton:
+  "Spoiler here!"
+
+spoilerName:
+  " about: **${name}**"
+
+counterSpoilerTitle:
+  "Characters: ${length}/${limit}"
+
+counterSpoilerMessageText:
+  "Do not touch me, Senpai. I'm here just to help you out couting characters."
+
+lowSpoilerTitle:
+  "Low spoiler"
+
+lowSpoilerDescription:
+  "Send as a low spoiler. User won't be asked to confirm to see it."
+
+lowSpoilerMessageText:
+  "Click me to see the spoiler${spoiler_name}."
+
+highSpoilerTitle:
+  "High spoiler"
+
+highSpoilerDescription:
+  "Send as a high spoiler. User will be asked to confirm to see it."
+
+highSpoilerMessageText:
+  "[High Spoiler] Click me to see the spoiler${spoiler_name}."
+
+tagSpoilerTitle:
+  "Wanna name this spoiler? (optional)"
+
+tagSpoilerDescription:
+  "Write it between quotation marks, like this: \"spoiler name here\" at the start of the text. After this, click the spoiler box."
+
+tagSpoilerMessageText:
+  "Do not touch me, Senpai. I'm here just to help you out."
+
+sanitizeSpoilerTitle:
+  "Limit reached! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "You have typed too much, please reduce the spoiler"
+
+sanitizeSpoilerMessageText:
+  "Do not touch me, Senpai. You are a bad boy sending more than 200 characters spoiler. Be polite to the others."
+
+handleSpoilerTitle:
+  "Notice me, Senpai"
+
+handleSpoilerDescription:
+  "Please, type something"
+
+handleSpoilerMessageText:
+  "You have to type something and send it as spoiler."
+
+errorTitle:
+  "Error"
+
+errorDescription:
+  "An error happen, please warn @farmy about it."
+
+errorMessageText:
+  "An error happen, please warn @farmy about it."
+
+errorRetrieve:
+  "I had some issues fetching this spoiler. Problably is more than one week older, that means it was deleted."
+
+offlineDB:
+  "My database is offline for some reason, please inform @farmy about it."
+
+offlineTitle:
+  "Something went wrong!"
+
+offlineDescription:
+  "Please click me to see what's going on."
+
+offlineText:
+  "My database is currently down and this wasn't supposed to be happening. Please inform @farmy about it."

@@ -1,0 +1,37 @@
+{
+    "defaultSeverity": "error",
+    "extends": "tslint-microsoft-contrib",
+    "jsRules": {},
+    "rules": {
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
+        "typedef": false,
+        "no-relative-imports": false,
+        "no-require-imports": false,
+        "no-var-requires": false,
+        "no-console": false,
+        "no-any": false,
+        "mocha-no-side-effect-code": false,
+        "no-http-string": false,
+        "max-line-length": false,
+        "binary-expression-operand-order": false,
+        "no-shadowed-variable": false,
+        "curly": false,
+        "array-type": false,
+        "prefer-array-literal": false,
+        "align": false,
+        "no-unnecessary-initializer": false,
+        "export-name": false,
+        "no-submodule-imports": false,
+        "interface-name": false,
+        "semicolon": false,
+        "no-unnecessary-semicolons": false,
+        "no-return-await": false,
+        "missing-jsdoc": false,
+        "mocha-unneeded-done": false,
+        "variable-name": false
+    },
+    "rulesDirectory": []
+}
