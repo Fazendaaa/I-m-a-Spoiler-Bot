@@ -12,40 +12,51 @@ const data_1 = require("../database/data");
 const keyboard_1 = require("../telegram/keyboard");
 const parse_1 = require("../utils/parse");
 const charactersLimit = 200;
-const counterSpoiler = ({ description, translate }) => {
+const tagSpoiler = ({ translate }) => {
+    return {
+        title: translate.t('tagSpoilerTitle'),
+        thumb_url: 'https://i.imgur.com/XkMEbd8.png',
+        description: translate.t('tagSpoilerDescription'),
+        message_text: translate.t('tagSpoilerMessageText')
+    };
+};
+const counterSpoiler = ({ description, translate, name }) => {
+    const title = ('' === name) ? '' : translate.t('spoilerCounterName', { name: name });
     return {
         thumb_url: 'https://i.imgur.com/54qirkY.png',
-        description: translate.t('counterDescription'),
+        description: translate.t('counterDescription', { title }),
         message_text: translate.t('counterSpoilerMessageText'),
         title: translate.t('counterSpoilerTitle', { length: description.length, limit: charactersLimit })
     };
 };
-const lightSpoiler = ({ translate, id, spoiler_name }) => {
+const lightSpoiler = ({ translate, id, title }) => {
     return {
         title: translate.t('lightSpoilerTitle'),
         thumb_url: 'https://i.imgur.com/XOzZR7c.png',
         reply_markup: keyboard_1.spoilerKeyboard({ id, translate }),
         description: translate.t('lightSpoilerDescription'),
-        message_text: translate.t('lightSpoilerMessageText', { spoiler_name })
+        message_text: translate.t('lightSpoilerMessageText', { title })
     };
 };
-const heavySpoiler = ({ translate, id, spoiler_name }) => {
+const heavySpoiler = ({ translate, id, title }) => {
     return {
         title: translate.t('heavySpoilerTitle'),
         thumb_url: 'https://i.imgur.com/TpAVSKT.png',
         description: translate.t('heavySpoilerDescription'),
         reply_markup: keyboard_1.spoilerKeyboard({ id, translate, isHeavy: true }),
-        message_text: translate.t('heavySpoilerMessageText', { spoiler_name })
+        message_text: translate.t('heavySpoilerMessageText', { title })
     };
 };
 const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
     try {
-        const { description, spoiler_name } = parse_1.parseSpoilerText({ message, translate });
+        const { description, name } = parse_1.parseSpoilerText({ message });
         const spoilerId = yield data_1.addNews({ message: description, id });
+        const title = ('' === name) ? '' : translate.t('spoilerName', { name: name });
         return [
-            counterSpoiler({ description, translate }),
-            lightSpoiler({ description, spoiler_name, translate, id: spoilerId }),
-            heavySpoiler({ description, spoiler_name, translate, id: spoilerId })
+            tagSpoiler({ translate }),
+            counterSpoiler({ description, name, translate }),
+            lightSpoiler({ description, title, translate, id: spoilerId }),
+            heavySpoiler({ description, title, translate, id: spoilerId })
         ];
     }
     catch (e) {
@@ -58,14 +69,6 @@ const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 
             }];
     }
 });
-const tagSpoiler = ({ translate }) => {
-    return {
-        title: translate.t('tagSpoilerTitle'),
-        thumb_url: 'https://i.imgur.com/XkMEbd8.png',
-        description: translate.t('tagSpoilerDescription'),
-        message_text: translate.t('tagSpoilerMessageText')
-    };
-};
 const sanitizeSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
     if (message.length > charactersLimit) {
         return [{
@@ -86,10 +89,7 @@ exports.handleSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, 
                 message_text: translate.t('handleSpoilerMessageText')
             }];
     }
-    return [
-        tagSpoiler({ translate }),
-        ...yield sanitizeSpoiler({ message, translate, id })
-    ];
+    return yield sanitizeSpoiler({ message, translate, id });
 });
 exports.retrieveSpoiler = ({ id, translate }) => __awaiter(this, void 0, void 0, function* () {
     try {
