@@ -32,7 +32,7 @@ bot.use(localStorage.middleware());
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-let dbStatus: boolean;
+let dbStatus = false;
 
 connect(process.env.MONGODB_URI);
 
@@ -43,7 +43,7 @@ connection.on('open', () => {
 });
 
 connection.on('error', () => {
-    console.error.bind(console, 'connection error:')
+    console.error.bind(console, 'connection error:');
     dbStatus = false;
 });
 
