@@ -17,6 +17,7 @@ const spoiler_1 = require("./lib/spoiler/spoiler");
 const parse_1 = require("./lib/telegram/parse");
 const parse_2 = require("./lib/utils/parse");
 dotenv_1.config();
+// ---------------------------------------------------------------------------------------------------------------------
 const telegraf = require('telegraf');
 const telegrafI18n = require('telegraf-i18n');
 const localSession = require('telegraf-session-local');
@@ -33,6 +34,7 @@ bot.startPolling();
 bot.use(telegraf.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
+// ---------------------------------------------------------------------------------------------------------------------
 let dbStatus;
 mongoose_1.connect(process.env.MONGODB_URI);
 mongoose_1.connection.on('open', () => {
@@ -44,6 +46,7 @@ mongoose_1.connection.on('error', () => {
     console.error.bind(console, 'connection error:');
     dbStatus = false;
 });
+// ---------------------------------------------------------------------------------------------------------------------
 bot.start(({ i18n, replyWithMarkdown }) => {
     replyWithMarkdown(i18n.t('start'));
 });
@@ -54,7 +57,7 @@ bot.help(({ i18n, replyWithMarkdown, replyWithVideo }) => __awaiter(this, void 0
     yield replyWithMarkdown(i18n.t('help3'));
 }));
 bot.command('about', ({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('about'), { disable_web_page_preview: true });
+    replyWithMarkdown(i18n.t('about'));
 });
 bot.on('inline_query', ({ i18n, answerInlineQuery, inlineQuery }) => __awaiter(this, void 0, void 0, function* () {
     const message = parse_2.messageToString({ message: inlineQuery.query });

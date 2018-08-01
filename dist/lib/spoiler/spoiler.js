@@ -43,8 +43,17 @@ const heavySpoiler = ({ translate, id, title }) => {
         title: translate.t('heavySpoilerTitle'),
         thumb_url: 'https://i.imgur.com/TpAVSKT.png',
         description: translate.t('heavySpoilerDescription'),
-        reply_markup: keyboard_1.spoilerKeyboard({ id, translate, isHeavy: true }),
+        reply_markup: keyboard_1.spoilerKeyboard({ id, translate, toHide: true }),
         message_text: translate.t('heavySpoilerMessageText', { title })
+    };
+};
+const lewdSpoiler = ({ translate, id, title }) => {
+    return {
+        title: translate.t('lewdSpoilerTitle'),
+        thumb_url: 'https://i.imgur.com/64HsYmA.png',
+        description: translate.t('lewdSpoilerDescription'),
+        reply_markup: keyboard_1.spoilerKeyboard({ id, translate, toHide: true }),
+        message_text: translate.t('lewdSpoilerMessageText', { title })
     };
 };
 const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
@@ -56,7 +65,8 @@ const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 
             tagSpoiler({ translate }),
             counterSpoiler({ description, name, translate }),
             lightSpoiler({ description, title, translate, id: spoilerId }),
-            heavySpoiler({ description, title, translate, id: spoilerId })
+            heavySpoiler({ description, title, translate, id: spoilerId }),
+            lewdSpoiler({ description, title, translate, id: spoilerId })
         ];
     }
     catch (e) {

@@ -1,10 +1,7 @@
-'use strict';
-
-import { messageToString } from '../../../src/lib/utils/parse';
+import { messageToString, parseSpoilerText, toBoolean } from '../../../src/lib/utils/parse';
 import { readMock } from '../../readMocks';
+import { doTesting } from '../../testing';
 
-describe('Testing messageToString', () => readMock('utils', 'messageToString').forEach(({ locale, mocks }) =>
-    describe(locale, () => mocks.forEach(({ label, input, output }) => test(label, () =>
-        expect(messageToString(input)).toMatch(output)
-    )))
-));
+doTesting({ file: readMock('utils', 'messageToString'), toTest: messageToString });
+doTesting({ file: readMock('utils', 'parseSpoilerText'), toTest: parseSpoilerText });
+doTesting({ file: readMock('utils', 'toBoolean'), toTest: toBoolean });

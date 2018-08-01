@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Foo bar",
+        "input": {
+            "message": "Foo bar"
+        },
+        "output": {
+            "name": "",
+            "description": "Foo bar"
+        }
+    },
+    {
+        "label": "\"Foo\" bar",
+        "input": {
+            "message": "\"Foo\" bar"
+        },
+        "output": {
+            "name": "Foo",
+            "description": "bar"
+        }
+    }
+]

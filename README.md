@@ -67,7 +67,13 @@ Example:
     <img src="./others/gif/help.2.gif"/>
 </div>
 
-And those heavy spoilers with:
+The heavy spoilers with:
+
+<div align="center">
+    <img src="./others/gif/help.3.gif"/>
+</div>
+
+And those lewd spoilers with -- I've added this option in a kind of future proofing if Apple changes it's [policies](https://www.businessinsider.com/apples-porn-policy-2013-1) again.
 
 <div align="center">
     <img src="./others/gif/help.3.gif"/>
@@ -129,6 +135,7 @@ I've made all the artwork for it, [Boku No Hero](http://bokunoheroacademia.wikia
     <img src="./others/img/light/light.png" width=100/>
     <img src="./others/img/heavy/heavy.png" width=100/>
     <img src="./others/img/warning/warning.png" width=100/>
+    <img src="./others/img/lewd/lewd.png" width=100/>
     <img src="./others/img/error/error.png" width=100/>
     <img src="./others/img/offline/offline.png" width=100/>
 </div>

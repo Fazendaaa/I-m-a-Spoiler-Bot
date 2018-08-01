@@ -67,7 +67,13 @@ Example:
     <img src="../../others/gif/help.2.gif"/>
 </div>
 
-E aqueles spoilers pesados com:
+Spoilers pesados com:
+
+<div align="center">
+    <img src="../../others/gif/help.3.gif"/>
+</div>
+
+E aqueles spoilers sensuais com -- essa opção foi adicionada como uma maneira de evitar algum problema com as [politicas](https://www.businessinsider.com/apples-porn-policy-2013-1) da Apple caso atualizem ela:
 
 <div align="center">
     <img src="../../others/gif/help.3.gif"/>
@@ -127,6 +133,7 @@ Eu fiz todos os desenhos do bot, [Boku No Hero](http://bokunoheroacademia.wikia.
     <img src="../../others/img/light/light.png" width=100/>
     <img src="../../others/img/heavy/heavy.png" width=100/>
     <img src="../../others/img/warning/warning.png" width=100/>
+    <img src="../../others/img/lewd/lewd.png" width=100/>
     <img src="../../others/img/error/error.png" width=100/>
     <img src="../../others/img/offline/offline.png" width=100/>
 </div>

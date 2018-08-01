@@ -1,0 +1,12 @@
+[
+    {
+        "label": "True",
+        "input": "true",
+        "output": true
+    },
+    {
+        "label": "False",
+        "input": "false",
+        "output": false
+    }
+]

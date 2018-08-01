@@ -1,5 +1,4 @@
 const emojiRegex = require('emoji-regex');
-import { Context } from '../../index';
 
 const createRegExp = emojiRegex();
 

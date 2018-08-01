@@ -1,9 +1,3 @@
-/**
- * @jest-environment node
- */
-
-'use strict';
-
 import { join } from 'path';
 import { handleSpoiler, retrieveSpoiler } from '../../../src/lib/spoiler/spoiler';
 import { readMock } from '../../readMocks';
@@ -15,16 +9,18 @@ const i18n = new telegarfi18n({
     directory: join(__dirname, '../../../others/locales')
 });
 
-describe.skip('Testing handleSpoiler', () => readMock('spoiler', 'handleSpoiler').forEach(({ locale, mocks }) =>
-    describe(locale, () => mocks.forEach(({ label, input, output }) => test(label, async () => {
-        handleSpoiler({ translate: i18n, ...input }).then(console.log);
+describe.skip('nothing', () => test('', () => expect(true).toBeTruthy()));
 
-        return await expect(handleSpoiler({ translate: i18n, ...input })).resolves.toEqual(output)
-    })))
-));
+// describe.skip('Testing handleSpoiler', () => readMock('spoiler', 'handleSpoiler').forEach(({ locale, mocks }) =>
+//     describe(locale, () => mocks.forEach(({ label, input, output }) => test(label, async () => {
+//         handleSpoiler({ translate: i18n, ...input }).then(console.log);
 
-describe.skip('Testing retrieveSpoiler', () => readMock('spoiler', 'retrieveSpoiler').forEach(({ locale, mocks }) =>
-    describe(locale, () => mocks.forEach(({ label, input, output }) => test(label, async () => {
-        return await expect(retrieveSpoiler({ translate: i18n, ...input })).resolves.toEqual(output)
-    })))
-));
+//         return await expect(handleSpoiler({ translate: i18n, ...input })).resolves.toEqual(output)
+//     })))
+// ));
+
+// describe.skip('Testing retrieveSpoiler', () => readMock('spoiler', 'retrieveSpoiler').forEach(({ locale, mocks }) =>
+//     describe(locale, () => mocks.forEach(({ label, input, output }) => test(label, async () => {
+//         return await expect(retrieveSpoiler({ translate: i18n, ...input })).resolves.toEqual(output)
+//     })))
+// ));

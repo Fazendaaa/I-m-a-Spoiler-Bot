@@ -1,16 +1,37 @@
 [
     {
-        "label": "Ç",
+        "label": "Nothing",
         "input": {
-            "message": "Ç"
+            "message": ""
         },
-        "output": "Ç"
+        "output": ""
     },
     {
-        "label": "Ímã",
+        "label": "Space",
         "input": {
-            "message": "Ímã"
+            "message": " "
         },
-        "output": "Ímã"
+        "output": " "
+    },
+    {
+        "label": "Lorem Ipsum",
+        "input": {
+            "message": "Lorem Ipsum"
+        },
+        "output": "Lorem Ipsum"
+    },
+    {
+        "label": "Lowercase",
+        "input": {
+            "message": "lowercase"
+        },
+        "output": "lowercase"
+    },
+    {
+        "label": "Uppercase",
+        "input": {
+            "message": "UPPERCASE"
+        },
+        "output": "UPPERCASE"
     }
 ]

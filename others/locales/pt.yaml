@@ -11,7 +11,7 @@ help3:
   "Para saber mais basta dar um /about"
 
 about:
-  "Veja o código por trás em:
+  "[‍](https://i.imgur.com/epXWGKC.png)Veja o código por trás em:
   🤖 [Meu site](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Veja como eu funciono.\n\
   😀 [Site do meu criador](http://fazendaaa.me) — Veja outros bots parecidos.\n\n\
   Ou até mesmo considere ajudar a me manter no ar:\n\
@@ -34,6 +34,15 @@ spoilerCounterName:
 
 counterSpoilerTitle:
   "Characteres: ${length}/${limit}"
+
+tagSpoilerTitle:
+  "Quer nomear este spoiler? (opcional)"
+
+tagSpoilerDescription:
+  "Basta escrever ele entre aspas, assim: \"nome do spoiler aqui\" no começo do texto. Depois só clicar no spoiler para enviar-lo."
+
+tagSpoilerMessageText:
+  "Não click em mim, Senpai. Estou aqui apenas para ajudá-lo."
 
 counterDescription:
   "Apenas contando os caracteres${title}."
@@ -59,14 +68,14 @@ heavySpoilerDescription:
 heavySpoilerMessageText:
   "🚨 ⚠️ *Spoiler Pesado* ⚠️ 🚨 -- Clique em mim para ver o spoiler${title  }."
 
-tagSpoilerTitle:
-  "Quer nomear este spoiler? (opcional)"
+lewdSpoilerTitle:
+  "Spoiler sensual"
 
-tagSpoilerDescription:
-  "Basta escrever ele entre aspas, assim: \"nome do spoiler aqui\" no começo do texto. Depois só clicar no spoiler para enviar-lo."
+lewdSpoilerDescription:
+  "Clique-me para enviar como um spoiler sensual. O usuário será perguntado se gostaria de ver o spoiler."
 
-tagSpoilerMessageText:
-  "Não click em mim, Senpai. Estou aqui apenas para ajudá-lo."
+lewdSpoilerMessageText:
+  "🔞 *Spoiler Sensual* 🔞 -- Clique em mim para ver o spoiler${title}."
 
 sanitizeSpoilerTitle:
   "Você passou o limite! ${length}/${limit}"

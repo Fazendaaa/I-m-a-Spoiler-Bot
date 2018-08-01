@@ -61,7 +61,7 @@ bot.help(async ({ i18n, replyWithMarkdown, replyWithVideo }) => {
 });
 
 bot.command('about', ({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('about'), { disable_web_page_preview: true });
+    replyWithMarkdown(i18n.t('about'));
 });
 
 bot.on('inline_query', async ({ i18n, answerInlineQuery, inlineQuery }) => {

@@ -1,15 +1,13 @@
-'use strict';
-
-import { readFileSync } from 'fs';
+import { existsSync, readFileSync } from 'fs';
 import { join } from 'path';
 
-interface Mock {
+export interface Mock {
     input: any;
     output: any;
     label: string;
 }
 
-interface BaseMock {
+export interface BaseMock {
     locale: string;
     mocks: Array<Mock>;
 }
@@ -18,10 +16,16 @@ export const readMock = (location: string, toTest: string): Array<BaseMock> => {
     const idioms = ['en-us', 'pt-br'];
     const basePath = join(__dirname, '__mocks__/', location);
 
-    return idioms.reduce((acc, locale) =>
-        acc.concat({
-            locale,
-            mocks: JSON.parse(readFileSync(`${basePath}/${locale}/${toTest}.json`, 'utf8'))
-        })
-    , []);
+    return idioms.reduce((acc, locale) => {
+        const file = `${basePath}/${locale}/${toTest}.json`;
+
+        if (true === existsSync(file)) {
+            acc.push({
+                locale,
+                mocks: JSON.parse(readFileSync(file, 'utf8'))
+            });
+        }
+
+        return acc;
+    }, []);
 };

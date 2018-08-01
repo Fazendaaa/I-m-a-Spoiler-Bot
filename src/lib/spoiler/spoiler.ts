@@ -41,8 +41,18 @@ const heavySpoiler = ({ translate, id, title }: SpoilerContext): Spoiler => {
         title: translate.t('heavySpoilerTitle'),
         thumb_url: 'https://i.imgur.com/TpAVSKT.png',
         description: translate.t('heavySpoilerDescription'),
-        reply_markup: spoilerKeyboard({ id, translate, isHeavy: true }),
+        reply_markup: spoilerKeyboard({ id, translate, toHide: true }),
         message_text: translate.t('heavySpoilerMessageText', { title })
+    };
+};
+
+const lewdSpoiler = ({ translate, id, title }: SpoilerContext): Spoiler => {
+    return {
+        title: translate.t('lewdSpoilerTitle'),
+        thumb_url: 'https://i.imgur.com/64HsYmA.png',
+        description: translate.t('lewdSpoilerDescription'),
+        reply_markup: spoilerKeyboard({ id, translate, toHide: true }),
+        message_text: translate.t('lewdSpoilerMessageText', { title })
     };
 };
 
@@ -56,7 +66,8 @@ const newSpoiler = async ({ message, translate, id }: Context): Promise<Array<Sp
             tagSpoiler({ translate }),
             counterSpoiler({ description, name, translate }),
             lightSpoiler({ description, title, translate, id: spoilerId }),
-            heavySpoiler({ description, title, translate, id: spoilerId })
+            heavySpoiler({ description, title, translate, id: spoilerId }),
+            lewdSpoiler({ description, title, translate, id: spoilerId })
         ];
     } catch (e) {
         console.error(e);
