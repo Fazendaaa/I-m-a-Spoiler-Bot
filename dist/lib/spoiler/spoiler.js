@@ -58,7 +58,7 @@ const lewdSpoiler = ({ translate, id, title }) => {
 };
 const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
     try {
-        const { description, name } = parse_1.parseSpoilerText({ message });
+        const { description, name } = yield parse_1.parseSpoilerText({ message });
         const spoilerId = yield data_1.addNews({ message: description, id });
         const title = ('' === name) ? '' : translate.t('spoilerName', { name: name });
         return [

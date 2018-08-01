@@ -29,6 +29,8 @@ Eu e uns amigos estávamos acostumados a utilizar um bot para enviar spoilers em
 ### Aviso
 Por padrão os comandos se encontram por em Inglês mas possuem seu equivalente em Português.
 
+**obs**: links são encurtados automaticamente.
+
 ## Como utilizar?
 Primeiro de tudo, abra uma conversa com o [@ispoilerbot](http://t.me/ispoilerbot).
 
@@ -76,7 +78,7 @@ Spoilers pesados com:
 E aqueles spoilers sensuais com -- essa opção foi adicionada como uma maneira de evitar algum problema com as [politicas](https://www.businessinsider.com/apples-porn-policy-2013-1) da Apple caso atualizem ela:
 
 <div align="center">
-    <img src="../../others/gif/help.3.gif"/>
+    <img src="../../others/gif/help.4.gif"/>
 </div>
 
 ## Ajuda
@@ -117,6 +119,7 @@ Se o Snyk reportar algum error ou bugs que podem ser corrigidos, apenas siga os 
 * [telegraf](http://telegraf.js.org/#/)
 * [telegraf-i18n](https://github.com/telegraf/telegraf-i18n)
 * [telegraf-session-local](https://github.com/RealSpeaker/telegraf-session-local)
+* [tiny-shortener](https://github.com/Fazendaaa/tiny-shortener)
 
 # Código
 [Typescript](http://typescriptlang.org/) puro e simples, além dos [padrões de linter da Microsoft](https://github.com/Microsoft/tslint-microsoft-contrib).
@@ -134,6 +137,7 @@ Eu fiz todos os desenhos do bot, [Boku No Hero](http://bokunoheroacademia.wikia.
     <img src="../../others/img/heavy/heavy.png" width=100/>
     <img src="../../others/img/warning/warning.png" width=100/>
     <img src="../../others/img/lewd/lewd.png" width=100/>
+    <img src="../../others/img/dark/dark.png" width=100/>
     <img src="../../others/img/error/error.png" width=100/>
     <img src="../../others/img/offline/offline.png" width=100/>
 </div>

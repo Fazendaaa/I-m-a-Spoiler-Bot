@@ -1,4 +1,4 @@
-import { BaseMock, Mock } from './readMocks';
+import { BaseMock } from './readMocks';
 
 interface ToBeTested {
     file: Array<BaseMock>
@@ -12,11 +12,22 @@ interface LocaleToBeTested extends BaseMock {
 interface TheTest extends LocaleToBeTested {
     input: any;
     output: any;
+    kind: string;
     label: string;
 }
 
-const doTheTest = ({ label, toTest, input, output }: TheTest): void => {
-    test(label, () => expect(toTest(input)).toEqual(output));
+const doTheTest = ({ label, toTest, input, output, kind }: TheTest): void => {
+    if ('await' === kind) {
+        return test(label, async () => {
+            const value = await toTest(input);
+
+            expect.assertions(1);
+
+            expect(value).toEqual(output);
+        });
+    }
+
+    return test(label, () => expect(toTest(input)).toEqual(output));
 };
 
 const localeTesting = ({ locale, mocks, toTest }: LocaleToBeTested): void => {

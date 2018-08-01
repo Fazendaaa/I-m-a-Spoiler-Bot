@@ -4,6 +4,7 @@ import { join } from 'path';
 export interface Mock {
     input: any;
     output: any;
+    kind: string;
     label: string;
 }
 

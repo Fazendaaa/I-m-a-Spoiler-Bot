@@ -58,7 +58,7 @@ const lewdSpoiler = ({ translate, id, title }: SpoilerContext): Spoiler => {
 
 const newSpoiler = async ({ message, translate, id }: Context): Promise<Array<Spoiler>> => {
     try {
-        const { description, name } = parseSpoilerText({ message });
+        const { description, name } = await parseSpoilerText({ message });
         const spoilerId = <number> await addNews({ message: description, id });
         const title = ('' === name) ? '' : translate.t('spoilerName', { name: name });
 

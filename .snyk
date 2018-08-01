@@ -1,4 +1,9 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.12.0
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:eslint:20180222':
+    - mongoose > mquery > eslint:
+        reason: None given
+        expires: '2018-08-31T16:55:08.456Z'
 patch: {}

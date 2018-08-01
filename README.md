@@ -32,6 +32,8 @@ By default all the commands are in English, but you can see if the same command 
 # How to use it
 First of all, talk to [@ispoilerbot](http://t.me/ispoilerbot).
 
+**note**: urls are automatically shortened.
+
 ## Sending Spoilers
 Basically there are two kinds of spoiler, those of _light_ weight, that won't ask the user to confirm to see it, and those of **heavy** weight, that will will ask permission to be displayed.
 
@@ -76,7 +78,7 @@ The heavy spoilers with:
 And those lewd spoilers with -- I've added this option in a kind of future proofing if Apple changes it's [policies](https://www.businessinsider.com/apples-porn-policy-2013-1) again.
 
 <div align="center">
-    <img src="./others/gif/help.3.gif"/>
+    <img src="./others/gif/help.4.gif"/>
 </div>
 
 ## Help
@@ -119,6 +121,7 @@ When Snyk report some errors or bugs that can be fixed, just follow the CLI comm
 * [telegraf](http://telegraf.js.org/#/)
 * [telegraf-i18n](https://github.com/telegraf/telegraf-i18n)
 * [telegraf-session-local](https://github.com/RealSpeaker/telegraf-session-local)
+* [tiny-shortener](https://github.com/Fazendaaa/tiny-shortener)
 
 # Code
 Plain and simple [Typescript](http://typescriptlang.org/) and the [Microsoft linter standards](https://github.com/Microsoft/tslint-microsoft-contrib) for it.
@@ -136,6 +139,7 @@ I've made all the artwork for it, [Boku No Hero](http://bokunoheroacademia.wikia
     <img src="./others/img/heavy/heavy.png" width=100/>
     <img src="./others/img/warning/warning.png" width=100/>
     <img src="./others/img/lewd/lewd.png" width=100/>
+    <img src="./others/img/dark/dark.png" width=100/>
     <img src="./others/img/error/error.png" width=100/>
     <img src="./others/img/offline/offline.png" width=100/>
 </div>
