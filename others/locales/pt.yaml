@@ -44,7 +44,7 @@ tagSpoilerDescription:
 tagSpoilerMessageText:
   "Não click em mim, Senpai. Estou aqui apenas para ajudá-lo."
 
-counterDescription:
+counterSpoilerDescription:
   "Apenas contando os caracteres${title}."
 
 counterSpoilerMessageText:
@@ -95,16 +95,16 @@ handleSpoilerDescription:
 handleSpoilerMessageText:
   "Você tem que digitar alguma coisa e enviar como spoiler."
 
-errorTitle:
+errorSpoilerTitle:
   "Erro"
 
-errorDescription:
+errorSpoilerDescription:
   "Um erro ocorreu, por favor avise @farmy sobre isto."
 
-errorMessageText:
+errorSpoilerMessageText:
   "Um erro ocorreu, por favor avise @farmy sobre isto."
 
-errorRetrieve:
+errorSpoilerRetrieve:
   "Eu tive problemas ao buscar este spoiler. Provavelmente ele tem mais de uma semana, o que significa que foi deletado."
 
 offlineDB:

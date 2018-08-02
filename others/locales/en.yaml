@@ -44,7 +44,7 @@ tagSpoilerMessageText:
 counterSpoilerTitle:
   "Characters: ${length}/${limit}"
 
-counterDescription:
+counterSpoilerDescription:
   "Just counting characters${title}."
 
 counterSpoilerMessageText:
@@ -95,16 +95,16 @@ handleSpoilerDescription:
 handleSpoilerMessageText:
   "You have to type something and send it as spoiler."
 
-errorTitle:
+errorSpoilerTitle:
   "Error"
 
-errorDescription:
+errorSpoilerDescription:
   "An error happen, please warn @farmy about it."
 
-errorMessageText:
+errorSpoilerMessageText:
   "An error happen, please warn @farmy about it."
 
-errorRetrieve:
+errorSpoilerRetrieve:
   "I had some issues fetching this spoiler. Problably is more than one week older, that means it was deleted."
 
 offlineDB:
