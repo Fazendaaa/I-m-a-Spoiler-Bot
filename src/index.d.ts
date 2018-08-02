@@ -2,8 +2,11 @@ import { InlineKeyboardMarkup } from 'telegram-typings';
 
 export interface Context {
     id?: number;
+    name?: string;
+    title?: string;
     translate: any;
     message?: string;
+    description?: string;
 }
 
 export interface MinimumInfo {

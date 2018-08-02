@@ -35,7 +35,7 @@ bot.use(telegraf.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
 // ---------------------------------------------------------------------------------------------------------------------
-let dbStatus;
+let dbStatus = false;
 mongoose_1.connect(process.env.MONGODB_URI);
 mongoose_1.connection.on('open', () => {
     console.log('DB connected.');
@@ -47,31 +47,27 @@ mongoose_1.connection.on('error', () => {
     dbStatus = false;
 });
 // ---------------------------------------------------------------------------------------------------------------------
-bot.start(({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('start'));
-});
+bot.start(({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('start')));
+bot.command('about', ({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('about')));
 bot.help(({ i18n, replyWithMarkdown, replyWithVideo }) => __awaiter(this, void 0, void 0, function* () {
     yield replyWithMarkdown(i18n.t('help1'));
-    yield replyWithVideo('https://media.giphy.com/media/3vvl2dunxjN9HNXjwi/giphy.gif');
+    yield replyWithVideo('https://raw.githubusercontent.com/Fazendaaa/I-m-a-Spoiler-Bot/master/others/gif/help.1.gif');
     yield replyWithMarkdown(i18n.t('help2'));
     yield replyWithMarkdown(i18n.t('help3'));
 }));
-bot.command('about', ({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('about'));
-});
 bot.on('inline_query', ({ i18n, answerInlineQuery, inlineQuery }) => __awaiter(this, void 0, void 0, function* () {
     const message = parse_2.messageToString({ message: inlineQuery.query });
-    const spoiler = yield spoiler_1.handleSpoiler({ message, translate: i18n, id: parseInt(inlineQuery.id, 10) });
+    const results = yield spoiler_1.handleSpoiler({ message, translate: i18n, id: parseInt(inlineQuery.id, 10) });
     if (false === dbStatus) {
         const offline = offline_1.offlineDB({ translate: i18n });
-        return yield answerInlineQuery(parse_1.toInline([offline]));
+        return yield answerInlineQuery(parse_1.toInline({ results: [offline] }));
     }
-    return yield answerInlineQuery(parse_1.toInline(spoiler));
+    return yield answerInlineQuery(parse_1.toInline({ results }));
 }));
 bot.on('callback_query', ({ i18n, update, answerCbQuery, session }) => __awaiter(this, void 0, void 0, function* () {
     const data = update.callback_query.data.split('/');
     const spoiler = yield spoiler_1.retrieveSpoiler({ translate: i18n, id: parseInt(data[0], 10) });
-    const show = parse_2.toBoolean(data[1]);
+    const show = parse_2.toBoolean({ message: data[1] });
     session.user = session.user || false;
     if (false === dbStatus) {
         return yield answerCbQuery(i18n.t('offlineDB'), true);

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toInline = (results) => {
+exports.toInline = ({ results }) => {
     return results.map(({ title, description, reply_markup, thumb_url, message_text }, id) => {
         return {
             title,

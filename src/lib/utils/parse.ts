@@ -3,29 +3,33 @@ const emojiRegex = require('emoji-regex');
 
 const createRegExp = emojiRegex();
 
+interface Util {
+    message: string;
+}
+
 interface SpoilerInfo {
     name: string;
     description: string;
 }
 
-const removeProtocol = async (input: string): Promise<string> => (await tiny(input)).replace('https://', '');
+const removeProtocol = async ({ message }: Util): Promise<string> => (await tiny(message)).replace('https://', '');
 
-const sanitizeURL = async ({ message }: { message: string }): Promise<string> => {
+const sanitizeURL = async ({ message }: Util): Promise<string> => {
     // https://stackoverflow.com/a/17773849/7092954
     const matched = message.match(/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})/gm);
 
     if (null !== matched) {
         return await matched.reduce(async (acc, URL) => {
-            return (await acc).replace(URL, await removeProtocol(URL));
+            return (await acc).replace(URL, await removeProtocol({ message: URL }));
         }, Promise.resolve(message));
     }
 
     return await message;
 };
 
-export const messageToString = ({ message }: { message: string }): string => message.replace(createRegExp, '');
+export const messageToString = ({ message }: Util): string => message.replace(createRegExp, '');
 
-export const parseSpoilerText = async ({ message }: { message: string }): Promise<SpoilerInfo> => {
+export const parseSpoilerText = async ({ message }: Util): Promise<SpoilerInfo> => {
     const name = message.match(/"((?:\\.|[^"\\])*)"/);
     const sanitize = message.replace(/\s*"((?:\\.|[^"\\])*)"\s*/, '');
 
@@ -35,4 +39,4 @@ export const parseSpoilerText = async ({ message }: { message: string }): Promis
     }
 };
 
-export const toBoolean = (value: string): boolean => ('true' === value) ? true : false;
+export const toBoolean = ({ message }: Util): boolean => ('true' === message) ? true : false;

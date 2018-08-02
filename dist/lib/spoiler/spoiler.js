@@ -56,50 +56,56 @@ const lewdSpoiler = ({ translate, id, title }) => {
         message_text: translate.t('lewdSpoilerMessageText', { title })
     };
 };
-const newSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
+const newSpoiler = ({ name, description, title, translate, id }) => {
+    if (description.length < charactersLimit) {
+        return [
+            tagSpoiler({ translate }),
+            counterSpoiler({ description, name, translate }),
+            lightSpoiler({ description, title, translate, id }),
+            heavySpoiler({ description, title, translate, id }),
+            lewdSpoiler({ description, title, translate, id })
+        ];
+    }
+    return [
+        {
+            thumb_url: 'https://i.imgur.com/GPcjNb0.png',
+            description: translate.t('sanitizeSpoilerDescription'),
+            message_text: translate.t('sanitizeSpoilerMessageText'),
+            title: translate.t('sanitizeSpoilerTitle', { length: description.length, limit: charactersLimit })
+        }
+    ];
+};
+const sanitizeSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
     try {
         const { description, name } = yield parse_1.parseSpoilerText({ message });
         const spoilerId = yield data_1.addNews({ message: description, id });
         const title = ('' === name) ? '' : translate.t('spoilerName', { name: name });
-        return [
-            tagSpoiler({ translate }),
-            counterSpoiler({ description, name, translate }),
-            lightSpoiler({ description, title, translate, id: spoilerId }),
-            heavySpoiler({ description, title, translate, id: spoilerId }),
-            lewdSpoiler({ description, title, translate, id: spoilerId })
-        ];
+        return newSpoiler({ name, title, description, translate, id: spoilerId });
     }
     catch (e) {
         console.error(e);
-        return [{
+        return yield [
+            {
                 title: translate.t('errorTitle'),
                 thumb_url: 'https://i.imgur.com/hw9ekg8.png',
                 description: translate.t('errorDescription'),
                 message_text: translate.t('errorMessageText')
-            }];
+            }
+        ];
     }
-});
-const sanitizeSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
-    if (message.length > charactersLimit) {
-        return [{
-                thumb_url: 'https://i.imgur.com/GPcjNb0.png',
-                description: translate.t('sanitizeSpoilerDescription'),
-                message_text: translate.t('sanitizeSpoilerMessageText'),
-                title: translate.t('sanitizeSpoilerTitle', { length: message.length, limit: charactersLimit })
-            }];
-    }
-    return newSpoiler({ message, translate, id });
 });
 exports.handleSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
-    if ('' === message) {
-        return [{
-                title: translate.t('handleSpoilerTitle'),
-                thumb_url: 'https://i.imgur.com/ByINOFv.png',
-                description: translate.t('handleSpoilerDescription'),
-                message_text: translate.t('handleSpoilerMessageText')
-            }];
+    if ('' !== message) {
+        return yield sanitizeSpoiler({ message, translate, id });
     }
-    return yield sanitizeSpoiler({ message, translate, id });
+    return yield [
+        {
+            title: translate.t('handleSpoilerTitle'),
+            thumb_url: 'https://i.imgur.com/ByINOFv.png',
+            description: translate.t('handleSpoilerDescription'),
+            message_text: translate.t('handleSpoilerMessageText')
+        }
+    ];
 });
 exports.retrieveSpoiler = ({ id, translate }) => __awaiter(this, void 0, void 0, function* () {
     try {

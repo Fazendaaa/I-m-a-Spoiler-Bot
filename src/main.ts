@@ -49,38 +49,34 @@ connection.on('error', () => {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-bot.start(({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('start'));
-});
+bot.start(({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('start')));
+
+bot.command('about', ({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('about')));
 
 bot.help(async ({ i18n, replyWithMarkdown, replyWithVideo }) => {
     await replyWithMarkdown(i18n.t('help1'));
-    await replyWithVideo('https://media.giphy.com/media/3vvl2dunxjN9HNXjwi/giphy.gif');
+    await replyWithVideo('https://raw.githubusercontent.com/Fazendaaa/I-m-a-Spoiler-Bot/master/others/gif/help.1.gif');
     await replyWithMarkdown(i18n.t('help2'));
     await replyWithMarkdown(i18n.t('help3'));
 });
 
-bot.command('about', ({ i18n, replyWithMarkdown }) => {
-    replyWithMarkdown(i18n.t('about'));
-});
-
 bot.on('inline_query', async ({ i18n, answerInlineQuery, inlineQuery }) => {
     const message = messageToString({ message: inlineQuery.query });
-    const spoiler = await handleSpoiler({ message, translate: i18n, id: parseInt(inlineQuery.id, 10) });
+    const results = await handleSpoiler({ message, translate: i18n, id: parseInt(inlineQuery.id, 10) });
 
     if (false === dbStatus) {
         const offline = offlineDB({ translate: i18n });
 
-        return await answerInlineQuery(toInline([ offline ]));
+        return await answerInlineQuery(toInline({ results: [ offline ]}));
     }
 
-    return await answerInlineQuery(toInline(spoiler));
+    return await answerInlineQuery(toInline({ results}));
 });
 
 bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }) => {
     const data = update.callback_query.data.split('/');
     const spoiler = await retrieveSpoiler({ translate: i18n, id: parseInt(data[0], 10) });
-    const show = toBoolean(data[1]);
+    const show = toBoolean({ message: data[ 1 ] });
     session.user = session.user || false;
 
     if (false === dbStatus) {

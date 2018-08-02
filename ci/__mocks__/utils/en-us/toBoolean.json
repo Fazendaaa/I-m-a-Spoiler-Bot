@@ -1,12 +1,16 @@
 [
     {
         "label": "True",
-        "input": "true",
+        "input": {
+            "message": "true"
+        },
         "output": true
     },
     {
         "label": "False",
-        "input": "false",
+        "input": {
+            "message": "false"
+        },
         "output": false
     }
 ]
