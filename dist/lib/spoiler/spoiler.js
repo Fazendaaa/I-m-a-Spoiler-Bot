@@ -113,6 +113,6 @@ exports.retrieveSpoiler = ({ id, translate }) => __awaiter(this, void 0, void 0,
     }
     catch (e) {
         console.error(e);
-        return translate.t('errorRetrieve');
+        return yield translate.t('errorRetrieve');
     }
 });

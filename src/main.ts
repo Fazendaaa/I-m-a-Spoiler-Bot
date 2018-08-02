@@ -17,8 +17,9 @@ const localSession = require('telegraf-session-local');
 
 const bot = new telegraf(<string> process.env.BOT_KEY);
 const i18n = new telegrafI18n({
-    defaultLanguage: 'en',
+    useSession: true,
     allowMissing: true,
+    defaultLanguage: 'en',
     directory: join(__dirname, '../others/locales')
 });
 const localStorage = new localSession({

@@ -119,6 +119,6 @@ export const retrieveSpoiler = async ({ id, translate }: Context): Promise<strin
     } catch (e) {
         console.error(e);
 
-        return translate.t('errorRetrieve');
+        return await translate.t('errorRetrieve');
     }
 };

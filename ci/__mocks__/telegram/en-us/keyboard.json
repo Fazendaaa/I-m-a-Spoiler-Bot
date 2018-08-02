@@ -8,8 +8,9 @@
             "inline_keyboard": [
                 [
                     {
-                        "callback_data": "0/false",
-                        "hide": false
+                        "hide": false,
+                        "text": "Spoiler here!",
+                        "callback_data": "0/false"
                     }
                 ]
             ]
@@ -24,8 +25,9 @@
             "inline_keyboard": [
                 [
                     {
-                        "callback_data": "123456/false",
-                        "hide": false
+                        "hide": false,
+                        "text": "Spoiler here!",
+                        "callback_data": "123456/false"
                     }
                 ]
             ]

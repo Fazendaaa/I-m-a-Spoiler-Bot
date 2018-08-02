@@ -20,14 +20,18 @@ interface TheTest extends LocaleToBeTested {
     label: string;
 }
 
-const i18n = new telegarfi18n({
-    defaultLanguage: 'en',
+export const i18n = new telegarfi18n({
+    useSession: true,
     allowMissing: true,
+    defaultLanguage: 'en',
     directory: join(__dirname, '../others/locales')
 });
 
-const doTheTest = ({ label, toTest, input, output, kind, translation }: TheTest): void => {
-    const value = toTest({ translate: (true === translation) ? i18n : null, ...input });
+const doTheTest = ({ label, locale, toTest, input, output, kind, translation }: TheTest): void => {
+    const curriedTranslation = {
+        t: ((resourceKey, templateData) => i18n.t(locale, resourceKey, templateData))
+    };
+    const value = toTest({ translate: (true === translation) ? curriedTranslation : null, ...input });
 
     if ('await' === kind) {
         return test(label, async () => {

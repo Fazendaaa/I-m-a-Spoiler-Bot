@@ -3,24 +3,14 @@
         "label": "Empty",
         "kind": "await",
         "input": {
-            "message": "",
-            "id": 0
+            "id": 0,
+            "message": ""
         },
         "output": [
             {
                 "thumb_url": "https://i.imgur.com/ByINOFv.png",
                 "description": "Please, type something",
-                "reply_markup": {
-                    "inline_keyboard": [
-                        [
-                            {
-                                "callback_data": "0",
-                                "hide": false
-                            }
-                        ]
-                    ]
-                },
-                "message_text": "You have to type something and send it as spoiler",
+                "message_text": "You have to type something and send it as spoiler.",
                 "title": "Notice me, Senpai"
             }
         ]
@@ -29,25 +19,72 @@
         "label": "Lorem Ipsum",
         "kind": "await",
         "input": {
-            "message": "Lorem Ipsum",
-            "id": 0
+            "id": 0,
+            "message": "Lorem Ipsum"
         },
         "output": [
             {
+                "description": "Write it between quotation marks, like this: \"spoiler name here\" at the start of the text. After this, click the spoiler box.",
+                "message_text": "Do not touch me, Senpai. I'm here just to help you out.",
+                "thumb_url": "https://i.imgur.com/XkMEbd8.png",
+                "title": "Wanna name this spoiler? (optional)"
+            },
+            {
+                "description": "Just counting characters.",
+                "message_text": "Do not touch me, Senpai. I'm here just to help you out counting characters.",
                 "thumb_url": "https://i.imgur.com/54qirkY.png",
-                "description": "Lorem Ipsum",
+                "title": "Characters: 11/200"
+            },
+            {
+                "description": "Click me to send as a light spoiler. User won't be asked to confirm to see it.",
+                "message_text": "Click me to see the spoiler.",
                 "reply_markup": {
                     "inline_keyboard": [
                         [
                             {
-                                "callback_data": "0",
-                                "hide": false
+                                "callback_data": "0/false",
+                                "hide": false,
+                                "text": "Spoiler here!"
                             }
                         ]
                     ]
                 },
-                "message_text": "Lorem Ipsum",
-                "title": "Characters: 11/200"
+                "thumb_url": "https://i.imgur.com/XOzZR7c.png",
+                "title": "light spoiler"
+            },
+            {
+                "description": "Click me to send as a heavy spoiler. User will be asked to confirm to see it.",
+                "message_text": "🚨 ⚠️ *Heavy Spoiler* ⚠️ 🚨 -- Click me to see the spoiler.",
+                "reply_markup": {
+                    "inline_keyboard": [
+                        [
+                            {
+                                "callback_data": "0/true",
+                                "hide": false,
+                                "text": "Spoiler here!"
+                            }
+                        ]
+                    ]
+                },
+                "thumb_url": "https://i.imgur.com/TpAVSKT.png",
+                "title": "Heavy spoiler"
+            },
+            {
+                "description": "Click me to send as a lewd spoiler. User will be asked to confirm to see it.",
+                "message_text": "🔞 *Lewd Spoiler* 🔞 -- Click me to see the spoiler.",
+                "reply_markup": {
+                    "inline_keyboard": [
+                        [
+                            {
+                                "callback_data": "0/true",
+                                "hide": false,
+                                "text": "Spoiler here!"
+                            }
+                        ]
+                    ]
+                },
+                "thumb_url": "https://i.imgur.com/64HsYmA.png",
+                "title": "Lewd spoiler"
             }
         ]
     }

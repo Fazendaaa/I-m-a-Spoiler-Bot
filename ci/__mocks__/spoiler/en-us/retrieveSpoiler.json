@@ -1,9 +1,10 @@
 [
     {
         "label": "ID 0",
+        "kind": "await",
         "input": {
             "id": 0
         },
-        "output": {}
+        "output": "I had some issues fetching this spoiler. Problably is more than one week older, that means it was deleted."
     }
 ]
