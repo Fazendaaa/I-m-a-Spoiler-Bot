@@ -2,7 +2,7 @@
     "name": "i-am-a-spoiler-bot",
     "description": "A friendly bot to hide spoilers sent.",
     "repository": "https://github.com/Fazendaaa/I-m-a-Spoiler-Bot.git",
-    "logo": "https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/master/img/logo/logo.png",
+    "logo": "https://raw.githubusercontent.com/Fazendaaa/I-m-a-Spoiler-Bot/master/others/img/logo/logo.png",
     "keywords": [
         "node",
         "telegram",
