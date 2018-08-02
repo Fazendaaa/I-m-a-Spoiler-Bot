@@ -12,7 +12,7 @@ export const addNews = ({ message, id }: { message: string; id: number }): Promi
 export const retrieveNews = ({ id }: { id: number }): Promise<string | Error> => {
     return news.findOne({ _id: id }, 'message')
         .then((retrieved: NewsInterface) => {
-            if (null !== retrieved) {
+            if (null !== retrieved && undefined !== retrieved) {
                 return retrieved.message;
             }
 

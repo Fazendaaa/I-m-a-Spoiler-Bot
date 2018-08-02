@@ -39,6 +39,10 @@ const doTheTest = ({ label, locale, toTest, input, output, kind, translation }: 
 
             expect(await value).toEqual(output);
         });
+    } if ('await/throw' === kind) {
+        return test(label, () => {
+            expect(value).rejects.toThrow(output);
+        });
     }
 
     return test(label, () => expect(value).toEqual(output));

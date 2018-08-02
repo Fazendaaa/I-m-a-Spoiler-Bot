@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Throwing deleted",
+        "kind": "await/throw",
+        "input": {
+            "id": 0
+        },
+        "output": "Something went wrong fetching this spoiler: 0"
+    }
+]

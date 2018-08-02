@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Throwing error",
+        "kind": "await/throw",
+        "input": {
+            "id": 0,
+            "message": ""
+        }
+    }
+]
