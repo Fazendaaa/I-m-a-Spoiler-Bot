@@ -13,6 +13,7 @@
 
 [![Build Status](https://img.shields.io/travis/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://travis-ci.org/Fazendaaa/I-m-a-Spoiler-Bot)
 [![codecov](https://img.shields.io/codecov/c/github/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://codecov.io/gh/Fazendaaa/I-m-a-Spoiler-Bot)
+[![Codacy Badge](https://img.shields.io/codacy/grade/ce230276b4284f47a91e0ab6ef644736.svg?style=flat-square)](https://www.codacy.com/app/Fazendaaa/I-m-a-Spoiler-Bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Fazendaaa/I-m-a-Spoiler-Bot&amp;utm_campaign=Badge_Grade)
 [![Dependencies](https://david-dm.org/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://codeclimate.com/github/Fazendaaa/I-m-a-Spoiler-Bot/master/package.json)
 [![Known Vulnerabilities](https://snyk.io/test/github/fazendaaa/podsearch_bot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/fazendaaa/podsearch_bot?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3183be464438842a30b3/maintainability)](https://codeclimate.com/github/Fazendaaa/I-m-a-Spoiler-Bot/maintainability)
@@ -102,6 +103,8 @@ Como há uma integração com o [Travis CI](http://travis-ci.org/) e [Codecov](h
 ```bash
 npm test
 ```
+
+Todos os códigos em [schedule](../..//src/lib/schedule) não são testados porque são simplesmente "timers" para as outras açóes já implementadas e testadas.
 
 Se algum erro for reportado durante este processo relacionado com dependências utilizadas e você gostaria de ver como lidar com elas, leia mais em [Segurança](#Segurança).
 

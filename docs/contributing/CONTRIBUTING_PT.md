@@ -6,11 +6,14 @@
     <br>
     <br>
 
+[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg?longCache=true&style=for-the-badge)](https://saythanks.io/to/Fazendaaa)
+
 [![English CONTRIBUTING](https://img.shields.io/badge/Language-EN-blue.svg?longCache=true&style=for-the-badge)](./CONTRIBUTING.md)
 [![Portuguese CONTRIBUTING](https://img.shields.io/badge/Linguagem-PT-green.svg?longCache=true&style=for-the-badge)](./CONTRIBUTING_PT.md)
 
 [![Build Status](https://img.shields.io/travis/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://travis-ci.org/Fazendaaa/I-m-a-Spoiler-Bot)
 [![codecov](https://img.shields.io/codecov/c/github/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://codecov.io/gh/Fazendaaa/I-m-a-Spoiler-Bot)
+[![Codacy Badge](https://img.shields.io/codacy/grade/ce230276b4284f47a91e0ab6ef644736.svg?style=flat-square)](https://www.codacy.com/app/Fazendaaa/I-m-a-Spoiler-Bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Fazendaaa/I-m-a-Spoiler-Bot&amp;utm_campaign=Badge_Grade)
 [![Dependencies](https://david-dm.org/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://codeclimate.com/github/Fazendaaa/I-m-a-Spoiler-Bot/master/package.json)
 [![Known Vulnerabilities](https://snyk.io/test/github/fazendaaa/podsearch_bot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/fazendaaa/podsearch_bot?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5c38351e2ca7bd3a83b6/maintainability)](https://codeclimate.com/github/Fazendaaa/I-m-a-Spoiler-Bot/maintainability)

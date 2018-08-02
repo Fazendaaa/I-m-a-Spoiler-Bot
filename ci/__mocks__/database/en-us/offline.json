@@ -1,0 +1,11 @@
+[
+    {
+        "label": "Default",
+        "output": {
+            "title": "Something went wrong!",
+            "thumb_url": "https://i.imgur.com/OBsbNhO.png",
+            "description": "Please click me to see what's going on.",
+            "message_text": "My database is currently down and this wasn't supposed to be happening. Please inform @farmy about it."
+        }
+    }
+]

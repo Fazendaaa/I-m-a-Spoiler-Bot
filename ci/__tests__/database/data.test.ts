@@ -6,7 +6,7 @@ import { doTesting } from '../../testing';
 mockingoose.news.toReturn({
     _id: 0,
     message: 'Lorem Ipsum'
-}, 'deleteMany');
+}, 'findOne');
 
 doTesting({ file: readMock('database', 'addNews'), toTest: addNews });
 doTesting({ file: readMock('database', 'retrieveNews'), toTest: retrieveNews });
