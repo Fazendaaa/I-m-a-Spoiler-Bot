@@ -9,6 +9,12 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/fazendaaa/podsearch_bot/badge.svg?targetFile=package.json)](https://snyk.io/test/github/fazendaaa/podsearch_bot?targetFile=package.json)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3183be464438842a30b3/maintainability)](https://codeclimate.com/github/Fazendaaa/I-m-a-Spoiler-Bot/maintainability)
 
+[![GitHub stars](https://img.shields.io/github/stars/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/network)
+[![GitHub issues](https://img.shields.io/github/issues/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/issues)
+[![GitHub license](https://img.shields.io/github/license/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FFazendaaa%2FI-m-a-Spoiler-Bot)
+
 > A friendly Telegram bot to hide spoilers sent.
 
 ## About
