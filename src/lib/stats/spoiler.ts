@@ -8,7 +8,7 @@ const file = 'stats.json';
 
 export const updateSpoilersSent = ({ spoilers }: SpoilerCounter): void => {
     if (false === existsSync(file)) {
-        writeFileSync(file, JSON.stringify({ total: 0 }), 'utf8');
+        writeFileSync(file, JSON.stringify({ total: [ 0 ] }), 'utf8');
     }
 
     const { total } = JSON.parse(readFileSync(file, 'utf8'));
