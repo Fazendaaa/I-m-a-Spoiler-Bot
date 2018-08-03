@@ -12,7 +12,7 @@ const dotenv_1 = require("dotenv");
 const mongoose_1 = require("mongoose");
 const path_1 = require("path");
 const offline_1 = require("./lib/database/offline");
-const clean_1 = require("./lib/schedule/clean");
+const database_1 = require("./lib/schedule/database");
 const spoiler_1 = require("./lib/spoiler/spoiler");
 const parse_1 = require("./lib/telegram/parse");
 const parse_2 = require("./lib/utils/parse");
@@ -28,9 +28,7 @@ const i18n = new telegrafI18n({
     defaultLanguage: 'en',
     directory: path_1.join(__dirname, '../others/locales')
 });
-const localStorage = new localSession({
-    database: 'example_db.json'
-});
+const localStorage = new localSession();
 bot.startPolling();
 bot.use(telegraf.log());
 bot.use(i18n.middleware());
@@ -41,7 +39,8 @@ mongoose_1.connect(process.env.MONGODB_URI);
 mongoose_1.connection.on('open', () => {
     console.log('DB connected.');
     dbStatus = true;
-    clean_1.cleanDB();
+    database_1.statsDB();
+    database_1.cleanDB();
 });
 mongoose_1.connection.on('error', () => {
     console.error.bind(console, 'connection error:');

@@ -104,7 +104,7 @@ Como há uma integração com o [Travis CI](http://travis-ci.org/) e [Codecov](h
 npm test
 ```
 
-Todos os códigos em [schedule](../..//src/lib/schedule) não são testados porque são simplesmente "timers" para as outras açóes já implementadas e testadas.
+Todos os códigos em [schedule](../../src/lib/schedule) não são testados porque são simplesmente "timers" para as outras açóes já implementadas e testadas. E aqueles na pasta [stats](../../src/lib/stats) também, mas porque servem apenas para calcular o número de spoilers enviados para ser usado na badge.
 
 Se algum erro for reportado durante este processo relacionado com dependências utilizadas e você gostaria de ver como lidar com elas, leia mais em [Segurança](#Segurança).
 

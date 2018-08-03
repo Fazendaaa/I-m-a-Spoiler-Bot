@@ -62,14 +62,14 @@ const sanitizeSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, 
     }
     catch (e) {
         console.error(e);
-        return yield [baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate })];
+        return [baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate })];
     }
 });
 exports.handleSpoiler = ({ message, translate, id }) => __awaiter(this, void 0, void 0, function* () {
     if ('' !== message) {
         return yield sanitizeSpoiler({ message, translate, id });
     }
-    return yield [baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate })];
+    return [baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate })];
 });
 exports.retrieveSpoiler = ({ id, translate }) => __awaiter(this, void 0, void 0, function* () {
     try {
@@ -77,6 +77,6 @@ exports.retrieveSpoiler = ({ id, translate }) => __awaiter(this, void 0, void 0,
     }
     catch (e) {
         console.error(e);
-        return yield translate.t('errorSpoilerRetrieve');
+        return translate.t('errorSpoilerRetrieve');
     }
 });

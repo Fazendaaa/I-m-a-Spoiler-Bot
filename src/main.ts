@@ -2,7 +2,7 @@ import { config } from 'dotenv';
 import { connect, connection } from 'mongoose';
 import { join } from 'path';
 import { offlineDB } from './lib/database/offline';
-import { cleanDB } from './lib/schedule/clean';
+import { cleanDB, statsDB } from './lib/schedule/database';
 import { handleSpoiler, retrieveSpoiler } from './lib/spoiler/spoiler';
 import { toInline } from './lib/telegram/parse';
 import { messageToString, toBoolean } from './lib/utils/parse';
@@ -22,9 +22,7 @@ const i18n = new telegrafI18n({
     defaultLanguage: 'en',
     directory: join(__dirname, '../others/locales')
 });
-const localStorage = new localSession({
-    database: 'example_db.json'
-});
+const localStorage = new localSession();
 
 bot.startPolling();
 bot.use(telegraf.log());
@@ -40,6 +38,7 @@ connect(process.env.MONGODB_URI);
 connection.on('open', () => {
     console.log('DB connected.');
     dbStatus = true;
+    statsDB();
     cleanDB();
 });
 

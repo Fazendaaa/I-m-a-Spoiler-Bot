@@ -8,6 +8,8 @@
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg?longCache=true&style=for-the-badge)](https://saythanks.io/to/Fazendaaa)
 
+![Spoilers sent](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&label=spoilers&url=http%3A%2F%2Flocalhost%3A3000%2Ftotal&query=%24.total%5B0%5D&colorB=orange)
+
 [![English README](https://img.shields.io/badge/Language-EN-blue.svg?longCache=true&style=for-the-badge)](./README.md)
 [![Portuguese README](https://img.shields.io/badge/Linguagem-PT-green.svg?longCache=true&style=for-the-badge)](./docs/readme/README_PT.md)
 
@@ -24,6 +26,8 @@
 
 ## About
 Me and my friends were used to use a bot to send spoilers in the main group of anime discussions, but this bot doesn't works anymore. That's why I've decided to write my own version of this bot so we can continue to send each other messages without disturbing the others group members that haven't read manga chapter or watched the anime episode yet.
+
+You can see how many spoilers have been sent so far in the badge at the top of this project.
 
 **note**: all of the spoilers are just stored for one week period!
 
@@ -106,7 +110,7 @@ To run all tests just:
 npm test
 ```
 
-All of the [schedule](./src/lib/schedule) implementations are not tested since they only works as a "timer" to do some actions other actions previously implemented.
+All of the [schedule](./src/lib/schedule) implementations are not tested since they only works as a "timer" to do some actions other actions previously implemented. And those in [stats](./src/lib/stats) also, since because those are files stats for the badge of spoilers sent.
 
 If you ran into some errors related to package dependencies and want to know how to handle it, read the [Security](#security) info.
 

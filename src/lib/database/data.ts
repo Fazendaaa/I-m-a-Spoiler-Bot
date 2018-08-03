@@ -29,3 +29,9 @@ export const deleteOneWeekOlder = (): Promise<number | Error> => {
         .then(removed => removed.length)
         .catch(err => { throw err; });
 };
+
+export const numberSpoilers = (): Promise<number | Error> => {
+    return news.find({})
+        .then(res => res.length)
+        .catch(err => { throw err; });
+};

@@ -78,46 +78,6 @@ If you have any other questions about it just use it the help command:
 /help
 ```
 
-# How does it work?
-You can build yourself a bot similar to this one, I've wrote a tutorial about it in my [Podesearch Bot](https://github.com/Fazendaaa/podsearch_bot) just follow the procedures listed in [BUILDING.md](https://github.com/Fazendaaa/podsearch_bot/blob/master/docs/building/BUILDING.md).
-
-# Deployment
-This bot is up and running at [Heroku](http://heroku.com/) through the Github integration, that means that each new push to the ```master``` branch means that is the code serving the bot. You can see more about how does it run at the server by looking at the [Procfile](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/blob/master/Procfile). You can also deploy yourself this bot into Heroku through:
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Fazendaaa/I-m-a-Spoiler-Bot)
-
-## Testing
-Since there's a [Travis CI](http://travis-ci.org/) integration and [Codecov](https://codecov.io/). All of the tests were written with [Jest](https://facebook.github.io/jest/).
-
-To run all tests just:
-
-```bash
-npm test
-```
-
-All of the [schedule](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/tree/master/src/lib/schedule) implementations are not tested since they only works as a "timer" to do some actions other actions previously implemented.
-
-If you ran into some errors related to package dependencies and want to know how to handle it, read the [Security](#security) info.
-
-# Security
-I've added a integration with [Snyk](https://snyk.io/) to ensure that all of my dependencies have no bugs or errors reported without fixing it first before Continuos integration (CI) to ensure the Continuos Development (CD).
-
-## Errors/Bugs in Dependencies
-When Snyk report some errors or bugs that can be fixed, just follow the CLI command to fix them before running -- more info at their [docs](https://github.com/snyk/snyk#cli).
-
-# Build with
-* [dotenv](https://github.com/motdotla/dotenv)
-* [emoji-regex](https://github.com/mathiasbynens/emoji-regex)
-* [mongoose](http://mongoosejs.com/)
-* [node schedule](https://github.com/node-schedule/node-schedule)
-* [telegraf](http://telegraf.js.org/#/)
-* [telegraf-i18n](https://github.com/telegraf/telegraf-i18n)
-* [telegraf-session-local](https://github.com/RealSpeaker/telegraf-session-local)
-* [tiny-shortener](https://github.com/Fazendaaa/tiny-shortener)
-
-# Code
-Plain and simple [Typescript](http://typescriptlang.org/) and the [Microsoft linter standards](https://github.com/Microsoft/tslint-microsoft-contrib) for it.
-
 # Artwork
 I've made all the artwork for it, [Boku No Hero](http://bokunoheroacademia.wikia.com/wiki/My_Hero_Academia_Wiki) was my inspiration.
 
@@ -139,12 +99,6 @@ You can see more in the [img](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/tre
 Please, I'm not a native/fluent english speaker, so whether you see a variable name wrote the wrong way or even some comment where I've wrote something with the wrong "past perfect way of life" or something like that, please let me know it. Not always is just about the code, but rather making it more clear to other people to learn from it.
 
 So, whether is code or not you can help me out making this code more accessible by reading the [CONTRIBUTING.md](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/blob/master/docs/contributing/CONTRIBUTING.md). 
-
-# Versioning
-I would love to say that [SemVer](https://semver.org/) or anything like that is used but, in my personal experience, this kind of approach doesn't work very well with me, the guy who could be committing in this project for two weeks in a roll and leave it for almost one year with no simple ```npm update```. So, no versioning system is used. 
-
-# TODO
-Since I will be keeping this README up to date with any major change and I don't use any versioning system to log all the fixed bugs or previous projects updates, you can still have a taste of what comes next and what is being under analysis right in the [Projects](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot/projects/) tab.
 
 # Authors
 * Only [me](https://github.com/Fazendaaa) for now.

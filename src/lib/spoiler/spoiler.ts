@@ -68,7 +68,7 @@ const sanitizeSpoiler = async ({ message, translate, id }: Context): Promise<Arr
     } catch (e) {
         console.error(e);
 
-        return await [ baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate }) ];
+        return [ baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate }) ];
     }
 };
 
@@ -77,7 +77,7 @@ export const handleSpoiler = async ({ message, translate, id }: Context): Promis
         return await sanitizeSpoiler({ message, translate, id });
     }
 
-    return await [ baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate }) ];
+    return [ baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate }) ];
 };
 
 export const retrieveSpoiler = async ({ id, translate }: Context): Promise<string> => {
@@ -86,6 +86,6 @@ export const retrieveSpoiler = async ({ id, translate }: Context): Promise<strin
     } catch (e) {
         console.error(e);
 
-        return await translate.t('errorSpoilerRetrieve');
+        return translate.t('errorSpoilerRetrieve');
     }
 };

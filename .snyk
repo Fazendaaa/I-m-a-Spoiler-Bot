@@ -5,5 +5,5 @@ ignore:
   'npm:eslint:20180222':
     - mongoose > mquery > eslint:
         reason: None given
-        expires: '2018-08-31T16:55:08.456Z'
+        expires: '2018-09-02T15:16:13.243Z'
 patch: {}

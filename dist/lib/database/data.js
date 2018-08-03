@@ -24,3 +24,8 @@ exports.deleteOneWeekOlder = () => {
         .then(removed => removed.length)
         .catch(err => { throw err; });
 };
+exports.numberSpoilers = () => {
+    return model_1.news.find({})
+        .then(res => res.length)
+        .catch(err => { throw err; });
+};
