@@ -8,7 +8,6 @@
 
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg?longCache=true&style=for-the-badge)](https://saythanks.io/to/Fazendaaa)
 
-![Spoilers sent](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&label=spoilers&url=http%3A%2F%2Flocalhost%3A3000%2Ftotal&query=%24.total%5B0%5D&colorB=orange)
 
 [![English README](https://img.shields.io/badge/Language-EN-blue.svg?longCache=true&style=for-the-badge)](./README.md)
 [![Portuguese README](https://img.shields.io/badge/Linguagem-PT-green.svg?longCache=true&style=for-the-badge)](./docs/readme/README_PT.md)
@@ -27,7 +26,9 @@
 ## About
 Me and my friends were used to use a bot to send spoilers in the main group of anime discussions, but this bot doesn't works anymore. That's why I've decided to write my own version of this bot so we can continue to send each other messages without disturbing the others group members that haven't read manga chapter or watched the anime episode yet.
 
-You can see how many spoilers have been sent so far in the badge at the top of this project.
+You can see how many spoilers have been sent so far here:
+
+![Spoilers sent](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&label=spoilers%20sent&url=https%3A%2F%2Fispoiler.herokuapp.com%2Fstats.json&query=%24.total&colorB=orange)
 
 **note**: all of the spoilers are just stored for one week period!
 

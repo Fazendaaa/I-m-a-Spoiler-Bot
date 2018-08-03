@@ -14,6 +14,10 @@
 ## About
 Me and my friends were used to use a bot to send spoilers in the main group of anime discussions, but this bot doesn't works anymore. That's why I've decided to write my own version of this bot so we can continue to send each other messages without disturbing the others group members that haven't read manga chapter or watched the anime episode yet.
 
+You can see how many spoilers have been sent so far here:
+
+![Spoilers sent](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&label=spoilers%20sent&url=https%3A%2F%2Fispoiler.herokuapp.com%2Fstats.json&query=%24.total&colorB=orange)
+
 **note**: all of the spoilers are just stored for one week period!
 
 ### Disclaimer

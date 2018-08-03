@@ -25,6 +25,10 @@
 ## Sobre
 Eu e uns amigos estávamos acostumados a utilizar um bot para enviar spoilers em um grupo de discussões de anime, mas tal bot parou de funcionar. Foi quando eu decidi fazer a minha versão de um bot assim, para podermos, desta maneira, continuar enviando conteúdos sensíveis sem afetar àqueles que ainda não leram o capítulo do mangá ou até mesmo viram o episódio do anime.
 
+Você pode ver quantos spoilers foram enviados até agora aqui:
+
+![Spoilers sent](https://img.shields.io/badge/dynamic/json.svg?style=for-the-badge&label=spoilers%20sent&url=https%3A%2F%2Fispoiler.herokuapp.com%2Fstats.json&query=%24.total&colorB=orange)
+
 **obs**: todos os spoilers são armazenados por uma semana apenas!
 
 ### Aviso
