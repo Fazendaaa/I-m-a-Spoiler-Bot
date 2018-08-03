@@ -28,11 +28,10 @@ exports.cleanDB = () => {
 };
 exports.statsDB = () => {
     const rule = new node_schedule_1.RecurrenceRule();
-    // rule.dayOfWeek = [new Range(0, 6)];
-    // rule.hour = 23;
-    // rule.second = 0;
-    // rule.minute = 59;
-    rule.second = 10;
+    rule.dayOfWeek = [new node_schedule_1.Range(0, 6)];
+    rule.hour = 23;
+    rule.second = 0;
+    rule.minute = 59;
     node_schedule_1.scheduleJob('Updating spoilers sent.', rule, () => __awaiter(this, void 0, void 0, function* () {
         try {
             spoiler_1.updateSpoilersSent({ spoilers: yield data_1.numberSpoilers() });
