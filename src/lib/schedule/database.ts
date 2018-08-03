@@ -22,12 +22,10 @@ export const cleanDB = (): void => {
 export const statsDB = (): void => {
     const rule = new RecurrenceRule();
 
-    // rule.dayOfWeek = [new Range(0, 6)];
-    // rule.hour = 23;
-    // rule.second = 0;
-    // rule.minute = 59;
-
-    rule.second = 10;
+    rule.dayOfWeek = [new Range(0, 6)];
+    rule.hour = 23;
+    rule.second = 0;
+    rule.minute = 59;
 
     scheduleJob('Updating spoilers sent.', rule, async () => {
         try {
