@@ -49,6 +49,8 @@ connection.on('error', () => {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
+bot.catch(console.error);
+
 bot.start(({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('start')));
 
 bot.command('about', ({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('about')));

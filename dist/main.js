@@ -47,6 +47,7 @@ mongoose_1.connection.on('error', () => {
     dbStatus = false;
 });
 // ---------------------------------------------------------------------------------------------------------------------
+bot.catch(console.error);
 bot.start(({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('start')));
 bot.command('about', ({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('about')));
 bot.help(({ i18n, replyWithMarkdown, replyWithVideo }) => __awaiter(this, void 0, void 0, function* () {
