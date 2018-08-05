@@ -14,4 +14,16 @@ mockingoose.news.toReturn([ _doc ], 'find');
 doTesting({ file: readMock('database', 'addNews'), toTest: addNews });
 doTesting({ file: readMock('database', 'retrieveNews'), toTest: retrieveNews });
 doTesting({ file: readMock('database', 'deleteOneWeekOlder'), toTest: deleteOneWeekOlder });
-doTesting({ file: readMock('database', 'numberSpoilers'), toTest: numberSpoilers });
+// doTesting({ file: readMock('database', 'numberSpoilers'), toTest: numberSpoilers });
+
+describe('Testing numberSpoilers.', () => {
+    test('Retrieving one.', () => {
+        expect(numberSpoilers()).resolves.toEqual(1);
+    });
+
+    test('Throwing error.', () => {
+        mockingoose.news.reset('find');
+
+        expect(numberSpoilers()).rejects.toThrow();
+    });
+});
