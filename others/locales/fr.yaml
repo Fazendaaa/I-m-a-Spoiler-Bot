@@ -1,0 +1,121 @@
+start:
+  "S'il vous plaît, utilisez-moi comme un outil en ligne pour envoyer spoiler (@ispoilerbot)."
+
+help1:
+  "Je suis juste un wrapper pour que vous puissiez envoyer des spoilers en groupes à certains pour le voir. Laissez-moi vous le montrer:"
+
+help2:
+  "Un rappel amical, tous les spoilers sont disponibles seulement pour une semaine après les avoir envoyés."
+
+help3:
+  "En savoir plus, juste /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)Voir le code derrière moi à:\n\
+  🤖 [Mon site internet](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- L'histoire derrière moi\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star ce projet, aide aussi et IL EST GRATUIT!!!\n\n\
+  Ou même envisager de soutenir mon créateur:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abonnement.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Une fois seulement.\n\
+  😀 [Site du créateur](http://fazendaaa.me) — Découvrez-le d'autres robots.\n\n\
+  *Avez-vous des suggestions, des erreurs à signaler ou même demander une traduction pour que je puisse travailler dans votre langue maternelle?*\n\n\
+  N'hésitez pas à dire à mon créateur: @farmy."
+
+priority:
+  "Laissez tout espoir, vous qui entrez ici... Pour le voir, cliquez à nouveau sur moi."
+
+spoilerButton:
+  "Spoiler ici!"
+
+spoilerName:
+  " sur: _${name}_"
+
+spoilerCounterName:
+  " sur: ${name}"
+
+tagSpoilerTitle:
+  "Vous voulez nommer ce spoiler? (optionnel)"
+
+tagSpoilerDescription:
+  "Écrivez-le entre guillemets, comme ceci: \"nom du spoiler ici\" au début du texte. Après cela, cliquez sur la boîte de spoiler."
+
+tagSpoilerMessageText:
+  "Ne me touche pas, Senpai. Je suis ici juste pour vous aider."
+
+counterSpoilerTitle:
+  "Lettres: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "Juste compter lettres${title}."
+
+counterSpoilerMessageText:
+  "Ne me touche pas, Senpai. Je suis ici juste pour vous aider à compter les Lettres."
+
+lightSpoilerTitle:
+  "spoiler léger"
+
+lightSpoilerDescription:
+  "Cliquez sur moi pour envoyer comme un spoiler léger. L'utilisateur ne sera pas invité à confirmer pour le voir."
+
+lightSpoilerMessageText:
+  "Cliquez moi pour voir le spoiler${title}."
+
+heavySpoilerTitle:
+  "Spoiler lourd"
+
+heavySpoilerDescription:
+  "Cliquez sur moi pour envoyer comme un spoiler lourd. L'utilisateur sera invité à confirmer pour le voir."
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Spoiler lourd* ⚠️ 🚨 -- Cliquez moi pour voir le spoiler${title}."
+
+lewdSpoilerTitle:
+  "Spoiler crépusculaire"
+
+lewdSpoilerDescription:
+  "Cliquez sur moi pour envoyer en tant que spoiler obscène. L'utilisateur sera invité à confirmer pour le voir."
+
+lewdSpoilerMessageText:
+  "🔞 *Spoiler bruyant* 🔞 -- Cliquez moi pour voir le spoiler${title}."
+
+sanitizeSpoilerTitle:
+  "Limite atteinte! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "Vous avez trop tapé, veuillez réduire le spoiler"
+
+sanitizeSpoilerMessageText:
+  "Ne me touche pas, Senpai. Vous êtes un mauvais garçon en envoyant plus de 200 caractères spoiler. Soyez poli avec les autres."
+
+handleSpoilerTitle:
+  "Remarquez moi, Senpai"
+
+handleSpoilerDescription:
+  "S'il vous plaît, tapez quelque chose"
+
+handleSpoilerMessageText:
+  "Vous devez taper quelque chose et l'envoyer comme spoiler."
+
+errorSpoilerTitle:
+  "Erreur"
+
+errorSpoilerDescription:
+  "Une erreur est survenue, veuillez prévenir @farmy à ce sujet."
+
+errorSpoilerMessageText:
+  "Une erreur est survenue, veuillez prévenir @farmy à ce sujet."
+
+errorSpoilerRetrieve:
+  "J'ai eu quelques problèmes à récupérer ce spoiler. Probablement plus d'une semaine de plus, cela signifie qu'il a été supprimé."
+
+offlineDB:
+  "Ma base de données est hors ligne pour une raison quelconque, merci d'en informer @farmy."
+
+offlineTitle:
+  "Quelque chose a mal tourné!"
+
+offlineDescription:
+  "S'il vous plaît cliquez sur moi pour voir ce qui se passe."
+
+offlineText:
+  "Ma base de données est actuellement hors service et cela n'était pas censé se produire. Merci d'en informer @farmy."

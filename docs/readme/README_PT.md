@@ -32,12 +32,22 @@ Você pode ver quantos spoilers foram enviados até agora aqui:
 **obs**: todos os spoilers são armazenados por uma semana apenas!
 
 ### Aviso
-Por padrão os comandos se encontram por em Inglês mas possuem seu equivalente em Português.
-
-**obs**: links são encurtados automaticamente.
+Por padrão os comandos se encontram por em Inglês mas possuem seu equivalente em Português:
+* [Inglês](../../others/locales/en.yaml)
+* [Português](../../others/locales/pt.yaml)
+* [Holandês](../../others/locales/nl.yaml)
+* [Espanhol](../../others/locales/es.yaml)
+* [Italiano](../../others/locales/it.yaml)
+* [Alemão](../../others/locales/de.yaml)
+* [Francês](../../others/locales/fr.yaml)
+* [Russo](../../others/locales/ru.yaml)
+* [Chinês](../../others/locales/zh.yaml)
+* [Japonês](../../others/locales/jp.yaml)
 
 ## Como utilizar?
 Primeiro de tudo, abra uma conversa com o [@ispoilerbot](http://t.me/ispoilerbot).
+
+**obs**: links são encurtados automaticamente.
 
 ## Sending Spoilers
 Basicamente há dois tipos de spoilers, os de _leve_ peso, que não pedirão ao usuário permissão para serem mostrados, e os de **pesado** peso, que pedirão tais permissões.

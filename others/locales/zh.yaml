@@ -1,0 +1,121 @@
+start:
+  "请使用我作为内联工具发送扰流板 (@ispoilerbot)."
+
+help1:
+  "我只是一个包装器，你可以将小组成员发送给一些人来看看它。让我告诉你："
+
+help2:
+  "一个友好的提醒，所有剧透只在发送后一周内可用。"
+
+help3:
+  "要知道更多，请 /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)查看我背后的代码：\n\
+  🤖 [我的网站](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- 我背后的历史。\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- 明星这个项目，也帮助和IT免费！\n\n\
+  或者甚至认为它支持我的创作者：\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — 订阅.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — 仅一次。\n\
+  😀 [创作者的网站](http://fazendaaa.me) — 看看其他一些机器人。\n\n\
+  *有任何建议，错误报告，甚至要求我的翻译，所以我可以用你的母语工作？*\n\n\
+  随意告诉我的创作者： @farmy."
+
+priority:
+  "离开所有希望谁进入这里... 要看到它，只需再次点击我。"
+
+spoilerButton:
+  "掠夺者在这里！"
+
+spoilerName:
+  " 关于: _${name}_"
+
+spoilerCounterName:
+  " 关于: ${name}"
+
+tagSpoilerTitle:
+  "想给这个扰流板命名吗？ （可选的）"
+
+tagSpoilerDescription:
+  "将它写在引号之间，如下所示：文本开头的 \"扰乱名称\" 。在此之后，单击扰流板框。"
+
+tagSpoilerMessageText:
+  "森派不要碰我。我来这里只是为了帮助你。"
+
+counterSpoilerTitle:
+  "人物: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "只计算字符${title}."
+
+counterSpoilerMessageText:
+  "森派不要碰我。我在这里只是为了帮助你计算角色。"
+
+lightSpoilerTitle:
+  "轻扰流板"
+
+lightSpoilerDescription:
+  "点击我发送作为灯光扰流板。用户不会被要求确认查看。"
+
+lightSpoilerMessageText:
+  "点击我查看扰流板${title}."
+
+heavySpoilerTitle:
+  "重型扰流板"
+
+heavySpoilerDescription:
+  "点击我发送重型扰流板。将要求用户确认查看它。"
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *重型扰流板* ⚠️ 🚨 -- 点击我查看扰流板${title}."
+
+lewdSpoilerTitle:
+  "猥亵扰流板"
+
+lewdSpoilerDescription:
+  "点击我发送作为淫荡扰流板。将要求用户确认查看它。"
+
+lewdSpoilerMessageText:
+  "🔞 *猥亵剧透* 🔞 -- 点击我查看扰流板${title}."
+
+sanitizeSpoilerTitle:
+  "达到限制！ ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "你打的太多了，请减少扰流板"
+
+sanitizeSpoilerMessageText:
+  "森派不要碰我。你是一个坏男孩，发送超过200个字符扰流板。对其他人要礼貌。"
+
+handleSpoilerTitle:
+  "通知我学长"
+
+handleSpoilerDescription:
+  "请输入一些东西"
+
+handleSpoilerMessageText:
+  "你必须输入内容并将其作为扰流板发送。"
+
+errorSpoilerTitle:
+  "错误"
+
+errorSpoilerDescription:
+  "发生错误，请警告@farmy。"
+
+errorSpoilerMessageText:
+  "发生错误，请警告@farmy。"
+
+errorSpoilerRetrieve:
+  "我有一些问题取得这个扰流板。可能已经超过一周了，这意味着它被删除了。"
+
+offlineDB:
+  "我的数据库出于某种原因离线，请通知@farmy。"
+
+offlineTitle:
+  "出了些问题！"
+
+offlineDescription:
+  "请点击我看看发生了什么。"
+
+offlineText:
+  "我的数据库目前已关闭，这不应该发生。请告知@farmy。"

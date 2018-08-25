@@ -2,10 +2,10 @@ start:
   "Please, use me as a inline tool to send spoiler (@ispoilerbot)."
 
 help1:
-  "I'm just a wrapper for you to sent spoilers in groups to only some to see it. Let me show it to you:"
+  "I'm just a wrapper for you to send spoilers in groups to only some to see it. Let me show it to you:"
 
 help2:
-  "One friendly remminder, all of the spoilers are available only for one week after sent them."
+  "One friendly reminder, all of the spoilers are available only for one week after sent them."
 
 help3:
   "To know more, just /about"
@@ -13,13 +13,13 @@ help3:
 about:
   "[‍](https://i.imgur.com/epXWGKC.png)See the code behind me at:\n\
   🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- The history behind me.\n\
-  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star this project, also help and IT'S FREE!!!.\n\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star this project, also help and IT'S FREE!!!\n\n\
   Or even consider it supporting my creator:\n\
   📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Subscription.\n\
   ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — One time only.\n\
   😀 [Creator's website](http://fazendaaa.me) — Check it out some other bots.\n\n\
   *Has any suggestions, errors to report it or even request a my translation so I can work in your native language?*\n\n\
-  Fell free to tell to my creator: @farmy."
+  Feel free to tell to my creator: @farmy."
 
 priority:
   "Leave all hope ye who enter here... To see it, just click me again."
@@ -100,13 +100,13 @@ errorSpoilerTitle:
   "Error"
 
 errorSpoilerDescription:
-  "An error happen, please warn @farmy about it."
+  "An error happened, please warn @farmy about it."
 
 errorSpoilerMessageText:
-  "An error happen, please warn @farmy about it."
+  "An error happened, please warn @farmy about it."
 
 errorSpoilerRetrieve:
-  "I had some issues fetching this spoiler. Problably is more than one week older, that means it was deleted."
+  "I had some issues fetching this spoiler. Probably is more than one week older, that means it was deleted."
 
 offlineDB:
   "My database is offline for some reason, please inform @farmy about it."

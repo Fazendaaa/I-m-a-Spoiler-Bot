@@ -1,0 +1,121 @@
+start:
+  "Per favore, usami come strumento in linea per inviare spoiler (@ispoilerbot)."
+
+help1:
+  "Sono solo un wrapper per te per inviare spoiler in gruppi a solo alcuni per vederlo. Lascia che te lo mostri:"
+
+help2:
+  "Un promemoria amichevole, tutti gli spoiler sono disponibili solo per una settimana dopo averli inviati."
+
+help3:
+  "Per saperne di più, semplicemente /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)Guarda il codice dietro di me a:\n\
+  🤖 [Il mio sito web](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- La storia dietro di me.\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star questo progetto, anche aiutare ed è GRATIS !!!\n\n\
+  O anche considerare di supportare il mio creatore:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Sottoscrizione.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Una sola volta.\n\
+  😀 [Sito web del creatore](http://fazendaaa.me) — Dai un'occhiata ad altri robot.\n\n\
+  *Qualche suggerimento, errori da segnalare o addirittura richiedere una mia traduzione per poter lavorare nella tua lingua madre?*\n\n\
+  Sentiti libero di dire al mio creatore: @farmy."
+
+priority:
+  "Lasciate ogni speranza voi che entrate qui... Per vederlo, cliccate nuovamente su di me."
+
+spoilerButton:
+  "Spoiler qui!"
+
+spoilerName:
+  " di: _${name}_"
+
+spoilerCounterName:
+  " di: ${name}"
+
+tagSpoilerTitle:
+  "Vuoi dare un nome a questo spoiler? (opzionale)"
+
+tagSpoilerDescription:
+  "Scrivilo tra virgolette, come questo: \"nome spoiler qui\" all'inizio del testo. Successivamente, fai clic sullo spoiler."
+
+tagSpoilerMessageText:
+  "Non toccarmi, Senpai. Sono qui solo per aiutarti."
+
+counterSpoilerTitle:
+  "caratteri: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "Solo contando i caratteri${title}."
+
+counterSpoilerMessageText:
+  "Non toccarmi, Senpai. Sono qui solo per aiutarti a contare i caratteri."
+
+lightSpoilerTitle:
+  "spoiler leggero"
+
+lightSpoilerDescription:
+  "Cliccami per inviare uno spoiler leggero. L'utente non sarà invitato a confermare per vederlo."
+
+lightSpoilerMessageText:
+  "Clicca per vedere lo spoiler${title}."
+
+heavySpoilerTitle:
+  "Spoiler pesante"
+
+heavySpoilerDescription:
+  "Cliccami per inviare uno spoiler pesante. L'utente sarà invitato a confermare per vederlo."
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Spoiler Pesante* ⚠️ 🚨 -- Clicca per vedere lo spoiler${title}."
+
+lewdSpoilerTitle:
+  "Spoiler lascivo"
+
+lewdSpoilerDescription:
+  "Cliccami per mandare uno spoiler lascivo. L'utente sarà invitato a confermare per vederlo."
+
+lewdSpoilerMessageText:
+  "🔞 *Spoiler Lascivo* 🔞 -- Clicca per vedere lo spoiler${title}."
+
+sanitizeSpoilerTitle:
+  "Limite raggiunto! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "Hai digitato troppo, per favore riduci lo spoiler"
+
+sanitizeSpoilerMessageText:
+  "Non toccarmi, Senpai. Sei un cattivo ragazzo che invia più di 200 caratteri di spoiler. Sii gentile con gli altri."
+
+handleSpoilerTitle:
+  "Notami, Senpai"
+
+handleSpoilerDescription:
+  "Per favore, scrivi qualcosa"
+
+handleSpoilerMessageText:
+  "Devi digitare qualcosa e inviarlo come spoiler."
+
+errorSpoilerTitle:
+  "Errore"
+
+errorSpoilerDescription:
+  "Si è verificato un errore, per favore avvisare @farmy a riguardo."
+
+errorSpoilerMessageText:
+  "Si è verificato un errore, per favore avvisare @farmy a riguardo."
+
+errorSpoilerRetrieve:
+  "Ho avuto alcuni problemi nel prendere questo spoiler. Probabilmente è più vecchia di una settimana, il che significa che è stata cancellata."
+
+offlineDB:
+  "Il mio database è offline per qualche motivo, per favore informa @farmy a riguardo."
+
+offlineTitle:
+  "Qualcosa è andato storto!"
+
+offlineDescription:
+  "Si prega di fare clic su di me per vedere cosa sta succedendo."
+
+offlineText:
+  "Il mio database è attualmente inattivo e questo non dovrebbe accadere. Si prega di informare @farmy a riguardo."

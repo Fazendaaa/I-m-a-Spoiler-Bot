@@ -31,7 +31,8 @@
         "no-return-await": false,
         "missing-jsdoc": false,
         "mocha-unneeded-done": false,
-        "variable-name": false
+        "variable-name": false,
+        "import-name": false
     },
     "rulesDirectory": []
 }

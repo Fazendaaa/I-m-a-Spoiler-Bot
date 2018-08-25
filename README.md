@@ -33,7 +33,17 @@ You can see how many spoilers have been sent so far here:
 **note**: all of the spoilers are just stored for one week period!
 
 ### Disclaimer
-By default all the commands are in English, but you can see if the same command is available in your language.
+By default all the commands are in English, but you can see if the same command is available in your language:
+* [English](./others/locales/en.yaml)
+* [Portuguese](./others/locales/pt.yaml)
+* [Dutch](./others/locales/nl.yaml)
+* [Spanish](./others/locales/es.yaml)
+* [Italian](./others/locales/it.yaml)
+* [German](./others/locales/de.yaml)
+* [French](./others/locales/fr.yaml)
+* [Russian](./others/locales/ru.yaml)
+* [Chinese](./others/locales/zh.yaml)
+* [Japanese](./others/locales/jp.yaml)
 
 # How to use it
 First of all, talk to [@ispoilerbot](http://t.me/ispoilerbot).

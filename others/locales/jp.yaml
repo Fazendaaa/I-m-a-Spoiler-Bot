@@ -1,0 +1,121 @@
+start:
+  "私をインラインツールとして使ってスポイラーを送ってください (@ispoilerbot)."
+
+help1:
+  "私はあなたのグループをスポイラーをいくつかの人に見せてもらうためのラッパーです。私にあなたにそれを見せてください："
+
+help2:
+  "フレンドリーな思い出がありますが、スポイラーはすべて、送信後1週間しか利用できません。"
+
+help3:
+  "もっと知るには、ちょうど /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)私の背後にあるコードを見てください：\n\
+  🤖 [私のウェブサイト](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- 私の背後にある歴史。\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- このプロジェクトにスターをつけて、助けて、無料！\n\n\
+  それとも私の作成者をサポートしていると考えています：\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — 購読.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — 一回きり。\n\
+  😀 [作成者のウェブサイト](http://fazendaaa.me) — 他のボットをチェックしてください。\n\n\
+  *あなたの母国語で作業できるように、何か提案や誤りがありましたら報告してください。*\n\n\
+  私の作成者に自由に教えてください： @farmy."
+
+priority:
+  "ここに入るすべての希望を残す...それを見るには、もう一度私をクリックしてください。"
+
+spoilerButton:
+  "ここでスポイラー！"
+
+spoilerName:
+  " 約: _${name}_"
+
+spoilerCounterName:
+  " 約: ${name}"
+
+tagSpoilerTitle:
+  "このスポイラーの名前を付けたいですか？ （オプション）"
+
+tagSpoilerDescription:
+  "引用符で囲みます（例：\"スポイラー名はここに\"のように）。その後、スポイラーボックスをクリックします。"
+
+tagSpoilerMessageText:
+  "Senpai、私に触れないでください。私はあなたを助けるためにここにいる。"
+
+counterSpoilerTitle:
+  "キャラクター: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "ちょうど文字を数える${title}."
+
+counterSpoilerMessageText:
+  "Senpai、私に触れないでください。私は文字を数えてあなたを助けるためにここに来ました。"
+
+lightSpoilerTitle:
+  "ライトスポイラー"
+
+lightSpoilerDescription:
+  "光のスポイラーとして私をクリックしてください。ユーザーは確認の確認を求められません。"
+
+lightSpoilerMessageText:
+  "スポイラーを見るには私をクリックしてください${title}."
+
+heavySpoilerTitle:
+  "ヘビースポイラー"
+
+heavySpoilerDescription:
+  "重いスポイラーとして送るために私をクリックしてください。ユーザーは確認のために確認を求められます。"
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *ヘビー・スポイラー* ⚠️ 🚨 -- スポイラーを見るには私をクリックしてください${title}."
+
+lewdSpoilerTitle:
+  "レッド・スポイラー"
+
+lewdSpoilerDescription:
+  "私をクリックすると、淫乱なスポイラーとして送信されます。ユーザーは確認のために確認を求められます。"
+
+lewdSpoilerMessageText:
+  "🔞 *レッド・スポイラー* 🔞 -- スポイラーを見るには私をクリックしてください${title}."
+
+sanitizeSpoilerTitle:
+  "限界に達しました！ ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "あなたはあまりにも多くを入力した、スポイラーを減らしてください"
+
+sanitizeSpoilerMessageText:
+  "Senpai、私に触れないでください。あなたは200文字以上のスポイラーを送る悪い少年です。他の人に礼儀正しくてください。"
+
+handleSpoilerTitle:
+  "私に知らせる、先輩"
+
+handleSpoilerDescription:
+  "どうか入力してください"
+
+handleSpoilerMessageText:
+  "あなたは何かを入力して、スポイラーとしてそれを送る必要があります。"
+
+errorSpoilerTitle:
+  "エラー"
+
+errorSpoilerDescription:
+  "エラーが発生しました。@farmy に警告してください。"
+
+errorSpoilerMessageText:
+  "エラーが発生しました。@farmy に警告してください。"
+
+errorSpoilerRetrieve:
+  "このスポイラーを取り出す際にいくつかの問題がありました。おそらく1週間以上前になっていることは、それが削除されたことを意味します。"
+
+offlineDB:
+  "何らかの理由でデータベースがオフラインになっていますので、@farmy にお知らせください。"
+
+offlineTitle:
+  "何かが間違っていた！"
+
+offlineDescription:
+  "何が起きているのか私をクリックしてください。"
+
+offlineText:
+  "私のデータベースは現在ダウンしており、これは起こっていないはずです。それについて @farmy にお知らせください。"

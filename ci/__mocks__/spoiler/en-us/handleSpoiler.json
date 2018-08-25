@@ -186,8 +186,8 @@
         },
         "output": [
             {
-                "description": "An error happen, please warn @farmy about it.",
-                "message_text": "An error happen, please warn @farmy about it.",
+                "description": "An error happened, please warn @farmy about it.",
+                "message_text": "An error happened, please warn @farmy about it.",
                 "thumb_url": "https://i.imgur.com/hw9ekg8.png",
                 "title": "Error"
             }

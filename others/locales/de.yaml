@@ -1,0 +1,121 @@
+start:
+  "Bitte verwenden Sie mich als Inline-Tool zum Senden von Spoiler (@ispoilerbot)."
+
+help1:
+  "Ich bin nur ein Wrapper für Sie, um Spoiler in Gruppen zu schicken, nur um einige zu sehen. Lass es mich dir zeigen:"
+
+help2:
+  "Eine freundliche Erinnerung, alle Spoiler sind nur für eine Woche nach dem Versand verfügbar."
+
+help3:
+  "Um mehr zu wissen, einfach /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)Siehe den Code hinter mir unter:\n\
+  🤖 [Meine Webseite](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Die Geschichte hinter mir.\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star dieses Projekt, auch Hilfe und es ist kostenlos!!!\n\n\
+  Oder denke sogar darüber nach, meinen Schöpfer zu unterstützen:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abonnement.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Nur einmal.\n\
+  😀 [Website des Herstellers](http://fazendaaa.me) — Schau es dir bei anderen Bots an.\n\n\
+  *Haben Sie irgendwelche Vorschläge, Fehler, um es zu melden oder sogar eine Übersetzung anzufordern, damit ich in Ihrer Muttersprache arbeiten kann?*\n\n\
+  Fühlen Sie sich frei, meinem Schöpfer zu erzählen: @farmy."
+
+priority:
+  "Lassen Sie alle hoffen, dass Sie hier eintreten... Um es zu sehen, klicken Sie einfach nochmal auf mich."
+
+spoilerButton:
+  "Spoiler hier!"
+
+spoilerName:
+  " Über: _${name}_"
+
+spoilerCounterName:
+  " Über: ${name}"
+
+tagSpoilerTitle:
+  "Willst du diesen Spoiler benennen? (wahlweise)"
+
+tagSpoilerDescription:
+  "Schreiben Sie es zwischen Anführungszeichen wie folgt: \"Spoiler Name hier\" am Anfang des Textes. Klicken Sie danach auf die Spoiler-Box."
+
+tagSpoilerMessageText:
+  "Fass mich nicht an, Senpai. Ich bin hier, um dir zu helfen."
+
+counterSpoilerTitle:
+  "Figuren: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "Nur Charaktere zählen${title}."
+
+counterSpoilerMessageText:
+  "Fass mich nicht an, Senpai. Ich bin hier, um dir zu helfen, Charaktere zu zählen."
+
+lightSpoilerTitle:
+  "Lichtspoiler"
+
+lightSpoilerDescription:
+  "Klicken Sie mich, um als Lichtspoiler zu senden. Der Benutzer wird nicht aufgefordert, dies zu bestätigen."
+
+lightSpoilerMessageText:
+  "Klicken Sie auf mich, um den Spoiler zu sehen${title}."
+
+heavySpoilerTitle:
+  "Schwerer Spoiler"
+
+heavySpoilerDescription:
+  "Klicken Sie mich, um als schwerer Spoiler zu senden. Der Benutzer wird aufgefordert, dies zu bestätigen."
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Schwerer Spoiler* ⚠️ 🚨 -- Klicken Sie auf mich, um den Spoiler zu sehen${title}."
+
+lewdSpoilerTitle:
+  "Lewd Spoiler"
+
+lewdSpoilerDescription:
+  "Klicken Sie mich, um als unzüchtiger Spoiler zu senden. Der Benutzer wird aufgefordert, dies zu bestätigen."
+
+lewdSpoilerMessageText:
+  "🔞 *Lewd Spoiler* 🔞 -- Klicken Sie auf mich, um den Spoiler zu sehen${title}."
+
+sanitizeSpoilerTitle:
+  "Limit erreicht! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "Sie haben zu viel eingegeben, bitte reduzieren Sie den Spoiler"
+
+sanitizeSpoilerMessageText:
+  "Fass mich nicht an, Senpai. Du bist ein böser Junge, der mehr als 200 Zeichen Spoiler schickt. Sei höflich zu den anderen."
+
+handleSpoilerTitle:
+  "Bemerke mich, Senpai"
+
+handleSpoilerDescription:
+  "Bitte, geben Sie etwas ein"
+
+handleSpoilerMessageText:
+  "Sie müssen etwas eingeben und es als Spoiler senden."
+
+errorSpoilerTitle:
+  "Error"
+
+errorSpoilerDescription:
+  "Ein Fehler ist aufgetreten, bitte warne @farmy darüber."
+
+errorSpoilerMessageText:
+  "Ein Fehler ist aufgetreten, bitte warne @farmy darüber."
+
+errorSpoilerRetrieve:
+  "Ich hatte einige Probleme, diesen Spoiler zu holen. Wahrscheinlich ist es mehr als eine Woche älter, dh es wurde gelöscht."
+
+offlineDB:
+  "Meine Datenbank ist aus irgendeinem Grund offline, bitte informieren Sie @farmy darüber."
+
+offlineTitle:
+  "Etwas ist schief gelaufen!"
+
+offlineDescription:
+  "Bitte klicken Sie auf mich, um zu sehen, was vor sich geht."
+
+offlineText:
+  "Meine Datenbank ist momentan nicht verfügbar und das sollte nicht passieren. Bitte informiere @farmy darüber."

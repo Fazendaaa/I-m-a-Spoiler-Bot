@@ -1,0 +1,121 @@
+start:
+  "Gebruik mij als een inline-tool om spoiler te sturen (@ispoilerbot)."
+
+help1:
+  "Ik ben gewoon een verpakking voor jou om spoilers in groepen naar slechts sommigen te sturen om het te zien. Laat me het je laten zien:"
+
+help2:
+  "Een vriendelijke herinnering, alle spoilers zijn slechts een week beschikbaar nadat ze zijn verzonden."
+
+help3:
+  "Om meer te weten, gewoon /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png) Zie de code achter mij op:\n\
+  🤖 [Mijn website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- De geschiedenis achter me.\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Ster dit project, help ook en HET IS GRATIS!!!\n\n\
+  Of beschouw het zelfs als ondersteuning van mijn maker:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abonnement.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Een keer maar.\n\
+  😀 [Website van de maker](http://fazendaaa.me) — Bekijk andere bots.\n\n\
+  *Heeft suggesties, fouten om het te melden of zelfs een vertaling aan te vragen zodat ik in uw moedertaal kan werken?*\n\n\
+  Voel je vrij om dit aan mijn maker te vertellen: @farmy."
+
+priority:
+  "Laat alle hoop toe dat gij hier binnengaat... Om het te zien, klikt u gewoon opnieuw op mij."
+
+spoilerButton:
+  "Spoiler hier!"
+
+spoilerName:
+  " over: _${name}_"
+
+spoilerCounterName:
+  " over: ${name}"
+
+tagSpoilerTitle:
+  "Wanna name this spoiler? (optional)"
+
+tagSpoilerDescription:
+  "Schrijf het tussen aanhalingstekens, zoals dit: \"spoiler naam hier\" aan het begin van de tekst. Klik hierna op het spoilervak."
+
+tagSpoilerMessageText:
+  "Raak me niet aan, Senpai. Ik ben hier alleen om je te helpen."
+
+counterSpoilerTitle:
+  "Characters: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "Tellingen tellen alleen maar${title}."
+
+counterSpoilerMessageText:
+  "Raak me niet aan, Senpai. Ik ben hier alleen om je te helpen bij het tellen van karakters."
+
+lightSpoilerTitle:
+  "lichte spoiler"
+
+lightSpoilerDescription:
+  "Klik op mij om te verzenden als een lichte spoiler. De gebruiker zal niet gevraagd worden om te bevestigen om het te zien."
+
+lightSpoilerMessageText:
+  "Klik op mij om de spoiler te zien${title}."
+
+heavySpoilerTitle:
+  "Zware Spoiler"
+
+heavySpoilerDescription:
+  "Klik op mij om te verzenden als een zware spoiler. De gebruiker zal gevraagd worden om te bevestigen om het te zien."
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Zware Spoiler* ⚠️ 🚨 -- Klik op mij om de spoiler te zien${title}."
+
+lewdSpoilerTitle:
+  "Lewd spoiler"
+
+lewdSpoilerDescription:
+  "Klik op mij om als een onzedelijke spoiler te sturen. De gebruiker zal gevraagd worden om te bevestigen om het te zien."
+
+lewdSpoilerMessageText:
+  "🔞 *Lewd Spoiler* 🔞 -- Klik op mij om de spoiler te zien${title}."
+
+sanitizeSpoilerTitle:
+  "Limiet bereikt! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "Je hebt te veel getypt, verminder de spoiler"
+
+sanitizeSpoilerMessageText:
+  "Raak me niet aan, Senpai. Je bent een slechte jongen die meer dan 200 tekens spoiler stuurt. Wees beleefd tegen de anderen."
+
+handleSpoilerTitle:
+  "Let op mij, Senpai"
+
+handleSpoilerDescription:
+  "Typ alsjeblieft iets"
+
+handleSpoilerMessageText:
+  "Je moet iets typen en het als spoiler verzenden."
+
+errorSpoilerTitle:
+  "Fout"
+
+errorSpoilerDescription:
+  "Er is een fout opgetreden, waarschuw er @farmy over."
+
+errorSpoilerMessageText:
+  "Er is een fout opgetreden, waarschuw er @farmy over."
+
+errorSpoilerRetrieve:
+  "Ik had wat problemen met het ophalen van deze spoiler. Waarschijnlijk is dit meer dan een week ouder, wat betekent dat het is verwijderd."
+
+offlineDB:
+  "Mijn database is om de een of andere reden offline, informeer @farmy erover."
+
+offlineTitle:
+  "Er is iets fout gegaan!"
+
+offlineDescription:
+  "Klik alstublieft op mij om te zien wat er aan de hand is."
+
+offlineText:
+  "Mijn database is momenteel niet beschikbaar en dit zou niet gebeuren. Informeer @farmy erover."
