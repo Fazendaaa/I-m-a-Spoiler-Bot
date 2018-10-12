@@ -22,7 +22,7 @@ about:
   Siéntase libre de decirle a mi creador: @farmy."
 
 priority:
-  "Deja todas las esperanzas de los que entren aquí... Para verlo, simplemente haz clic en mí otra vez."
+  "Dejad toda esperanza, los que entráis... Para verlo, simplemente haz clic en mí otra vez."
 
 spoilerButton:
   "Spoiler aquí!"
@@ -34,7 +34,7 @@ spoilerCounterName:
   " acerca de: ${name}"
 
 tagSpoilerTitle:
-  "¿Quieres ponerle nombre a este alerón? (Opcional)"
+  "¿Quieres ponerle nombre a este spoiler? (Opcional)"
 
 tagSpoilerDescription:
   "Escríbalo entre comillas, así: \"spoiler name here\" al comienzo del texto. Después de esto, haz clic en el cuadro de spoiler."
@@ -88,25 +88,25 @@ sanitizeSpoilerMessageText:
   "No me toques, Senpai. Eres un chico malo que envía spoilers de más de 200 caracteres. Sé cortés con los demás."
 
 handleSpoilerTitle:
-  "Notar me Senpai"
+  "Nótame Senpai"
 
 handleSpoilerDescription:
   "Por favor, escribe algo"
 
 handleSpoilerMessageText:
-  "You have to type something and send it as spoiler."
+  "Debes escribir algo y enviarlo como spoiler."
 
 errorSpoilerTitle:
   "Error"
 
 errorSpoilerDescription:
-  "Ocurrió un error, por favor advierte @farmy al respecto."
+  "Ocurrió un error, por favor advierte a @farmy al respecto."
 
 errorSpoilerMessageText:
-  "Ocurrió un error, por favor advierte @farmy al respecto."
+  "Ocurrió un error, por favor advierte a @farmy al respecto."
 
 errorSpoilerRetrieve:
-  "Tuve algunos problemas para buscar este spoiler. Probablemente es más de una semana anterior, eso significa que fue eliminado."
+  "Tuve algunos problemas para buscar este spoiler. Probablemente tiene más de una semana de antiguedad, eso significa que fue eliminado."
 
 offlineDB:
   "Mi base de datos está fuera de línea por alguna razón, por favor informe a @farmy al respecto."
@@ -118,4 +118,4 @@ offlineDescription:
   "Por favor, haz clic en mí para ver qué está pasando."
 
 offlineText:
-  "Mi base de datos está actualmente inactiva y se suponía que esto no estaba sucediendo. Por favor, informe a @farmy al respecto."
+  "Mi base de datos está actualmente inactiva y se suponía que esto no debería suceder. Por favor, informe a @farmy al respecto."
