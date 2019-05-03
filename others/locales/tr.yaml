@@ -1,0 +1,121 @@
+start:
+  "Lütfen, spoiler vermek için beni inline olarak kullan. (@ispoilerbot)."
+
+help1:
+  "Gruplarda spoiler olabilecek bilgileri gizlemek için bir botum. Nasıl kullanıldığına bakabilirsin:"
+
+help2:
+  "Dostça bir hatırlatma, spoilerlerin tamamı gonderildikten sonra sadece bir hafta kullanılabilir."
+
+help3:
+  "Daha fazla bilgi için, yazman gereken sadece /about"
+
+about:
+  "[‍](https://i.imgur.com/epXWGKC.png)Kodlarımı görün:\n\
+  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Tarihime göz atabilirsin.\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Bu projeyi yıldızlayıp, ÜCRETSİZ yardımcı olabilirsin!!!\n\n\
+  Hatta kodlayıcımı da destekleyebilirsin:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abone ol.\n\
+  ☕ [Kahve ısmarla](https://www.buymeacoffee.com/Fazenda) — Tek seferlik.\n\
+  😀 [Kodlayıcının Websitesi](http://fazendaaa.me) — Diğer botlara göz at.\n\n\
+  *Türkçe Çevirisi @HolyTotem ve @RulingLightning tarafından yapılmıştır.*\n\n\
+  Geliştiricim ile konuşmaktan çekinmeyin: @farmy."
+
+priority:
+  "Burada her türlü bilgiyi görebilirsin... Gerçekten görmek istediğine eminsen butona tekrar tıkla."
+
+spoilerButton:
+  "Spoiler burada!"
+
+spoilerName:
+  " about: _${name}_"
+
+spoilerCounterName:
+  " about: ${name}"
+
+tagSpoilerTitle:
+  "Bu spoilera isim vermek ister misin? (isteğe bağlı)"
+
+tagSpoilerDescription:
+  "Metinin başına isim yazmak için tırnak işaretlerini kullan, bunun gibi: \"buraya spoiler adı\" Daha sonra, spoiler kutusuna tıklayın."
+
+tagSpoilerMessageText:
+  "Bana dokunmamalısın, Senpai. Sadece sana yardım etmek için buradayım."
+
+counterSpoilerTitle:
+  "Karakter: ${length}/${limit}"
+
+counterSpoilerDescription:
+  "Sadece karakterleri sayıyorum${title}."
+
+counterSpoilerMessageText:
+  "Bana dokunma, Senpai. Sadece karakterleri saymana yardım etmek icin buradayım."
+
+lightSpoilerTitle:
+  "Hafif spoiler"
+
+lightSpoilerDescription:
+  "Hafif bir spoiler göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenmeyecektir."
+
+lightSpoilerMessageText:
+  "Spoilerı görmek için bana tıkla${title}."
+
+heavySpoilerTitle:
+  "Ağır spoiler"
+
+heavySpoilerDescription:
+  "Ağır bir spoiler göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenecektir."
+
+heavySpoilerMessageText:
+  "🚨 ⚠️ *Ağır Spoiler* ⚠️ 🚨 -- Spoilerı görmek için bana tıkla${title}."
+
+lewdSpoilerTitle:
+  "Açık saçık spoiler"
+
+lewdSpoilerDescription:
+  "Açık saçık bir spoiler olarak göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenecektir."
+
+lewdSpoilerMessageText:
+  "🔞 *Açık saçık spoiler* 🔞 -- Spoileri görmek için bana tıkla${title}."
+
+sanitizeSpoilerTitle:
+  "Sınıra ulaşıldı! ${length}/${limit}"
+
+sanitizeSpoilerDescription:
+  "Karakter sınırını aştınız, lütfen spoileri daha az kelime ile belirtin"
+
+sanitizeSpoilerMessageText:
+  "Bana dokunmamalısın, Senpai. 200 karakterden fazla spoiler gönderen kötu bir çocuksun. Diğerlerine karşı anlayışlı  ol."
+
+handleSpoilerTitle:
+  "Beni dikkate al, Senpai"
+
+handleSpoilerDescription:
+  "Lütfen bir şeyler yaz"
+
+handleSpoilerMessageText:
+  "Bir şeyler yazmalı ve onu spoiler olarak göndermelisin."
+
+errorSpoilerTitle:
+  "Hata"
+
+errorSpoilerDescription:
+  "Bir hata oldu, lütfen bu konuda @farmy'i bilgilendir."
+
+errorSpoilerMessageText:
+  "Bir hata oldu, lütfen bu konuda @farmy'i bilgilendir."
+
+errorSpoilerRetrieve:
+  "Bu spoileri açarken bazı sorunlar yasadım. Muhtemelen bir haftadan daha eskidir, yani silinmiştir."
+
+offlineDB:
+  "Veritabanım nedense çevrımdışı, lutfen @farmy'i bu konuda bilgilendirin."
+
+offlineTitle:
+  "Bir şeyler yanlış gitti!"
+
+offlineDescription:
+  "Neler olduğunu görmek için lütfen bana tıklayın."
+
+offlineText:
+  "Veritabanım şu anda kapalı ve bunun olmaması gerekiyordu. Lütfen @farmy'i bu konuda bilgilendirin."

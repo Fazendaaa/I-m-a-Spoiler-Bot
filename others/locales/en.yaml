@@ -1,31 +1,31 @@
 start:
-  "Lütfen, spoiler vermek için beni inline olarak kullan. (@ispoilerbot)."
+  "Please, use me as a inline tool to send spoiler (@ispoilerbot)."
 
 help1:
-  "Gruplarda spoiler olabilecek bilgileri gizlemek için bir botum. Nasıl kullanıldığına bakabilirsin:"
+  "I'm just a wrapper for you to send spoilers in groups to only some to see it. Let me show it to you:"
 
 help2:
-  "Dostça bir hatırlatma, spoilerlerin tamamı gonderildikten sonra sadece bir hafta kullanılabilir."
+  "One friendly reminder, all of the spoilers are available only for one week after sent them."
 
 help3:
-  "Daha fazla bilgi için, yazman gereken sadece /about"
+  "To know more, just /about"
 
 about:
-  "[‍](https://i.imgur.com/epXWGKC.png)Kodlarımı görün:\n\
-  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Tarihime göz atabilirsin.\n\
-  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Bu projeyi yıldızlayıp, ÜCRETSİZ yardımcı olabilirsin!!!\n\n\
-  Hatta kodlayıcımı da destekleyebilirsin:\n\
-  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abone ol.\n\
-  ☕ [Kahve ısmarla](https://www.buymeacoffee.com/Fazenda) — Tek seferlik.\n\
-  😀 [Kodlayıcının Websitesi](http://fazendaaa.me) — Diğer botlara göz at.\n\n\
-  *Türkçe Çevirisi @HolyTotem ve @RulingLightning tarafından yapılmıştır.*\n\n\
-  Geliştiricim ile konuşmaktan çekinmeyin: @farmy."
+  "[‍](https://i.imgur.com/epXWGKC.png)See the code behind me at:\n\
+  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- The history behind me.\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star this project, also help and IT'S FREE!!!\n\n\
+  Or even consider it supporting my creator:\n\
+  📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Subscription.\n\
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — One time only.\n\
+  😀 [Creator's website](http://fazendaaa.me) — Check it out some other bots.\n\n\
+  *Has any suggestions, errors to report it or even request a my translation so I can work in your native language?*\n\n\
+  Feel free to tell to my creator: @farmy."
 
 priority:
-  "Burada her türlü bilgiyi görebilirsin... Gerçekten görmek istediğine eminsen butona tekrar tıkla."
+  "Leave all hope ye who enter here... To see it, just click me again."
 
 spoilerButton:
-  "Spoiler burada!"
+  "Spoiler here!"
 
 spoilerName:
   " about: _${name}_"
@@ -34,88 +34,88 @@ spoilerCounterName:
   " about: ${name}"
 
 tagSpoilerTitle:
-  "Bu spoilera isim vermek ister misin? (isteğe bağlı)"
+  "Wanna name this spoiler? (optional)"
 
 tagSpoilerDescription:
-  "Metinin başına isim yazmak için tırnak işaretlerini kullan, bunun gibi: \"buraya spoiler adı\" Daha sonra, spoiler kutusuna tıklayın."
+  "Write it between quotation marks, like this: \"spoiler name here\" at the start of the text. After this, click the spoiler box."
 
 tagSpoilerMessageText:
-  "Bana dokunmamalısın, Senpai. Sadece sana yardım etmek için buradayım."
+  "Do not touch me, Senpai. I'm here just to help you out."
 
 counterSpoilerTitle:
-  "Karakter: ${length}/${limit}"
+  "Characters: ${length}/${limit}"
 
 counterSpoilerDescription:
-  "Sadece karakterleri sayıyorum${title}."
+  "Just counting characters${title}."
 
 counterSpoilerMessageText:
-  "Bana dokunma, Senpai. Sadece karakterleri saymana yardım etmek icin buradayım."
+  "Do not touch me, Senpai. I'm here just to help you out counting characters."
 
 lightSpoilerTitle:
-  "Hafif spoiler"
+  "light spoiler"
 
 lightSpoilerDescription:
-  "Hafif bir spoiler göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenmeyecektir."
+  "Click me to send as a light spoiler. User won't be asked to confirm to see it."
 
 lightSpoilerMessageText:
-  "Spoilerı görmek için bana tıkla${title}."
+  "Click me to see the spoiler${title}."
 
 heavySpoilerTitle:
-  "Ağır spoiler"
+  "Heavy spoiler"
 
 heavySpoilerDescription:
-  "Ağır bir spoiler göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenecektir."
+  "Click me to send as a heavy spoiler. User will be asked to confirm to see it."
 
 heavySpoilerMessageText:
-  "🚨 ⚠️ *Ağır Spoiler* ⚠️ 🚨 -- Spoilerı görmek için bana tıkla${title}."
+  "🚨 ⚠️ *Heavy Spoiler* ⚠️ 🚨 -- Click me to see the spoiler${title}."
 
 lewdSpoilerTitle:
-  "Açık saçık spoiler"
+  "Lewd spoiler"
 
 lewdSpoilerDescription:
-  "Açık saçık bir spoiler olarak göndermek için bana tıklayın. Kullanıcılardan görmesi için onaylama istenecektir."
+  "Click me to send as a lewd spoiler. User will be asked to confirm to see it."
 
 lewdSpoilerMessageText:
-  "🔞 *Açık saçık spoiler* 🔞 -- Spoileri görmek için bana tıkla${title}."
+  "🔞 *Lewd Spoiler* 🔞 -- Click me to see the spoiler${title}."
 
 sanitizeSpoilerTitle:
-  "Sınıra ulaşıldı! ${length}/${limit}"
+  "Limit reached! ${length}/${limit}"
 
 sanitizeSpoilerDescription:
-  "Karakter sınırını aştınız, lütfen spoileri daha az kelime ile belirtin"
+  "You have typed too much, please reduce the spoiler"
 
 sanitizeSpoilerMessageText:
-  "Bana dokunmamalısın, Senpai. 200 karakterden fazla spoiler gönderen kötu bir çocuksun. Diğerlerine karşı anlayışlı  ol."
+  "Do not touch me, Senpai. You are a bad boy sending more than 200 characters spoiler. Be polite to the others."
 
 handleSpoilerTitle:
-  "Beni dikkate al, Senpai"
+  "Notice me, Senpai"
 
 handleSpoilerDescription:
-  "Lütfen bir şeyler yaz"
+  "Please, type something"
 
 handleSpoilerMessageText:
-  "Bir şeyler yazmalı ve onu spoiler olarak göndermelisin."
+  "You have to type something and send it as spoiler."
 
 errorSpoilerTitle:
-  "Hata"
+  "Error"
 
 errorSpoilerDescription:
-  "Bir hata oldu, lütfen bu konuda @farmy'i bilgilendir."
+  "An error happened, please warn @farmy about it."
 
 errorSpoilerMessageText:
-  "Bir hata oldu, lütfen bu konuda @farmy'i bilgilendir."
+  "An error happened, please warn @farmy about it."
 
 errorSpoilerRetrieve:
-  "Bu spoileri açarken bazı sorunlar yasadım. Muhtemelen bir haftadan daha eskidir, yani silinmiştir."
+  "I had some issues fetching this spoiler. Probably is more than one week older, that means it was deleted."
 
 offlineDB:
-  "Veritabanım nedense çevrımdışı, lutfen @farmy'i bu konuda bilgilendirin."
+  "My database is offline for some reason, please inform @farmy about it."
 
 offlineTitle:
-  "Bir şeyler yanlış gitti!"
+  "Something went wrong!"
 
 offlineDescription:
-  "Neler olduğunu görmek için lütfen bana tıklayın."
+  "Please click me to see what's going on."
 
 offlineText:
-  "Veritabanım şu anda kapalı ve bunun olmaması gerekiyordu. Lütfen @farmy'i bu konuda bilgilendirin."
+  "My database is currently down and this wasn't supposed to be happening. Please inform @farmy about it."
