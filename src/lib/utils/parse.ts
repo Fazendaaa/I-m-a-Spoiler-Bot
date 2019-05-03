@@ -30,7 +30,7 @@ const sanitizeURL = async ({ message }: Util): Promise<string> => {
 export const messageToString = ({ message }: Util): string => message.replace(createRegExp, '');
 
 export const parseSpoilerText = async ({ message }: Util): Promise<SpoilerInfo> => {
-    const name = message.match(/"((?:\\.|[^"\\])*)"/);
+    const name = message.match(/["“]((?:\\.|[^"\\])*)[”"]/);
     const sanitize = message.replace(/\s*"((?:\\.|[^"\\])*)"\s*/, '');
 
     return {
