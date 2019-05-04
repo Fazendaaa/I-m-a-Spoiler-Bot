@@ -36,6 +36,7 @@ Por padrão os comandos se encontram por em Inglês mas possuem seu equivalente 
 * [Inglês](../../others/locales/en.yaml)
 * [Português](../../others/locales/pt.yaml)
 * [Holandês](../../others/locales/nl.yaml)
+* [Turco](../../others/locales/tr.yaml)
 * [Espanhol](../../others/locales/es.yaml)
 * [Italiano](../../others/locales/it.yaml)
 * [Alemão](../../others/locales/de.yaml)

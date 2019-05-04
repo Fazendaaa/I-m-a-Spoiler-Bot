@@ -38,6 +38,7 @@ By default all the commands are in English, but you can see if the same command 
 * [Portuguese](./others/locales/pt.yaml)
 * [Dutch](./others/locales/nl.yaml)
 * [Spanish](./others/locales/es.yaml)
+* [Turkish](./others/locales/tr.yaml)
 * [Italian](./others/locales/it.yaml)
 * [German](./others/locales/de.yaml)
 * [French](./others/locales/fr.yaml)
