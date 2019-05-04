@@ -2,7 +2,7 @@ start:
   "Per favore, usami come strumento in linea per inviare spoiler (@ispoilerbot)."
 
 help1:
-  "Sono solo un wrapper per te per inviare spoiler in gruppi a solo alcuni per vederlo. Lascia che te lo mostri:"
+  "Sono solo un wrapper per inviare spoiler nei gruppi e farli vedere solo ad alcuni. Lascia che te lo mostri:"
 
 help2:
   "Un promemoria amichevole, tutti gli spoiler sono disponibili solo per una settimana dopo averli inviati."
@@ -13,16 +13,16 @@ help3:
 about:
   "[‍](https://i.imgur.com/epXWGKC.png)Guarda il codice dietro di me a:\n\
   🤖 [Il mio sito web](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- La storia dietro di me.\n\
-  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star questo progetto, anche aiutare ed è GRATIS !!!\n\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Metti una stellina a questo progetto, è d'aiuto ed è anche GRATIS !!!\n\n\
   O anche considerare di supportare il mio creatore:\n\
   📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Sottoscrizione.\n\
   ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Una sola volta.\n\
-  😀 [Sito web del creatore](http://fazendaaa.me) — Dai un'occhiata ad altri robot.\n\n\
-  *Qualche suggerimento, errori da segnalare o addirittura richiedere una mia traduzione per poter lavorare nella tua lingua madre?*\n\n\
-  Sentiti libero di dire al mio creatore: @farmy."
+  😀 [Sito web del creatore](http://fazendaaa.me) — Dai un'occhiata ad altri bot.\n\n\
+  *Hai qualche suggerimento, errori da segnalare o vorresti richiedere una mia traduzione per poter funzionare nella tua lingua madre?*\n\n\
+  Sentiti libero di dirlo al mio creatore: @farmy."
 
 priority:
-  "Lasciate ogni speranza voi che entrate qui... Per vederlo, cliccate nuovamente su di me."
+  "Lasciate ogne speranza, voi ch’intrate... Per vedere lo spoiler, clicca nuovamente il pulsante."
 
 spoilerButton:
   "Spoiler qui!"
@@ -106,7 +106,7 @@ errorSpoilerMessageText:
   "Si è verificato un errore, per favore avvisare @farmy a riguardo."
 
 errorSpoilerRetrieve:
-  "Ho avuto alcuni problemi nel prendere questo spoiler. Probabilmente è più vecchia di una settimana, il che significa che è stata cancellata."
+  "Ho avuto alcuni problemi a trovare questo spoiler. Probabilmente è più vecchio di una settimana, il che significa che è stato cancellato."
 
 offlineDB:
   "Il mio database è offline per qualche motivo, per favore informa @farmy a riguardo."
