@@ -31,7 +31,7 @@ export const messageToString = ({ message }: Util): string => message.replace(cr
 
 export const parseSpoilerText = async ({ message }: Util): Promise<SpoilerInfo> => {
     const name = message.match(/["“]((?:\\.|[^"\\])*)[”"]/);
-    const sanitize = message.replace(/\s*"((?:\\.|[^"\\])*)"\s*/, '');
+    const sanitize = message.replace(/\s*["“]((?:\\.|[^"\\])*)[”"]\s*/, '');
 
     return {
         name: (null === name) ? '' : name[ 1 ],

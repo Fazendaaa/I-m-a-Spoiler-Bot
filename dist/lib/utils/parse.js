@@ -24,8 +24,8 @@ const sanitizeURL = ({ message }) => __awaiter(this, void 0, void 0, function* (
 });
 exports.messageToString = ({ message }) => message.replace(createRegExp, '');
 exports.parseSpoilerText = ({ message }) => __awaiter(this, void 0, void 0, function* () {
-    const name = message.match(/"((?:\\.|[^"\\])*)"/);
-    const sanitize = message.replace(/\s*"((?:\\.|[^"\\])*)"\s*/, '');
+    const name = message.match(/["“]((?:\\.|[^"\\])*)[”"]/);
+    const sanitize = message.replace(/\s*["“]((?:\\.|[^"\\])*)[”"]\s*/, '');
     return {
         name: (null === name) ? '' : name[1],
         description: yield sanitizeURL({ message: sanitize })
