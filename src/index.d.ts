@@ -1,4 +1,6 @@
 import { InlineKeyboardMarkup } from 'telegram-typings';
+import { ContextMessageUpdate } from 'telegraf';
+import I18n from 'telegraf-i18n';
 
 export interface Context {
     id?: number;
@@ -15,4 +17,8 @@ export interface MinimumInfo {
     description: string;
     message_text: string;
     reply_markup?: InlineKeyboardMarkup;
+}
+
+export interface IBotContext extends ContextMessageUpdate {
+    readonly i18n: I18n;
 }

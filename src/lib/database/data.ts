@@ -26,7 +26,7 @@ export const deleteOneWeekOlder = (): Promise<number | Error> => {
     const thisWeek = Date.now() - oneWeek;
 
     return news.deleteMany({ date: { $lte: thisWeek } })
-        .then(removed => removed.length)
+        .then(removed => removed.n)
         .catch(err => { throw err; });
 };
 

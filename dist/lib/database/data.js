@@ -21,7 +21,7 @@ exports.deleteOneWeekOlder = () => {
     const oneWeek = 604800000;
     const thisWeek = Date.now() - oneWeek;
     return model_1.news.deleteMany({ date: { $lte: thisWeek } })
-        .then(removed => removed.length)
+        .then(removed => removed.n)
         .catch(err => { throw err; });
 };
 exports.numberSpoilers = () => {
