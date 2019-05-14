@@ -6,7 +6,7 @@ export interface Context {
     id?: number;
     name?: string;
     title?: string;
-    translate: any;
+    translate: I18n;
     message?: string;
     description?: string;
 }

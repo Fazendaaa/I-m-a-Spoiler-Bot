@@ -1,5 +1,5 @@
 start:
-  "Lütfen, spoiler vermek için beni inline olarak kullan. (@ispoilerbot)."
+  "Lütfen, spoiler vermek için beni inline olarak kullan. (${botName})."
 
 help1:
   "Gruplarda spoiler olabilecek bilgileri gizlemek için bir botum. Nasıl kullanıldığına bakabilirsin:"
@@ -119,3 +119,13 @@ offlineDescription:
 
 offlineText:
   "Veritabanım şu anda kapalı ve bunun olmaması gerekiyordu. Lütfen @farmy'i bu konuda bilgilendirin."
+
+addedInAGroup:
+  "Hey millet.\n\nBir uyarı, lütfen bir bot her zaman beni bir yönetici olarak yanı sıra gereksiz koymayın üyeleri 
+tarafından gönderilen mesajlara erişebildiği bir grupta yönetici olarak yerleştirilmiş; yani, bitirdim görmemi 
+istemediğin şeyleri görmek. Beni kullanmak için sadece beni ara:\n
+```
+${botName} spoiler mesajlaşma burada
+```\n\n
+Bu yüzden sadece görmek için ne çağırdığımı görmeye başlayacağım ve önlemek için göndermek istediğiniz spoyleri 
+gizleyeceğim diğer insanlar seni gereksiz yere görüyor :)"

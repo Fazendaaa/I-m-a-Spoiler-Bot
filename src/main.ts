@@ -1,50 +1,57 @@
 import { config } from 'dotenv';
-import { connect, connection } from 'mongoose';
+import { connect } from 'mongoose';
 import { join } from 'path';
+import { TelegrafConstructor } from 'telegraf';
+import I18n from 'telegraf-i18n';
+import LocalSession from 'telegraf-session-local';
+import { IBotContext } from '.';
 import { offlineDB } from './lib/database/offline';
-import { cleanDB, statsDB } from './lib/schedule/database';
+import { cleanDB } from './lib/schedule/database';
 import { handleSpoiler, retrieveSpoiler } from './lib/spoiler/spoiler';
 import { toInline } from './lib/telegram/parse';
 import { messageToString, toBoolean } from './lib/utils/parse';
-import { IBotContext } from '.';
 
 config();
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-const Telegraf = require('telegraf');
-const I18n = require('telegraf-i18n');
-const Session = require('telegraf-session-local');
+const Telegraf = <TelegrafConstructor> require('telegraf');
 
-const bot = new Telegraf(<string> process.env.BOT_KEY);
+const bot = new Telegraf(process.env.BOT_KEY);
 const i18n = new I18n({
     useSession: true,
     allowMissing: true,
     defaultLanguage: 'en',
     directory: join(__dirname, '../others/locales')
 });
-const localStorage = new Session();
+let botName = '';
+const localStorage = new LocalSession();
 
 bot.startPolling();
 bot.use(Telegraf.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
 
+bot.telegram.getMe()
+.then(botInfo => {
+    botName = botInfo.first_name;
+})
+.catch(console.error);
+
 // ---------------------------------------------------------------------------------------------------------------------
 
 let dbStatus = false;
 
-connect(process.env.MONGODB_URI, { useNewUrlParser: true });
-
-connection.on('open', () => {
-    console.log('DB connected.');
-    dbStatus = true;
-    statsDB();
+connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+.then(() => {
     cleanDB();
-});
+    console.log('DB connected.');
 
-connection.on('error', () => {
-    console.error.bind(console, 'connection error:');
+    dbStatus = true;
+})
+.catch(err => {
+    console.error(err);
+
     dbStatus = false;
 });
 
@@ -52,7 +59,7 @@ connection.on('error', () => {
 
 bot.catch(console.error);
 
-bot.start(({ i18n, replyWithMarkdown }: IBotContext) => replyWithMarkdown(i18n.t('start')));
+bot.start(({ i18n, replyWithMarkdown }: IBotContext) => replyWithMarkdown(i18n.t('start', { botName })));
 
 bot.command('about', ({ i18n, replyWithMarkdown }: IBotContext) => replyWithMarkdown(i18n.t('about')));
 
@@ -93,4 +100,12 @@ bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }: IBotCo
     session.user = false;
 
     return await answerCbQuery(spoiler, true);
+});
+
+bot.on('new_chat_members', async ({ i18n, message, replyWithMarkdown }: IBotContext) => {
+    const newChatMember = message.new_chat_participant.username;
+
+    if (newChatMember === botName) {
+        return await replyWithMarkdown(i18n.t('addedInAGroup', { botName }));
+    }
 });

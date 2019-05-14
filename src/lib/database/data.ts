@@ -1,15 +1,31 @@
+import { Document } from 'mongoose';
 import { NewsInterface } from './index';
 import { news } from './model';
 
-export const addNews = ({ message, id }: { message: string; id: number }): Promise<number | Error> => {
+interface IAddNews {
+    readonly message: string;
+    readonly id: number
+};
+
+interface IRetrieveNews {
+    readonly id: number
+};
+
+/**
+ *
+ */
+export const addNews = async ({ message, id }: IAddNews) => {
     const options = { upsert: true, new: true, setDefaultsOnInsert: true };
 
     return news.findOneAndUpdate({ _id: id }, { message, date: Date.now() }, options)
-        .then(res => res._id)
-        .catch(err => { throw err; });
+        .then((value: Document): number => <number> value._id)
+        .catch((err: Error): Error => { throw err; });
 };
 
-export const retrieveNews = ({ id }: { id: number }): Promise<string | Error> => {
+/**
+ *
+ */
+export const retrieveNews = async ({ id }: IRetrieveNews) => {
     return news.findOne({ _id: id }, 'message')
         .then((retrieved: NewsInterface) => {
             if (null !== retrieved && undefined !== retrieved) {
@@ -21,7 +37,10 @@ export const retrieveNews = ({ id }: { id: number }): Promise<string | Error> =>
         .catch(err => { throw err; });
 };
 
-export const deleteOneWeekOlder = (): Promise<number | Error> => {
+/**
+ *
+ */
+export const deleteOneWeekOlder = async () => {
     const oneWeek = 604800000;
     const thisWeek = Date.now() - oneWeek;
 
@@ -30,7 +49,10 @@ export const deleteOneWeekOlder = (): Promise<number | Error> => {
         .catch(err => { throw err; });
 };
 
-export const numberSpoilers = (): Promise<number | Error> => {
+/**
+ *
+ */
+export const numberSpoilers = async () => {
     return news.find({})
         .then(res => res.length)
         .catch(err => { throw err; });

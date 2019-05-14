@@ -1,5 +1,5 @@
 start:
-  "Please, use me as a inline tool to send spoiler (@ispoilerbot)."
+  "Please, use me as a inline tool to send spoiler (${botName})."
 
 help1:
   "I'm just a wrapper for you to send spoilers in groups to only some to see it. Let me show it to you:"
@@ -119,3 +119,13 @@ offlineDescription:
 
 offlineText:
   "My database is currently down and this wasn't supposed to be happening. Please inform @farmy about it."
+
+addedInAGroup:
+  "Hey, lads.\n\nA warning, please do not put me as an administrator, as well as unnecessary, every time a bot is
+placed as administrator in a group he has access to messages sent by his members; that is, I would end seeing things 
+that you would not want me to see. Remember that to use me just call me with:\n
+```
+${botName} spoiler message here
+```\n\n
+So I will end up seeing only what I call to see and I will hide the spoiler that you want to send to avoid other people 
+see you unnecessarily :)"
