@@ -2,27 +2,27 @@ start:
   "Bitte verwenden Sie mich als Inline-Tool zum Senden von Spoiler (@ispoilerbot)."
 
 help1:
-  "Ich bin nur ein Wrapper für Sie, um Spoiler in Gruppen zu schicken, nur um einige zu sehen. Lass es mich dir zeigen:"
+  "Ich bin nur ein Wrapper für Sie, um Spoiler in Gruppen nur zu bestimmten Nutzern zu schicken. Lass es mich dir zeigen:"
 
 help2:
-  "Eine freundliche Erinnerung, alle Spoiler sind nur für eine Woche nach dem Versand verfügbar."
+  "Zur Erinnerung: Alle Spoiler sind nur für eine Woche nach dem Versand verfügbar."
 
 help3:
-  "Um mehr zu wissen, einfach /about"
+  "Um mehr zu erfahren, einfach /about"
 
 about:
-  "[‍](https://i.imgur.com/epXWGKC.png)Siehe den Code hinter mir unter:\n\
+  "[‍](https://i.imgur.com/epXWGKC.png)Der Quellcode hinter diesem Bot:\n\
   🤖 [Meine Webseite](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Die Geschichte hinter mir.\n\
-  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Star dieses Projekt, auch Hilfe und es ist kostenlos!!!\n\n\
+  ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Favorisiere dieses Projekt, es hift und ist kostenlos!!!\n\n\
   Oder denke sogar darüber nach, meinen Schöpfer zu unterstützen:\n\
   📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abonnement.\n\
-  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Nur einmal.\n\
-  😀 [Website des Herstellers](http://fazendaaa.me) — Schau es dir bei anderen Bots an.\n\n\
-  *Haben Sie irgendwelche Vorschläge, Fehler, um es zu melden oder sogar eine Übersetzung anzufordern, damit ich in Ihrer Muttersprache arbeiten kann?*\n\n\
-  Fühlen Sie sich frei, meinem Schöpfer zu erzählen: @farmy."
+  ☕ [Buy me a coffee](https://www.buymeacoffee.com/Fazenda) — Einmalig.\n\
+  😀 [Website des Herstellers](http://fazendaaa.me) — Schau dir die anderen Bots an.\n\n\
+  *Haben Sie irgendwelche Vorschläge, Fehler zu melden, oder eine Übersetzung anzufordern damit ich in Ihrer Muttersprache funktioniere?*\n\n\
+  Wenden Sie sich an meinen Ersteller: @farmy."
 
 priority:
-  "Lassen Sie alle hoffen, dass Sie hier eintreten... Um es zu sehen, klicken Sie einfach nochmal auf mich."
+  "Ihr, die ihr hier eintretet, lasst jede Hoffnung zurück... Um es zu sehen, klicken Sie einfach nochmal auf mich."
 
 spoilerButton:
   "Spoiler hier!"
@@ -34,28 +34,28 @@ spoilerCounterName:
   " Über: ${name}"
 
 tagSpoilerTitle:
-  "Willst du diesen Spoiler benennen? (wahlweise)"
+  "Willst du diesen Spoiler benennen? (optional)"
 
 tagSpoilerDescription:
-  "Schreiben Sie es zwischen Anführungszeichen wie folgt: \"Spoiler Name hier\" am Anfang des Textes. Klicken Sie danach auf die Spoiler-Box."
+  "Schreiben Sie es am Anfang des Textes zwischen Anführungszeichen wie folgt: \"Spoiler Name hier\". Klicken Sie danach auf die Spoiler-Box."
 
 tagSpoilerMessageText:
-  "Fass mich nicht an, Senpai. Ich bin hier, um dir zu helfen."
+  "Fass mich nicht an, Senpai. Ich bin nur hier, um dir zu helfen."
 
 counterSpoilerTitle:
-  "Figuren: ${length}/${limit}"
+  "Zeichen: ${length}/${limit}"
 
 counterSpoilerDescription:
-  "Nur Charaktere zählen${title}."
+  "Ich zähle nur die Zeichen${title}."
 
 counterSpoilerMessageText:
-  "Fass mich nicht an, Senpai. Ich bin hier, um dir zu helfen, Charaktere zu zählen."
+  "Fass mich nicht an, Senpai. Ich bin nur hier um dir zu helfen, Zeichen zu zählen."
 
 lightSpoilerTitle:
-  "Lichtspoiler"
+  "Leichter Spoiler"
 
 lightSpoilerDescription:
-  "Klicken Sie mich, um als Lichtspoiler zu senden. Der Benutzer wird nicht aufgefordert, dies zu bestätigen."
+  "Klicken Sie mich, um als leichten Spoiler zu senden. Der Benutzer wird nicht aufgefordert, dies zu bestätigen."
 
 lightSpoilerMessageText:
   "Klicken Sie auf mich, um den Spoiler zu sehen${title}."
@@ -73,7 +73,7 @@ lewdSpoilerTitle:
   "Lewd Spoiler"
 
 lewdSpoilerDescription:
-  "Klicken Sie mich, um als unzüchtiger Spoiler zu senden. Der Benutzer wird aufgefordert, dies zu bestätigen."
+  "Klicken Sie mich, um als perversen Spoiler zu senden. Der Benutzer wird aufgefordert, dies zu bestätigen."
 
 lewdSpoilerMessageText:
   "🔞 *Lewd Spoiler* 🔞 -- Klicken Sie auf mich, um den Spoiler zu sehen${title}."
@@ -85,7 +85,7 @@ sanitizeSpoilerDescription:
   "Sie haben zu viel eingegeben, bitte reduzieren Sie den Spoiler"
 
 sanitizeSpoilerMessageText:
-  "Fass mich nicht an, Senpai. Du bist ein böser Junge, der mehr als 200 Zeichen Spoiler schickt. Sei höflich zu den anderen."
+  "Fass mich nicht an, Senpai. Du bist ein böser Junge, der mehr als 200 Zeichen Spoiler verschickt. Sei höflich zu den anderen."
 
 handleSpoilerTitle:
   "Bemerke mich, Senpai"
@@ -97,7 +97,7 @@ handleSpoilerMessageText:
   "Sie müssen etwas eingeben und es als Spoiler senden."
 
 errorSpoilerTitle:
-  "Error"
+  "Fehler"
 
 errorSpoilerDescription:
   "Ein Fehler ist aufgetreten, bitte warne @farmy darüber."
@@ -106,7 +106,7 @@ errorSpoilerMessageText:
   "Ein Fehler ist aufgetreten, bitte warne @farmy darüber."
 
 errorSpoilerRetrieve:
-  "Ich hatte einige Probleme, diesen Spoiler zu holen. Wahrscheinlich ist es mehr als eine Woche älter, dh es wurde gelöscht."
+  "Ich hatte einige Probleme, diesen Spoiler zu holen. Wahrscheinlich ist er über eine Woche alt, dh. er wurde gelöscht."
 
 offlineDB:
   "Meine Datenbank ist aus irgendeinem Grund offline, bitte informieren Sie @farmy darüber."
@@ -118,4 +118,4 @@ offlineDescription:
   "Bitte klicken Sie auf mich, um zu sehen, was vor sich geht."
 
 offlineText:
-  "Meine Datenbank ist momentan nicht verfügbar und das sollte nicht passieren. Bitte informiere @farmy darüber."
+  "Meine Datenbank ist momentan nicht verfügbar. Das sollte nicht passieren. Bitte informiere @farmy darüber."
