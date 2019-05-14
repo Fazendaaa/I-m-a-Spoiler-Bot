@@ -6,14 +6,15 @@ import { cleanDB, statsDB } from './lib/schedule/database';
 import { handleSpoiler, retrieveSpoiler } from './lib/spoiler/spoiler';
 import { toInline } from './lib/telegram/parse';
 import { messageToString, toBoolean } from './lib/utils/parse';
-import Telegraf from 'telegraf';
-import I18n from 'telegraf-i18n';
-import Session from 'telegraf/session';
 import { IBotContext } from '.';
 
 config();
 
 // ---------------------------------------------------------------------------------------------------------------------
+
+const Telegraf = require('telegraf');
+const I18n = require('telegraf-i18n');
+const Session = require('telegraf-session-local');
 
 const bot = new Telegraf(<string> process.env.BOT_KEY);
 const i18n = new I18n({
@@ -33,7 +34,7 @@ bot.use(localStorage.middleware());
 
 let dbStatus = false;
 
-connect(process.env.MONGODB_URI);
+connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 connection.on('open', () => {
     console.log('DB connected.');

@@ -8,9 +8,9 @@
         "watch": "tsc -w",
         "bot": "node dist/main.js",
         "test": "snyk test && npm run jest",
-        "start": "npm run build && npm run bot",
         "deploy": "ncu --upgrade && npm install",
         "validate": "node node_modules/app.json/index.js validate",
+        "start": "npm run deploy && npm run test && npm run build && npm run bot",
         "jest": "jest --config jest.config.json --ci --runInBand --detectOpenHandles --no-cache"
     },
     "repository": {
@@ -33,9 +33,9 @@
     "devDependencies": {
         "@types/dotenv": "^6.1.1",
         "@types/emoji-regex": "^8.0.0",
-        "@types/jest": "^24.0.12",
-        "@types/mongoose": "^5.5.0",
-        "@types/node": "^12.0.0",
+        "@types/jest": "^24.0.13",
+        "@types/mongoose": "^5.5.1",
+        "@types/node": "^12.0.1",
         "@types/node-schedule": "^1.2.3",
         "app.json": "^1.3.0",
         "codecov": "^3.4.0",
@@ -54,7 +54,7 @@
         "dotenv": "^8.0.0",
         "emoji-regex": "^8.0.0",
         "extend": "^3.0.2",
-        "mongoose": "^5.5.7",
+        "mongoose": "^5.5.8",
         "node-schedule": "^1.3.2",
         "serve": "^11.0.0",
         "telegraf": "^3.29.0",

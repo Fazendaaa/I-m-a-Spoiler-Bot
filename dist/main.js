@@ -7,9 +7,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = require("dotenv");
 const mongoose_1 = require("mongoose");
@@ -19,26 +16,26 @@ const database_1 = require("./lib/schedule/database");
 const spoiler_1 = require("./lib/spoiler/spoiler");
 const parse_1 = require("./lib/telegram/parse");
 const parse_2 = require("./lib/utils/parse");
-const telegraf_1 = __importDefault(require("telegraf"));
-const telegraf_i18n_1 = __importDefault(require("telegraf-i18n"));
-const session_1 = __importDefault(require("telegraf/session"));
 dotenv_1.config();
 // ---------------------------------------------------------------------------------------------------------------------
-const bot = new telegraf_1.default(process.env.BOT_KEY);
-const i18n = new telegraf_i18n_1.default({
+const Telegraf = require('telegraf');
+const I18n = require('telegraf-i18n');
+const Session = require('telegraf-session-local');
+const bot = new Telegraf(process.env.BOT_KEY);
+const i18n = new I18n({
     useSession: true,
     allowMissing: true,
     defaultLanguage: 'en',
     directory: path_1.join(__dirname, '../others/locales')
 });
-const localStorage = new session_1.default();
+const localStorage = new Session();
 bot.startPolling();
-bot.use(telegraf_1.default.log());
+bot.use(Telegraf.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
 // ---------------------------------------------------------------------------------------------------------------------
 let dbStatus = false;
-mongoose_1.connect(process.env.MONGODB_URI);
+mongoose_1.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 mongoose_1.connection.on('open', () => {
     console.log('DB connected.');
     dbStatus = true;

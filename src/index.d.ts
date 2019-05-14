@@ -19,6 +19,11 @@ export interface MinimumInfo {
     reply_markup?: InlineKeyboardMarkup;
 }
 
+interface ISession {
+    user: boolean;
+}
+
 export interface IBotContext extends ContextMessageUpdate {
     readonly i18n: I18n;
+    session: ISession | null;
 }
