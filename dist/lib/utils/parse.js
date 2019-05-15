@@ -7,10 +7,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const emoji_regex_1 = __importDefault(require("emoji-regex"));
 const tiny_shortener_1 = require("tiny-shortener");
-const emojiRegex = require('emoji-regex');
-const createRegExp = emojiRegex();
+const createRegExp = emoji_regex_1.default();
 const removeProtocol = ({ message }) => __awaiter(this, void 0, void 0, function* () { return (yield tiny_shortener_1.tiny(message)).replace('https://', ''); });
 const sanitizeURL = ({ message }) => __awaiter(this, void 0, void 0, function* () {
     // https://stackoverflow.com/a/17773849/7092954
@@ -20,7 +23,7 @@ const sanitizeURL = ({ message }) => __awaiter(this, void 0, void 0, function* (
             return (yield acc).replace(URL, yield removeProtocol({ message: URL }));
         }), Promise.resolve(message));
     }
-    return yield message;
+    return message;
 });
 exports.messageToString = ({ message }) => message.replace(createRegExp, '');
 exports.parseSpoilerText = ({ message }) => __awaiter(this, void 0, void 0, function* () {

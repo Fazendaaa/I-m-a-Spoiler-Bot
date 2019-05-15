@@ -10,7 +10,7 @@
 
 
 [![English README](https://img.shields.io/badge/Language-EN-blue.svg?longCache=true&style=for-the-badge)](./README.md)
-[![Portuguese README](https://img.shields.io/badge/Linguagem-PT-green.svg?longCache=true&style=for-the-badge)](./docs/readme/README_PT.md)
+[![Portuguese README](https://img.shields.io/badge/Linguagem-PT-green.svg?longCache=true&style=for-the-badge)](./documentation/readme/README_PT.md)
 
 [![Build Status](https://img.shields.io/travis/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://travis-ci.org/Fazendaaa/I-m-a-Spoiler-Bot)
 [![codecov](https://img.shields.io/codecov/c/github/Fazendaaa/I-m-a-Spoiler-Bot.svg?style=flat-square)](https://codecov.io/gh/Fazendaaa/I-m-a-Spoiler-Bot)
@@ -168,7 +168,7 @@ You can see more in the [img](./others/img) folder.
 # Contributing
 Please, I'm not a native/fluent english speaker, so whether you see a variable name wrote the wrong way or even some comment where I've wrote something with the wrong "past perfect way of life" or something like that, please let me know it. Not always is just about the code, but rather making it more clear to other people to learn from it.
 
-So, whether is code or not you can help me out making this code more accessible by reading the [CONTRIBUTING.md](./docs/contributing/CONTRIBUTING.md). 
+So, whether is code or not you can help me out making this code more accessible by reading the [CONTRIBUTING.md](./documentation/contributing/CONTRIBUTING.md). 
 
 # Versioning
 I would love to say that [SemVer](https://semver.org/) or anything like that is used but, in my personal experience, this kind of approach doesn't work very well with me, the guy who could be committing in this project for two weeks in a roll and leave it for almost one year with no simple ```npm update```. So, no versioning system is used. 

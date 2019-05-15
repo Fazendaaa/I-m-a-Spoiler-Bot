@@ -1,5 +1,5 @@
+import emojiRegex from 'emoji-regex';
 import { tiny } from 'tiny-shortener';
-const emojiRegex = require('emoji-regex');
 
 const createRegExp = emojiRegex();
 
@@ -24,7 +24,7 @@ const sanitizeURL = async ({ message }: Util): Promise<string> => {
         }, Promise.resolve(message));
     }
 
-    return await message;
+    return message;
 };
 
 export const messageToString = ({ message }: Util): string => message.replace(createRegExp, '');
