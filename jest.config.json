@@ -4,15 +4,15 @@
     "verbose": true,
     "useStderr": true,
     "forceExit": true,
+    "testMatch": null,
+    "preset": "ts-jest",
     "logHeapUsage": true,
     "collectCoverage": true,
+    "testEnvironment": "node",
     "name": "i-am-a-spoiler-bot",
     "testURL": "http://localhost/",
     "coverageDirectory": "./coverage",
     "testRegex": "(./ci/__tests__/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "transform": {
-        "^.+\\.tsx?$": "ts-jest"
-    },
     "coverageReporters": [
         "json",
         "lcov",
@@ -24,16 +24,19 @@
         "./node_modules/"
     ],
     "moduleFileExtensions": [
-        "ts",
-        "tsx",
         "js",
-        "jsx",
         "json",
-        "node"
+        "jsx",
+        "node",
+        "ts",
+        "tsx"
     ],
     "globals": {
         "ts-jest": {
-            "enableTsDiagnostics": true
+            "diagnostics": {
+               "warnOnly": true
+            }
         }
     }
-}
+  }
+  
