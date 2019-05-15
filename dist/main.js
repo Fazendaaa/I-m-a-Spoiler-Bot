@@ -14,16 +14,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv_1 = require("dotenv");
 const mongoose_1 = require("mongoose");
 const path_1 = require("path");
+const telegraf_i18n_1 = __importDefault(require("telegraf-i18n"));
+const telegraf_session_local_1 = __importDefault(require("telegraf-session-local"));
 const offline_1 = require("./lib/database/offline");
 const database_1 = require("./lib/schedule/database");
 const spoiler_1 = require("./lib/spoiler/spoiler");
 const parse_1 = require("./lib/telegram/parse");
 const parse_2 = require("./lib/utils/parse");
-const telegraf_i18n_1 = __importDefault(require("telegraf-i18n"));
 dotenv_1.config();
 // ---------------------------------------------------------------------------------------------------------------------
 const Telegraf = require('telegraf');
-const Session = require('telegraf-session-local');
 const bot = new Telegraf(process.env.BOT_KEY);
 const i18n = new telegraf_i18n_1.default({
     useSession: true,
@@ -32,25 +32,26 @@ const i18n = new telegraf_i18n_1.default({
     directory: path_1.join(__dirname, '../others/locales')
 });
 let botName = '';
-const localStorage = new Session();
+const localStorage = new telegraf_session_local_1.default();
 bot.startPolling();
 bot.use(Telegraf.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
-bot.telegram.getMe().then(botInfo => {
+bot.telegram.getMe()
+    .then(botInfo => {
     botName = botInfo.first_name;
-});
+})
+    .catch(console.error);
 // ---------------------------------------------------------------------------------------------------------------------
 let dbStatus = false;
-mongoose_1.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
-mongoose_1.connection.on('open', () => {
+mongoose_1.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+    .then(() => {
+    database_1.cleanDB();
     console.log('DB connected.');
     dbStatus = true;
-    database_1.statsDB();
-    database_1.cleanDB();
-});
-mongoose_1.connection.on('error', () => {
-    console.error.bind(console, 'connection error:');
+})
+    .catch(err => {
+    console.error(err);
     dbStatus = false;
 });
 // ---------------------------------------------------------------------------------------------------------------------

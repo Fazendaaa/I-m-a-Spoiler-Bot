@@ -13,9 +13,9 @@ const keyboard_1 = require("../telegram/keyboard");
 const parse_1 = require("../utils/parse");
 const charactersLimit = 200;
 const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, description }) => {
-    const descriptionArgs = (undefined === title) ? null : { title };
-    const messageTextArgs = (undefined === title) ? null : { title };
-    const titleArgs = (undefined === description) ? null : { length: description.length, limit: charactersLimit };
+    const descriptionArgs = (undefined === title) ? undefined : { title };
+    const messageTextArgs = (undefined === title) ? undefined : { title };
+    const titleArgs = (undefined === description) ? undefined : { length: description.length, limit: charactersLimit };
     return {
         thumb_url,
         reply_markup,
