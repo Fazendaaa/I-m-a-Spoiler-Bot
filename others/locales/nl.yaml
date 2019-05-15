@@ -1,5 +1,5 @@
 start:
-  "Gebruik mij als een inline-tool om spoiler te sturen (@ispoilerbot)."
+  "Gebruik mij als een inline-tool om spoiler te sturen (${botName})."
 
 help1:
   "Ik ben gewoon een verpakking voor jou om spoilers in groepen naar slechts sommigen te sturen om het te zien. Laat me het je laten zien:"
@@ -119,3 +119,14 @@ offlineDescription:
 
 offlineText:
   "Mijn database is momenteel niet beschikbaar en dit zou niet gebeuren. Informeer @farmy erover."
+
+addedInAGroup:
+  "Hé, mensen.\n\nEen waarschuwing, zet me alsjeblieft niet als een beheerder, maar ook als onnodig, elke keer als een 
+bot is geplaatst als beheerder in een groep heeft hij toegang tot berichten verzonden door zijn leden; dat wil zeggen, 
+ik zou eindigen dingen zien waarvan je niet wilt dat ik ze zie. Onthoud dat als je me wilt gebruiken, je me gewoon kunt 
+bellen met:\n
+```
+${botName} spoiler-berichten hier
+```\n\n
+Dus ik zal uiteindelijk alleen zien wat ik bel om te zien en ik zal de spoiler verstoppen die je wilt sturen om te 
+vermijden andere mensen zien je onnodig :)"

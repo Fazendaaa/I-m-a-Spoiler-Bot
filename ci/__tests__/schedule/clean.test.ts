@@ -1,1 +1,5 @@
-describe.skip('nothing', () => test('', () => expect(true).toBeTruthy()));
+describe.skip('nothing', () => {
+    test('', () => {
+        expect(true).toBeTruthy();
+    });
+});

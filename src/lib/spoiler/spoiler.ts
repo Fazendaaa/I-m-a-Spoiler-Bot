@@ -7,9 +7,9 @@ import { Spoiler, SpoilerContext } from './index';
 const charactersLimit = 200;
 
 const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, description }: SpoilerContext): Spoiler => {
-    const descriptionArgs = (undefined === title) ? null : { title };
-    const messageTextArgs = (undefined === title) ? null : { title };
-    const titleArgs = (undefined === description) ? null : { length: description.length, limit: charactersLimit };
+    const descriptionArgs = (undefined === title) ? undefined : { title };
+    const messageTextArgs = (undefined === title) ? undefined : { title };
+    const titleArgs = (undefined === description) ? undefined : { length: description.length, limit: charactersLimit };
 
     return {
         thumb_url,
@@ -82,7 +82,7 @@ export const handleSpoiler = async ({ message, translate, id }: Context): Promis
 
 export const retrieveSpoiler = async ({ id, translate }: Context): Promise<string> => {
     try {
-        return <string> await retrieveNews({ id });
+        return await retrieveNews({ id });
     } catch (e) {
         console.error(e);
 

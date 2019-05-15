@@ -1,7 +1,5 @@
 import mockingoose from 'mockingoose';
 import { addNews, deleteOneWeekOlder, numberSpoilers, retrieveNews } from '../../../src/lib/database/data';
-import { readMock } from '../../readMocks';
-import { doTesting } from '../../testing';
 
 const _doc = {
     _id: 0,
@@ -11,10 +9,26 @@ const _doc = {
 mockingoose.news.toReturn(_doc, 'findOne');
 mockingoose.news.toReturn([ _doc ], 'find');
 
-doTesting({ file: readMock('database', 'addNews'), toTest: addNews });
-doTesting({ file: readMock('database', 'retrieveNews'), toTest: retrieveNews });
-doTesting({ file: readMock('database', 'deleteOneWeekOlder'), toTest: deleteOneWeekOlder });
-// doTesting({ file: readMock('database', 'numberSpoilers'), toTest: numberSpoilers });
+describe('Testing Add News', () => {
+    test('First test', () => {
+        expect(addNews({ id: 0, message: '' })).rejects.toThrow();
+    });
+});
+
+describe('Testing Retrieve News', () => {
+    test('First test', async () => {
+        expect.assertions(1);
+
+        expect(await retrieveNews({ id: 0 }))
+        .toEqual('Lorem Ipsum');
+    });
+});
+
+describe('Testing Delete One Week Older', () => {
+    test('First test', async () => {
+        expect(deleteOneWeekOlder()).rejects.toThrow();
+    });
+})
 
 describe('Testing numberSpoilers.', () => {
     test('Retrieving one.', () => {
