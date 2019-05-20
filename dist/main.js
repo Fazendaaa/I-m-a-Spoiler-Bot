@@ -11,9 +11,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const child_process_1 = require("child_process");
 const dotenv_1 = require("dotenv");
 const mongoose_1 = require("mongoose");
 const path_1 = require("path");
+const telegraf_1 = __importDefault(require("telegraf"));
 const telegraf_i18n_1 = __importDefault(require("telegraf-i18n"));
 const telegraf_session_local_1 = __importDefault(require("telegraf-session-local"));
 const offline_1 = require("./lib/database/offline");
@@ -23,8 +25,7 @@ const parse_1 = require("./lib/telegram/parse");
 const parse_2 = require("./lib/utils/parse");
 dotenv_1.config();
 // ---------------------------------------------------------------------------------------------------------------------
-const Telegraf = require('telegraf');
-const bot = new Telegraf(process.env.BOT_KEY);
+const bot = new telegraf_1.default(process.env.BOT_KEY);
 const i18n = new telegraf_i18n_1.default({
     useSession: true,
     allowMissing: true,
@@ -34,7 +35,7 @@ const i18n = new telegraf_i18n_1.default({
 let botName = '';
 const localStorage = new telegraf_session_local_1.default();
 bot.startPolling();
-bot.use(Telegraf.log());
+bot.use(telegraf_1.default.log());
 bot.use(i18n.middleware());
 bot.use(localStorage.middleware());
 bot.telegram.getMe()
@@ -55,7 +56,20 @@ mongoose_1.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     dbStatus = false;
 });
 // ---------------------------------------------------------------------------------------------------------------------
-bot.catch(console.error);
+bot.catch((err) => {
+    console.error(err);
+    // https://stackoverflow.com/a/46825815/7092954
+    setTimeout(() => {
+        process.on('exit', () => {
+            child_process_1.spawn(process.argv.shift(), process.argv, {
+                detached: true,
+                stdio: 'inherit',
+                cwd: process.cwd()
+            });
+        });
+        process.exit();
+    }, 5000);
+});
 bot.start(({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('start', { botName })));
 bot.command('about', ({ i18n, replyWithMarkdown }) => replyWithMarkdown(i18n.t('about')));
 bot.help(({ i18n, replyWithMarkdown, replyWithVideo }) => __awaiter(this, void 0, void 0, function* () {

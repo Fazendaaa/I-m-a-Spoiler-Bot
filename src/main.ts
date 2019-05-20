@@ -1,7 +1,8 @@
+import { spawn } from 'child_process';
 import { config } from 'dotenv';
 import { connect } from 'mongoose';
 import { join } from 'path';
-import { TelegrafConstructor } from 'telegraf';
+import Telegraf from 'telegraf';
 import I18n from 'telegraf-i18n';
 import LocalSession from 'telegraf-session-local';
 import { IBotContext } from '.';
@@ -14,8 +15,6 @@ import { messageToString, toBoolean } from './lib/utils/parse';
 config();
 
 // ---------------------------------------------------------------------------------------------------------------------
-
-const Telegraf = <TelegrafConstructor> require('telegraf');
 
 const bot = new Telegraf(process.env.BOT_KEY);
 const i18n = new I18n({
@@ -57,7 +56,22 @@ connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-bot.catch(console.error);
+bot.catch((err: Error) => {
+    console.error(err);
+
+    // https://stackoverflow.com/a/46825815/7092954
+    setTimeout(() => {
+        process.on('exit', () => {
+            spawn(process.argv.shift(), process.argv, {
+                detached : true,
+                stdio: 'inherit',
+                cwd: process.cwd()
+            });
+        });
+
+        process.exit();
+    }, 5000);
+});
 
 bot.start(({ i18n, replyWithMarkdown }: IBotContext) => replyWithMarkdown(i18n.t('start', { botName })));
 
