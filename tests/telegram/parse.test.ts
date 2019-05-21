@@ -1,4 +1,4 @@
-import { toInline } from '../../../src/lib/telegram/parse';
+import { toInline } from '../../src/lib/telegram/parse';
 
 describe('Testing To Inline', () => {
     test('Only test', () => {

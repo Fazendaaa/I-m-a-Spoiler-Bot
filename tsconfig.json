@@ -61,6 +61,6 @@
         "ci",
         "node_modules",
         "dist",
-        "__tests__"
+        "tests"
     ]
 }

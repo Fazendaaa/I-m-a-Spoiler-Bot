@@ -1,5 +1,5 @@
 import mockingoose from 'mockingoose';
-import { addNews, deleteOneWeekOlder, numberSpoilers, retrieveNews } from '../../../src/lib/database/data';
+import { addNews, deleteOneWeekOlder, numberSpoilers, retrieveNews } from '../../src/lib/database/data';
 
 const _doc = {
     _id: 0,

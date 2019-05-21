@@ -1,4 +1,4 @@
-import { messageToString, parseSpoilerText, toBoolean } from '../../../src/lib/utils/parse';
+import { messageToString, parseSpoilerText, toBoolean } from '../../src/lib/utils/parse';
 
 describe('Testing Message To String', () => {
     test('#1 test', () => {

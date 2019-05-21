@@ -12,7 +12,7 @@
     "name": "i-am-a-spoiler-bot",
     "testURL": "http://localhost/",
     "coverageDirectory": "./coverage",
-    "testRegex": "(./ci/__tests__/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(./tests/.*| (\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "coverageReporters": [
         "json",
         "lcov",

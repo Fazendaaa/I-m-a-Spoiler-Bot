@@ -1,12 +1,12 @@
 import { join } from 'path';
 import I18n from 'telegraf-i18n';
-import { offlineDB } from '../../../src/lib/database/offline';
+import { offlineDB } from '../../src/lib/database/offline';
 
 const i18n = new I18n({
     useSession: true,
     allowMissing: true,
     defaultLanguage: 'en',
-    directory: join(__dirname, '../../../others/locales')
+    directory: join(__dirname, '../../others/locales')
 });
 
 const translate = {
