@@ -1,7 +1,11 @@
 import I18n from 'telegraf-i18n';
 import { MinimumInfo } from '../../main';
 
-export const offlineDB = ({ translate }: { translate: I18n }): MinimumInfo => {
+interface IOfflineDB {
+    readonly translate: I18n
+};
+
+export const offlineDB = ({ translate }: IOfflineDB): MinimumInfo => {
     return {
         title: translate.t('offlineTitle'),
         message_text: translate.t('offlineText'),

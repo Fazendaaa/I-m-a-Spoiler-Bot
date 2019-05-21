@@ -90,15 +90,17 @@ const restart = () => spawn(process.argv.shift(), process.argv, {
     cwd: process.cwd()
 });
 
+// https://stackoverflow.com/a/46825815/7092954
+setTimeout(() => {
+    process.on('exit', () => restart);
+    process.exit();
+}, 5000);
+
 // ---------------------------------------------------------------------------------------------------------------------
+
 bot.catch((err: Error) => {
     console.error(err);
-
-    // https://stackoverflow.com/a/46825815/7092954
-    setTimeout(() => {
-        process.on('exit', () => restart);
-        process.exit();
-    }, 5000);
+    process.exit();
 });
 
 bot.start(({ i18n, replyWithMarkdown }: IBotContext) => replyWithMarkdown(i18n.t('start', { botName })));
@@ -119,8 +121,6 @@ bot.on('inline_query', async ({ i18n, answerInlineQuery, inlineQuery }: IBotCont
     if (false === dbStatus) {
         const offline = offlineDB({ translate: i18n });
 
-        restart();
-
         return await answerInlineQuery(toInline({ results: [ offline ]}));
     }
 
@@ -134,8 +134,6 @@ bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }: IBotCo
     session.user = session.user || false;
 
     if (false === dbStatus) {
-        restart();
-
         return await answerCbQuery(i18n.t('offlineDB'), true);
     } if (true === show && false === session.user) {
         session.user = true;

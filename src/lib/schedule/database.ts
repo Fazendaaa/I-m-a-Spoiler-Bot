@@ -1,5 +1,5 @@
 import { Range, RecurrenceRule, scheduleJob } from 'node-schedule';
-import { deleteOneWeekOlder, numberSpoilers } from '../database/data';
+import { deleteOneWeekOlder } from '../database/data';
 
 export const cleanDB = (): void => {
     const rule = new RecurrenceRule();

@@ -1,12 +1,21 @@
-import { Context } from '../../main';
+import { InlineKeyboardMarkup } from 'telegram-typings';
+import { Context, MinimumInfo } from '../../main';
 import { addNews, retrieveNews } from '../database/data';
 import { spoilerKeyboard } from '../telegram/keyboard';
 import { parseSpoilerText } from '../utils/parse';
-import { Spoiler, SpoilerContext } from './index';
+
+export interface SpoilerContext extends Context {
+    name?: string;
+    kind?: string;
+    title?: string;
+    thumb_url?: string;
+    description?: string;
+    reply_markup?: InlineKeyboardMarkup;
+}
 
 const charactersLimit = 200;
 
-const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, description }: SpoilerContext): Spoiler => {
+const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, description }: SpoilerContext): MinimumInfo => {
     const descriptionArgs = (undefined === title) ? undefined : { title };
     const messageTextArgs = (undefined === title) ? undefined : { title };
     const titleArgs = (undefined === description) ? undefined : { length: description.length, limit: charactersLimit };
@@ -20,29 +29,21 @@ const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, descript
     };
 };
 
-const tagSpoiler = ({ translate }: SpoilerContext): Spoiler => {
-    return baseSpoiler({ kind: 'tag', thumb_url: 'https://i.imgur.com/XkMEbd8.png', translate });
-};
+const tagSpoiler = ({ translate }: SpoilerContext): MinimumInfo => baseSpoiler({ translate, kind: 'tag', thumb_url: 'https://i.imgur.com/XkMEbd8.png' });
 
-const counterSpoiler = ({ description, translate, name }: SpoilerContext): Spoiler => {
+const counterSpoiler = ({ description, translate, name }: SpoilerContext): MinimumInfo => {
     const title = ('' === name) ? '' : translate.t('spoilerCounterName', { name: name });
 
     return baseSpoiler({ kind: 'counter', thumb_url: 'https://i.imgur.com/54qirkY.png', title, description, translate });
 };
 
-const lightSpoiler = (input: SpoilerContext): Spoiler  => {
-    return baseSpoiler({ kind: 'light', thumb_url: 'https://i.imgur.com/XOzZR7c.png', ...input });
-};
+const lewdSpoiler = (input: SpoilerContext): MinimumInfo => baseSpoiler({ ...input, kind: 'lewd', thumb_url: 'https://i.imgur.com/64HsYmA.png' });
 
-const heavySpoiler = (input: SpoilerContext): Spoiler => {
-    return baseSpoiler({ kind: 'heavy', thumb_url: 'https://i.imgur.com/TpAVSKT.png', ...input });
-};
+const heavySpoiler = (input: SpoilerContext): MinimumInfo => baseSpoiler({ ...input, kind: 'heavy', thumb_url: 'https://i.imgur.com/TpAVSKT.png' });
 
-const lewdSpoiler = (input: SpoilerContext): Spoiler => {
-    return baseSpoiler({ kind: 'lewd', thumb_url: 'https://i.imgur.com/64HsYmA.png', ...input });
-};
+const lightSpoiler = (input: SpoilerContext): MinimumInfo  => baseSpoiler({ ...input, kind: 'light', thumb_url: 'https://i.imgur.com/XOzZR7c.png' });
 
-const newSpoiler = ({ name, description, title, translate, id }: Context): Array<Spoiler> => {
+const newSpoiler = ({ name, description, title, translate, id }: Context): Array<MinimumInfo> => {
     if (description.length < charactersLimit) {
         const reply_markup = spoilerKeyboard({ id, translate, toHide: true });
 
@@ -55,10 +56,12 @@ const newSpoiler = ({ name, description, title, translate, id }: Context): Array
         ];
     }
 
-    return [ baseSpoiler({ kind: 'sanitize', thumb_url: 'https://i.imgur.com/GPcjNb0.png', description, translate }) ];
+    return [
+        baseSpoiler({ translate, description, kind: 'sanitize', thumb_url: 'https://i.imgur.com/GPcjNb0.png' })
+    ];
 };
 
-const sanitizeSpoiler = async ({ message, translate, id }: Context): Promise<Array<Spoiler>> => {
+const sanitizeSpoiler = async ({ message, translate, id }: Context): Promise<Array<MinimumInfo>> => {
     try {
         const { description, name } = await parseSpoilerText({ message });
         const spoilerId = <number> await addNews({ message: description, id });
@@ -68,19 +71,23 @@ const sanitizeSpoiler = async ({ message, translate, id }: Context): Promise<Arr
     } catch (e) {
         console.error(e);
 
-        return [ baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate }) ];
+        return [
+            baseSpoiler({ kind: 'error', thumb_url: 'https://i.imgur.com/hw9ekg8.png', translate })
+        ];
     }
 };
 
-export const handleSpoiler = async ({ message, translate, id }: Context): Promise<Array<Spoiler>> => {
+export const handleSpoiler = async ({ message, translate, id }: Context): Promise<Array<MinimumInfo>> => {
     if ('' !== message) {
         return await sanitizeSpoiler({ message, translate, id });
     }
 
-    return [ baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate }) ];
+    return [
+        baseSpoiler({ kind: 'handle', thumb_url: 'https://i.imgur.com/ByINOFv.png', translate })
+    ];
 };
 
-export const retrieveSpoiler = async ({ id, translate }: Context): Promise<string> => {
+export const retrieveSpoiler = async ({ id, translate }: Context): Promise<string | Error> => {
     try {
         return await retrieveNews({ id });
     } catch (e) {
