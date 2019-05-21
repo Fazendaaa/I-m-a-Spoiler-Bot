@@ -2,10 +2,10 @@ import { spawn } from 'child_process';
 import { config } from 'dotenv';
 import { connect } from 'mongoose';
 import { join } from 'path';
-import Telegraf from 'telegraf';
+import Telegraf, { ContextMessageUpdate } from 'telegraf';
 import I18n from 'telegraf-i18n';
 import LocalSession from 'telegraf-session-local';
-import { IBotContext } from '.';
+import { InlineKeyboardMarkup } from 'telegram-typings';
 import { offlineDB } from './lib/database/offline';
 import { cleanDB } from './lib/schedule/database';
 import { handleSpoiler, retrieveSpoiler } from './lib/spoiler/spoiler';
@@ -13,6 +13,34 @@ import { toInline } from './lib/telegram/parse';
 import { messageToString, toBoolean } from './lib/utils/parse';
 
 config();
+
+// ---------------------------------------------------------------------------------------------------------------------
+
+export interface Context {
+    id?: number;
+    name?: string;
+    title?: string;
+    translate: I18n;
+    message?: string;
+    description?: string;
+}
+
+export interface MinimumInfo {
+    title: string;
+    thumb_url?: string;
+    description: string;
+    message_text: string;
+    reply_markup?: InlineKeyboardMarkup;
+}
+
+interface ISession {
+    user: boolean;
+}
+
+export interface IBotContext extends ContextMessageUpdate {
+    readonly i18n: I18n;
+    session: ISession | null;
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 

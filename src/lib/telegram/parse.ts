@@ -1,5 +1,5 @@
 import { InlineQueryResultArticle } from 'telegram-typings';
-import { MinimumInfo } from '../../index';
+import { MinimumInfo } from '../../main';
 
 export const toInline = ({ results }: { results: Array<MinimumInfo> }): Array<InlineQueryResultArticle> => {
     return results.map(({ title, description, reply_markup, thumb_url, message_text }, id) => {

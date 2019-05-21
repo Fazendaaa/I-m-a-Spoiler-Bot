@@ -1,4 +1,4 @@
-import { Context } from '../../index';
+import { Context } from '../../main';
 import { addNews, retrieveNews } from '../database/data';
 import { spoilerKeyboard } from '../telegram/keyboard';
 import { parseSpoilerText } from '../utils/parse';

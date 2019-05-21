@@ -1,4 +1,4 @@
-import { MinimumInfo, Context } from '../../index';
+import { MinimumInfo, Context } from '../../main';
 import { InlineKeyboardMarkup } from 'telegram-typings';
 
 export interface Spoiler extends MinimumInfo {}
