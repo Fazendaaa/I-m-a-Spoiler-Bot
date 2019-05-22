@@ -6,15 +6,31 @@ import { parseSpoilerText } from '../utils/parse';
 
 export interface SpoilerContext extends Context {
     name?: string;
-    kind?: string;
     title?: string;
     thumb_url?: string;
     description?: string;
     reply_markup?: InlineKeyboardMarkup;
+    kind?: 'tag' | 'lewd' | 'error' | 'sanitize' | 'handle' | 'counter' | 'heavy' | 'light';
 }
 
+/**
+ * The  maximum characters limit allowed to a user to sent as spoiler, this is due to is not the "maximum characters" to
+ * sent per se, but to be displayed after.
+ */
 const charactersLimit = 200;
 
+/**
+ * Injects all the data need to create a spoiler.
+ *
+ * @param kind - The kind of the spoiler
+ * @param title -
+ * @param thumb_url - The image of the spoiler kind
+ * @param translate - The translation object
+ * @param description - The spoiler description
+ * @param reply_markup - The keyboard to be attached to the spoiler kind itself
+ *
+ * @returns The spoiler data
+ */
 const baseSpoiler = ({ title, reply_markup, kind, translate, thumb_url, description }: SpoilerContext): MinimumInfo => {
     const descriptionArgs = (undefined === title) ? undefined : { title };
     const messageTextArgs = (undefined === title) ? undefined : { title };

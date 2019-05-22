@@ -1,6 +1,11 @@
 import { Range, RecurrenceRule, scheduleJob } from 'node-schedule';
 import { deleteOneWeekOlder } from '../database/data';
 
+/**
+ * Set a rule to run everyday to remove all of the older spoilers -- see more at [[deleteOneWeekOlder]].
+ *
+ * @returns Nothing
+ */
 export const cleanDB = (): void => {
     const rule = new RecurrenceRule();
 

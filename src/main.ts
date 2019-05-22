@@ -72,7 +72,6 @@ let dbStatus = false;
 connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 .then(() => {
     cleanDB();
-    console.log('DB connected.');
 
     dbStatus = true;
 })
@@ -129,7 +128,7 @@ bot.on('inline_query', async ({ i18n, answerInlineQuery, inlineQuery }: IBotCont
 
 bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }: IBotContext) => {
     const data = update.callback_query.data.split('/');
-    const spoiler = await retrieveSpoiler({ translate: i18n, id: parseInt(data[0], 10) });
+    const spoiler = <string> await retrieveSpoiler({ translate: i18n, id: parseInt(data[0], 10) });
     const show = toBoolean({ message: data[ 1 ] });
     session.user = session.user || false;
 
@@ -153,3 +152,6 @@ bot.on('new_chat_members', async ({ i18n, message, replyWithMarkdown }: IBotCont
         return await replyWithMarkdown(i18n.t('addedInAGroup', { botName }));
     }
 });
+
+bot.launch()
+    .catch(console.error);

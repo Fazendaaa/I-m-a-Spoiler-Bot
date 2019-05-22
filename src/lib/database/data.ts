@@ -17,7 +17,12 @@ interface IRetrieveNews {
 };
 
 /**
+ * Handles the insertion of a new spoiler.
  *
+ * @param id - The query id to be used as the database id
+ * @param message - The spoiler message to be hidden
+ *
+ * @returns The NEWS's id
  */
 export const addNews = async ({ message, id }: IAddNews): Promise<number | Error> => news
     .findOneAndUpdate({
@@ -34,7 +39,11 @@ export const addNews = async ({ message, id }: IAddNews): Promise<number | Error
     .catch((err: Error): Error => { throw err; });
 
 /**
+ * Retrieves the message saved int [[addNews]].
  *
+ * @param id - The spoiler message to be retrieved
+ *
+ * @returns The saved message
  */
 export const retrieveNews = async ({ id }: IRetrieveNews): Promise<string | Error> => news
     .findOne({
@@ -50,7 +59,9 @@ export const retrieveNews = async ({ id }: IRetrieveNews): Promise<string | Erro
     .catch(err => { throw err; });
 
 /**
+ * After one week, all of the spoilers stored must be removed; this is to reduce the storage cost.
  *
+ * @returns The number of deleted messages
  */
 export const deleteOneWeekOlder = async (): Promise<number | Error> => {
     const oneWeek = 604800000;
@@ -66,7 +77,9 @@ export const deleteOneWeekOlder = async (): Promise<number | Error> => {
 };
 
 /**
+ * Due to the [[deleteOneWeekOlder]] function, the only spoiler numbers that are the ones sent in the span of a week.
  *
+ * @returns How many spoilers are stored
  */
 export const numberSpoilers = async (): Promise<number | Error> => news.find({})
     .then(res => res.length)

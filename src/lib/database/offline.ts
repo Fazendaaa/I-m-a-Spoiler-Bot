@@ -5,6 +5,13 @@ interface IOfflineDB {
     readonly translate: I18n
 };
 
+/**
+ * Handles the offline database message to be sent in a query.
+ *
+ * @param translate - The Telegram's i18n translate object
+ *
+ * @returns The offline database message
+ */
 export const offlineDB = ({ translate }: IOfflineDB): MinimumInfo => {
     return {
         title: translate.t('offlineTitle'),

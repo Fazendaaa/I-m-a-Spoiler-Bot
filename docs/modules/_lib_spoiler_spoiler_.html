@@ -70,6 +70,12 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-kind-icon">Spoiler<wbr>Context</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
@@ -102,9 +108,15 @@
 					<div class="tsd-signature tsd-kind-icon">characters<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">200</span><span class="tsd-signature-symbol"> =&nbsp;200</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L7">lib/spoiler/spoiler.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L20">lib/spoiler/spoiler.ts:20</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The  maximum characters limit allowed to a user to sent as spoiler, this is due to is not the &quot;maximum characters&quot; to
+							sent per se, but to be displayed after.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -113,15 +125,20 @@
 					<a name="basespoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> base<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">base<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">base<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L9">lib/spoiler/spoiler.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L34">lib/spoiler/spoiler.ts:34</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Injects all the data need to create a spoiler.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -131,7 +148,7 @@
 											<h5>description<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
 										</li>
 										<li class="tsd-parameter">
-											<h5>kind<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<h5>kind<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">"tag"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"lewd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"sanitize"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"handle"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"counter"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"heavy"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"light"</span></h5>
 										</li>
 										<li class="tsd-parameter">
 											<h5>reply_<wbr>markup<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InlineKeyboardMarkup</span></h5>
@@ -148,7 +165,8 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
+							<p>The spoiler data</p>
 						</li>
 					</ul>
 				</section>
@@ -156,13 +174,13 @@
 					<a name="counterspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> counter<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">counter<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">counter<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L27">lib/spoiler/spoiler.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L50">lib/spoiler/spoiler.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,7 +200,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -190,13 +208,13 @@
 					<a name="handlespoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> handle<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L75">lib/spoiler/spoiler.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L96">lib/spoiler/spoiler.ts:96</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -216,7 +234,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -224,22 +242,22 @@
 					<a name="heavyspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> heavy<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">heavy<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SpoilerContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">heavy<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L37">lib/spoiler/spoiler.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L58">lib/spoiler/spoiler.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>input: <span class="tsd-signature-type">SpoilerContext</span></h5>
+									<h5>input: <a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -247,22 +265,22 @@
 					<a name="lewdspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> lewd<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">lewd<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SpoilerContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">lewd<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L41">lib/spoiler/spoiler.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L56">lib/spoiler/spoiler.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>input: <span class="tsd-signature-type">SpoilerContext</span></h5>
+									<h5>input: <a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -270,22 +288,22 @@
 					<a name="lightspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> light<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">light<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SpoilerContext</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">light<wbr>Spoiler<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L33">lib/spoiler/spoiler.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L60">lib/spoiler/spoiler.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>input: <span class="tsd-signature-type">SpoilerContext</span></h5>
+									<h5>input: <a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-signature-type">SpoilerContext</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -293,13 +311,13 @@
 					<a name="newspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> new<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">new<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L45">lib/spoiler/spoiler.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L62">lib/spoiler/spoiler.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -325,7 +343,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -333,13 +351,13 @@
 					<a name="retrievespoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> retrieve<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module">
-						<li class="tsd-signature tsd-kind-icon">retrieve<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">retrieve<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L83">lib/spoiler/spoiler.ts:83</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L106">lib/spoiler/spoiler.ts:106</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -356,7 +374,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -364,13 +382,13 @@
 					<a name="sanitizespoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> sanitize<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">sanitize<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">sanitize<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L61">lib/spoiler/spoiler.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L80">lib/spoiler/spoiler.ts:80</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -390,7 +408,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Spoiler</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -398,13 +416,13 @@
 					<a name="tagspoiler" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagConst">Const</span> tag<wbr>Spoiler</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-external-module tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">tag<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Spoiler</span></li>
+						<li class="tsd-signature tsd-kind-icon">tag<wbr>Spoiler<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/7382498/src/lib/spoiler/spoiler.ts#L23">lib/spoiler/spoiler.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/Fazendaaa/I-m-a-Spoiler-Bot//blob/20b1fac/src/lib/spoiler/spoiler.ts#L48">lib/spoiler/spoiler.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -418,7 +436,7 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Spoiler</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_main_.minimuminfo.html" class="tsd-signature-type">MinimumInfo</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -464,6 +482,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="../interfaces/_lib_spoiler_spoiler_.spoilercontext.html" class="tsd-kind-icon">Spoiler<wbr>Context</a>
+					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-external-module tsd-is-not-exported">
 						<a href="_lib_spoiler_spoiler_.html#characterslimit" class="tsd-kind-icon">characters<wbr>Limit</a>
 					</li>

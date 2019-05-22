@@ -4,7 +4,7 @@ import TypedocWebpackPlugin from 'typedoc-webpack-plugin';
 module.exports = {
     target: 'node',
     mode: 'development',
-    entry: join(__dirname, 'src/main.ts'),
+    entry: join(__dirname, './src/main.ts'),
     node: {
         __dirname: false
     },
@@ -26,15 +26,15 @@ module.exports = {
         rules: [
             {
                 test: /\.mjs$/,
-                include: /node_modules/,
-                type: 'javascript/auto'
+                type: 'javascript/auto',
+                include: /node_modules/
             },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: [
-                    /node_modules/,
-                    /ci/
+                    /tests/,
+                    /node_modules/
                 ]
             }
         ]
