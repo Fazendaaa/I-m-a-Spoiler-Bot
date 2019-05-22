@@ -27,12 +27,16 @@ module.exports = {
             {
                 test: /\.mjs$/,
                 type: 'javascript/auto',
-                include: /node_modules/
+                include: /node_modules/,
+                exclude: [
+                    /docs/
+                ]
             },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: [
+                    /docs/,
                     /tests/,
                     /node_modules/
                 ]
