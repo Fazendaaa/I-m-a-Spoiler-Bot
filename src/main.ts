@@ -92,7 +92,6 @@ const restart = () => spawn(process.argv.shift(), process.argv, {
 // https://stackoverflow.com/a/46825815/7092954
 setTimeout(() => {
     process.on('exit', () => restart);
-    process.exit();
 }, 5000);
 
 // ---------------------------------------------------------------------------------------------------------------------
