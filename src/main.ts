@@ -151,6 +151,3 @@ bot.on('new_chat_members', async ({ i18n, message, replyWithMarkdown }: IBotCont
         return await replyWithMarkdown(i18n.t('addedInAGroup', { botName }));
     }
 });
-
-bot.launch()
-    .catch(console.error);
