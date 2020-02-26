@@ -103,6 +103,7 @@ bot.on('callback_query', async ({ i18n, update, answerCbQuery, session }: IBotCo
 });
 
 bot.on('new_chat_members', async ({ i18n, message, replyWithMarkdown }: IBotContext) => {
+    // @ts-ignore
     const newChatMember = message.new_chat_participant.username;
 
     if (newChatMember === botName) {

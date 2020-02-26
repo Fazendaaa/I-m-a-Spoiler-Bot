@@ -5,14 +5,15 @@
     "main": "dist/main.js",
     "scripts": {
         "build": "tsc",
-        "bot": "node dist/main.js",
+        "bot": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 ./dist/main.js",
         "test": "snyk test && npm run jest",
         "doc": "typedoc --out ./docs/ ./src/",
         "deploy": "ncu --upgrade && npm install",
         "lint": "tslint --config tslint.json --project .",
         "validate": "node node_modules/app.json/index.js validate",
         "start": "npm run deploy && npm run test && npm run build && npm run bot",
-        "jest": "jest --config jest.config.json --ci --runInBand --detectOpenHandles --no-cache"
+        "jest": "jest --config jest.config.json --ci --runInBand --detectOpenHandles --no-cache",
+        "docker": "npm run build && npm run bot"
     },
     "repository": {
         "type": "git",
