@@ -5,20 +5,20 @@ help1:
   "Gruplarda spoiler olabilecek bilgileri gizlemek için bir botum. Nasıl kullanıldığına bakabilirsin:"
 
 help2:
-  "Dostça bir hatırlatma, spoilerlerin tamamı gonderildikten sonra sadece bir hafta kullanılabilir."
+  "Dostça bir hatırlatma, spoilerler gönderildikten sonra sadece bir hafta kullanılabilir."
 
 help3:
   "Daha fazla bilgi için, yazman gereken sadece /about"
 
 about:
   "[‍](https://i.imgur.com/epXWGKC.png)Kodlarımı görün:\n\
-  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Tarihime göz atabilirsin.\n\
+  🤖 [My website](https://fazendaaa.github.io/I-m-a-Spoiler-Bot/) -- Detaylarına buradan bakalabilirsin.\n\
   ⭐ [Github](https://github.com/Fazendaaa/I-m-a-Spoiler-Bot) -- Bu projeyi yıldızlayıp, ÜCRETSİZ yardımcı olabilirsin!!!\n\n\
   Hatta kodlayıcımı da destekleyebilirsin:\n\
   📅 [Patreon](https://www.patreon.com/Fazenda/overview) — Abone ol.\n\
   ☕ [Kahve ısmarla](https://www.buymeacoffee.com/Fazenda) — Tek seferlik.\n\
   😀 [Kodlayıcının Websitesi](http://fazendaaa.me) — Diğer botlara göz at.\n\n\
-  *Türkçe Çevirisi @HolyTotem ve @RulingLightning tarafından yapılmıştır.*\n\n\
+  *Türkçe Çevirisi @HolyTotem tarafından yapılmıştır.*\n\n\
   Geliştiricim ile konuşmaktan çekinmeyin: @farmy."
 
 priority:
@@ -106,10 +106,10 @@ errorSpoilerMessageText:
   "Bir hata oldu, lütfen bu konuda @farmy'i bilgilendir."
 
 errorSpoilerRetrieve:
-  "Bu spoileri açarken bazı sorunlar yasadım. Muhtemelen bir haftadan daha eskidir, yani silinmiştir."
+  "Bu spoileri açarken bazı sorunlar yaşadım. Muhtemelen bir haftadan daha eskidir, yani silinmiştir."
 
 offlineDB:
-  "Veritabanım nedense çevrımdışı, lutfen @farmy'i bu konuda bilgilendirin."
+  "Veritabanım nedense çevrımdışı, lütfen @farmy'i bu konuda bilgilendirin."
 
 offlineTitle:
   "Bir şeyler yanlış gitti!"
@@ -121,11 +121,11 @@ offlineText:
   "Veritabanım şu anda kapalı ve bunun olmaması gerekiyordu. Lütfen @farmy'i bu konuda bilgilendirin."
 
 addedInAGroup:
-  "Hey millet.\n\nBir uyarı, lütfen bir bot her zaman beni bir yönetici olarak yanı sıra gereksiz koymayın üyeleri 
-tarafından gönderilen mesajlara erişebildiği bir grupta yönetici olarak yerleştirilmiş; yani, bitirdim görmemi 
-istemediğin şeyleri görmek. Beni kullanmak için sadece beni ara:\n
+  "Hey millet.\n\nBir uyarı! lütfen beni gereksiz yere yönetici olarak atamayın. Üyeler
+tarafından gönderilen mesajlara erişebildiğim için bir grupta yönetici atamak risklidir; yani, görmeni 
+istemediğin şeyleri görmemeliyim. Beni kullanmak için yapman gereken:\n
 ```
-${botName} spoiler mesajlaşma burada
+${botName} spoiler mesajlajı buraya gelecek
 ```\n\n
-Bu yüzden sadece görmek için ne çağırdığımı görmeye başlayacağım ve önlemek için göndermek istediğiniz spoyleri 
-gizleyeceğim diğer insanlar seni gereksiz yere görüyor :)"
+Bu yüzden sadece görmem gereken şeyleri göreceğim ve önlemek için göndermek istediğiniz spoileri 
+gizleyeceğim, diğer insanlar beni gereksiz yere görmeyecek :)"
