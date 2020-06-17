@@ -42,7 +42,7 @@ bot.telegram.getMe()
 
 let dbStatus = false;
 
-connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     cleanDB();
     console.log('DB connected.');
