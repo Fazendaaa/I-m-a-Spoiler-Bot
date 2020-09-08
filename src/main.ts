@@ -1,7 +1,6 @@
 import { config } from 'dotenv';
-import { connect } from 'mongoose';
+import { connect, set } from 'mongoose';
 import { join } from 'path';
-import { TelegrafConstructor } from 'telegraf';
 import I18n from 'telegraf-i18n';
 import LocalSession from 'telegraf-session-local';
 import { IBotContext } from '.';
@@ -15,7 +14,7 @@ config();
 
 // ---------------------------------------------------------------------------------------------------------------------
 
-const Telegraf = <TelegrafConstructor> require('telegraf');
+const Telegraf = require('telegraf');
 
 const bot = new Telegraf(process.env.BOT_KEY);
 const i18n = new I18n({
@@ -42,14 +41,16 @@ bot.telegram.getMe()
 
 let dbStatus = false;
 
-connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => {
-    cleanDB();
-    console.log('DB connected.');
+connect(<string>process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    // https://stackoverflow.com/a/51918795/7092954
+    set('useCreateIndex', true);
+    set('useFindAndModify', false);
 
     dbStatus = true;
-})
-.catch(err => {
+}).catch(err => {
     console.error(err);
 
     dbStatus = false;

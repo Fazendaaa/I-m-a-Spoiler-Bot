@@ -1,6 +1,6 @@
 import { InlineKeyboardMarkup } from 'telegram-typings';
-import { ContextMessageUpdate } from 'telegraf';
 import I18n from 'telegraf-i18n';
+import { TelegrafContext } from 'telegraf/typings/context';
 
 export interface Context {
     id?: number;
@@ -23,7 +23,7 @@ interface ISession {
     user: boolean;
 }
 
-export interface IBotContext extends ContextMessageUpdate {
+export interface IBotContext extends TelegrafContext {
     readonly i18n: I18n;
     session: ISession | null;
 }

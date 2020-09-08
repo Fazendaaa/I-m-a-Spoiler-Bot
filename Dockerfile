@@ -3,6 +3,13 @@ EXPOSE 8080
 
 WORKDIR /usr/src/app
 
+COPY package.json .
+
+RUN [ "npm", "install" ]
+
 COPY . .
 
-ENTRYPOINT [ "npm", "run", "docker" ]
+RUN [ "mv", "session.d.ts", "node_modules/telegraf-session-local/lib/" ]
+RUN [ "npm", "run", "build" ]
+
+ENTRYPOINT [ "npm", "run", "bot" ]

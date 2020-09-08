@@ -61,6 +61,7 @@
         "ci",
         "node_modules",
         "dist",
-        "__tests__"
+        "__tests__",
+        "session.d.ts"
     ]
 }
