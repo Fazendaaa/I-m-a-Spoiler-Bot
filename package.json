@@ -46,7 +46,7 @@
         "jest": "^26.0.1",
         "mockingoose": "^2.13.2",
         "npm-check-updates": "^7.0.1",
-        "snyk": "^1.342.2",
+        "snyk": "^1.1024.0",
         "superagent": "^5.2.2",
         "telegram-typings": "^3.6.1",
         "ts-jest": "^26.1.0",
